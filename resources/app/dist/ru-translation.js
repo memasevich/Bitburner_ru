@@ -40,6 +40,13 @@
     "Export Game": "Экспортировать игру",
     "Import Game": "Импортировать игру",
     "Compare Save": "Сравнить сохранения",
+    "Import Save Comparison": "Сравнение импортируемого сохранения",
+    "We've found a": "Найдено",
+    "that you may want to use instead.": "которое вы, возможно, захотите использовать вместо текущего.",
+    "Your current game's data is on the left and the data that will be imported is on the right.":
+      "Данные текущей игры находятся слева, а данные импортируемого сохранения — справа.",
+    "Please double check everything is fine before proceeding!":
+      "Перед продолжением ещё раз проверьте, что всё в порядке!",
     "Delete Game": "Удалить игру",
     "Reset Game": "Сбросить игру",
     "Reset tutorial": "Сбросить обучение",
@@ -79,6 +86,7 @@
     "Disable Overview Progress Bars": "Отключить индикаторы прогресса в обзоре",
     "Show all intermediary time units, even when null.": "Показывать все промежуточные единицы времени, даже нулевые",
     "Timestamp format:": "Формат времени:",
+    "Example timestamp:": "Пример времени:",
     "Currency Symbol:": "Символ валюты:",
     "Locale:": "Региональный формат:",
 
@@ -118,6 +126,492 @@
     "Show Less": "Показать меньше",
     "View Documentation": "Открыть документацию",
     "Copy to Clipboard": "Скопировать в буфер обмена",
+
+    // City-map labels are server/location identifiers and must remain literal.
+    // The player may need to enter these exact names in terminal commands.
+
+    // Documentation: statistics page. API names remain literal.
+    "Search NS API": "Поиск NS API",
+    "Below are some": "Ниже приведены некоторые",
+    "the stats that will increase with play": "характеристики, которые будут расти по мере игры",
+    "reset during augmentation installs": "сбрасываться при установке аугментаций",
+    "as you progress through the game.": "по мере прохождения игры.",
+    "Your stats can be found in the Overview panel,":
+      "Ваши характеристики можно найти на панели «Обзор»,",
+    "the Stats subpage": "на странице «Статистика»",
+    "the side menu, or with API methods like":
+      "в боковом меню или с помощью методов API, таких как",
+    "Hack Skill": "Навык взлома",
+    "For many aspects of Bitburner,": "Во многих аспектах Bitburner",
+    "increasing your Hack skill will be an important goal.":
+      "повышение навыка взлома — важная цель.",
+    "Primarily affected by the efficiency of": "В первую очередь зависящий от эффективности",
+    "your hacking strategies, you will also be offered":
+      "ваших стратегий взлома, он также может быть усилен с помощью",
+    "that greatly enhance your Hack Skill": "которые значительно повышают ваш навык взлома",
+    "level and how effective its results are.": "и эффективность его применения.",
+    "Affects:": "Влияет на:",
+    "Time needed to execute hack, grow, or weaken and similar methods":
+      "Время выполнения взлома, роста, ослабления и аналогичных методов",
+    "Your chance to successfully hack a": "Вероятность успешно взломать",
+    "Percent of a": "Процент денег",
+    "server's money stolen when hacking it": "сервера, украденных при его взломе",
+    "Success rate of certain crimes": "Вероятность успеха некоторых преступлений",
+    "Time needed to create a Program": "Время создания программы",
+    "Company Reputation gain for certain jobs":
+      "Прирост репутации компании за некоторые должности",
+    "Gain Hack experience by:": "Получение опыта взлома:",
+    "Manually hacking servers through the": "Ручной взлом серверов через",
+    "Using ns.hack(), ns.grow(), or ns.weaken() through scripts":
+      "Использование ns.hack(), ns.grow() или ns.weaken() в скриптах",
+    "Committing certain crimes": "Совершение определённых преступлений",
+    "Some Company jobs and other types of work":
+      "Некоторые должности в компаниях и другие виды работы",
+    "Studying at a university": "Обучение в университете",
+    "Combat Skills": "Боевые навыки",
+    "Strength, Defense, Dexterity, and Agility": "Сила, защита, ловкость и проворство",
+    "These represent your physical skill and attributes, including your ability to sneak, inflict or endure damage, and pull off high precision tasks.":
+      "Они описывают физические навыки и характеристики, включая способность скрываться, наносить и выдерживать урон и выполнять высокоточные действия.",
+    "Similar to your Hack skill, you will be offered":
+      "Как и для навыка взлома, вам будут доступны",
+    "to multiplicatively enhance your Combat Skills and exp gain.":
+      "для мультипликативного усиления боевых навыков и прироста опыта.",
+    "HP scales with Defense.": "ОЗ зависит от защиты.",
+    "Infiltration and some jobs may cause you to take damage.":
+      "При проникновении и на некоторых работах вы можете получить урон.",
+    "Faction Reputation gain for Security and": "Прирост репутации фракции за охранную работу и",
+    "Gain experience by:": "Получение опыта:",
+    "Working out at a gym": "Тренировки в спортзале",
+      "Doing Security or": "Выполнение охранной работы или",
+    "Working certain jobs at a Company": "Работа на определённых должностях в компании",
+    "Rarely as useful as Hacking and Physical skills, Charisma can help get a company job, gain trust, or calm chaos in social situations.":
+      "Обаяние редко бывает так же полезно, как взлом и физические навыки, но помогает получить работу в компании, завоевать доверие или успокоить напряжённую ситуацию.",
+    "Charisma can also be enhanced with": "Обаяние также можно усилить с помощью",
+    "Company Reputation gain for most jobs":
+      "Прирост репутации компании за большинство должностей",
+    "Other Stats and abilities are available in later stages of the game.":
+      "Другие характеристики и способности станут доступны на более поздних этапах игры.",
+    "Below are some of the stats that will increase with play and reset during augmentation installs as you progress through the game. Your stats can be found in the Overview panel, the Stats subpage of the side menu, or with API methods like":
+      "Ниже приведены некоторые характеристики, которые будут расти по мере игры и сбрасываться при установке аугментаций по мере прохождения игры. Ваши характеристики можно найти на панели «Обзор», на странице «Статистика» в боковом меню или с помощью методов API, таких как",
+    "For many aspects of Bitburner, increasing your Hack skill will be an important goal. Primarily affected by the efficiency of your hacking strategies, you will also be offered":
+      "Во многих аспектах Bitburner повышение навыка взлома — важная цель. В первую очередь зависящий от эффективности ваших стратегий взлома, он также может быть усилен с помощью",
+    "Time needed to execute ": "Время выполнения ",
+    " and similar methods": " и аналогичных методов",
+    "Success rate of certain ": "Вероятность успеха некоторых ",
+    "of certain crimes": "некоторых преступлений",
+    "Time needed to create a ": "Время создания ",
+    " through scripts": " в скриптах",
+    "Committing ": "Совершение ",
+    "certain crimes": "определённых преступлений",
+    "Carrying out ": "Выполнение ",
+    " or doing ": " или выполнение ",
+    "Field work for ": "полевых заданий для ",
+    " and other types of work": " и другие виды работы",
+    "Working certain jobs at a ": "Работа на определённых должностях в ",
+    "Doing Field work for a ": "Выполнение полевых заданий для ",
+    "Reputation gain when carrying out ": "Прирост репутации за ",
+    "Reputation gain for certain jobs": "Прирост репутации за некоторые должности",
+    "Reputation gain for Security and ": "Прирост репутации за охранную работу и ",
+    "Reputation gain for most jobs": "Прирост репутации за большинство должностей",
+    // The documentation splits these phrases around inline links/code.
+    // Keep the trimmed variants because translateText preserves surrounding whitespace.
+    "Time needed to execute": "Время выполнения",
+    "and similar methods": "и аналогичных методов",
+    "Success rate of certain": "Вероятность успеха некоторых",
+    "Time needed to create a": "Время создания",
+    Using: "Использование",
+    "through scripts": "в скриптах",
+    Committing: "Совершение",
+    "Carrying out": "Выполнение",
+    "or doing": "или выполнение",
+    "Field work for": "полевых заданий для",
+    Some: "Некоторые",
+    "and other types of work": "и другие виды работы",
+    "Working certain jobs at a": "Работа на определённых должностях в",
+    "Doing Field work for a": "Выполнение полевых заданий для",
+    "Reputation gain when carrying out": "Прирост репутации за",
+    "Reputation gain for Security and": "Прирост репутации за охранную работу и",
+    "gain when carrying out": "прирост за выполнение",
+    "gain for certain jobs": "прирост за определённые должности",
+    "gain for Security and": "прирост за охранную работу и",
+    "gain for most jobs": "прирост за большинство должностей",
+    "jobs and other types of work": "должности и другие виды работы",
+    Security: "охранную работу",
+    certain: "определённых",
+    Doing: "Выполнение",
+    or: "или",
+    Faction: "Фракция",
+    Company: "Компания",
+    Program: "Программа",
+    crimes: "преступлений",
+
+    // Documentation page: Companies. Inline links and button labels are kept
+    // as separate entries so the surrounding prose is translated completely.
+    "When exploring the": "Исследуя",
+    "you can visit various companies.": "вы можете посещать различные компании.",
+    "At these companies, you can apply for jobs.":
+      "В этих компаниях можно устроиться на работу.",
+    "Working a job lets you earn money, experience, and":
+      "Работа позволяет получать деньги и опыт, а также повышать показатель «",
+    "with that company.": "» в этой компании.",
+    "While working for a company, you can click":
+      "Во время работы в компании вы можете нажать",
+    "to be able to do things while you continue to work in the background.":
+      "чтобы заниматься другими делами, пока вы продолжаете работать в фоновом режиме.",
+    "There is a 20% penalty to the related gains.":
+      "При этом соответствующие доходы уменьшаются на 20%.",
+    "Clicking the": "Нажатие кнопки",
+    "button under the overview will return you to the current work.":
+      "под панелью «Обзор» вернёт вас к текущей работе.",
+    "If you've been hired to do a job you can click that":
+      "Если вас наняли на работу, снова нажмите",
+    "button again to get a promotion if you meet the requirements.":
+      "ещё раз, чтобы получить повышение, если вы соответствуете требованиям.",
+    "You can see the requirements by hovering your cursor over the button.":
+      "Наведите курсор на кнопку, чтобы увидеть требования.",
+    "can see the requirements by hovering your cursor over the button.":
+      "можете увидеть требования, наведя курсор на кнопку.",
+    "Higher positions give increased rewards.":
+      "Более высокие должности дают больше наград.",
+
+    // Documentation navigation.
+    Guides: "Руководства",
+    "Basic Mechanics": "Основные механики",
+    Scripts: "Скрипты",
+    Servers: "Серверы",
+    RAM: "ОЗУ",
+    "Hacknet nodes": "Узлы Hacknet",
+    Companies: "Компании",
+    Crimes: "Преступления",
+    Programs: "Программы",
+    "Stock market": "Фондовый рынок",
+    "Coding contracts": "Контракты на программирование",
+    Autocomplete: "Автодополнение",
+    "Advanced Mechanics": "Продвинутые механики",
+    "Hacking algorithms": "Алгоритмы взлома",
+    "Offline scripts and bonus time": "Офлайн-скрипты и бонусное время",
+    "List of factions and their requirements": "Список фракций и требований к ним",
+    BitNodes: "BitNodes",
+    "BitNode recommendation - Short guide": "Рекомендации по BitNode — краткое руководство",
+    "BitNode recommendation - Detailed guide":
+      "Рекомендации по BitNode — подробное руководство",
+    "BitNode recommendation - Comprehensive guide":
+      "Рекомендации по BitNode — подробное руководство",
+    "Source-Files": "Исходные файлы",
+    "Hacknet Servers": "Серверы Hacknet",
+    "Hacknet Nodes": "Узлы Hacknet",
+    Gangs: "Банды",
+    Intelligence: "Интеллект",
+    "Hacknet scripts": "Скрипты Hacknet",
+    Grafting: "Пересадка",
+    "Darkweb Network": "Сеть Даркнета",
+    Corporations: "Корпорации",
+    Resources: "Ресурсы",
+    Migration: "Перенос",
+    "Learn to program": "Учимся программировать",
+    "Game frozen or stuck?": "Игра зависла или остановилась?",
+    "Tools & Resources": "Инструменты и ресурсы",
+    Changelog: "Список изменений",
+    "Changelog - Legacy v2": "Список изменений — старая версия v2",
+    "Changelog - Legacy v1": "Список изменений — старая версия v1",
+    "Changelog - Legacy v0": "Список изменений — старая версия v0",
+    "Bitburner v1.0.0 script migration guide":
+      "Руководство по переносу скриптов Bitburner v1.0.0",
+    "Bitburner v2.0.0 script migration guide":
+      "Руководство по переносу скриптов Bitburner v2.0.0",
+    "Netscript 2 migration guide (.script to .js)":
+      "Руководство по переносу Netscript 2 (.script → .js)",
+
+    // Units and short labels that appear in dynamic summary values.
+    "/ sec": "/ сек",
+
+    // Milestones page.
+    "Milestones don't reward you for completing them. They are here to guide you if you're lost. They will reset when you install Augmentations.":
+      "Вехи не дают наград за выполнение. Они нужны, чтобы направлять вас, если вы заблудились. После установки аугментаций они сбрасываются.",
+
+    // Documentation pages: RAM and Scripts. Inline code and API names are
+    // intentionally left untouched; these entries translate only prose.
+    "Before you start": "Перед началом",
+    "How Scripts work offline": "Как работают скрипты в офлайн-режиме",
+    "Identifying a Script": "Идентификация скрипта",
+    "Referencing Other Scripts": "Ссылки на другие скрипты",
+    "Script Arguments": "Аргументы скрипта",
+    "Multithreading scripts": "Многопоточность скриптов",
+    "Never-ending scripts": "Бесконечные скрипты",
+    "In Bitburner, RAM determines how many":
+      "В Bitburner ОЗУ определяет, сколько",
+    "can run on a": "могут работать на",
+    "Multiplying the number of threads a":
+      "Умножение числа потоков, которые использует",
+    "uses multiplies its RAM cost, but also multiplies the effectiveness of several functions such as":
+      "увеличивает стоимость ОЗУ скрипта, но также увеличивает эффективность таких функций, как",
+    "You can purchase more RAM for your home computer from tech vendors.":
+      "Вы можете покупать дополнительное ОЗУ для домашнего компьютера у продавцов технологий.",
+    "You can also use cloud or hacked servers as a source of additional RAM.":
+      "Также можно использовать облачные или взломанные серверы как источник дополнительного ОЗУ.",
+    "It is highly recommended that you have a basic familiarity with programming concepts like":
+      "Настоятельно рекомендуется иметь базовое представление о таких концепциях программирования, как",
+    "before starting to write scripts - but you can start with basic skills and learn with practice.":
+      "до начала написания скриптов, но начать можно и с базовых навыков, постепенно обучаясь на практике.",
+    "If you'd like to first learn a bit about programming, see":
+      "Если вы хотите сначала немного изучить программирование, ознакомьтесь со страницей",
+    "Scripts you write in Bitburner are real, working JavaScript and can be used to automate basic hacking logic, and almost any mechanic in the game.":
+      "Скрипты, которые вы пишете в Bitburner, являются настоящими рабочими программами на JavaScript. Их можно использовать для автоматизации базовой логики взлома и почти любой игровой механики.",
+    "Running any script requires in-game": "Для запуска любого скрипта требуется внутриигровое",
+    "with a minimum cost of 1.6 GB per script.":
+      "стоимостью не менее 1,6 ГБ на скрипт.",
+    "More complex scripts and API functions generally require more":
+      "Более сложные скрипты и функции API обычно требуют больше",
+    "which you will gain in many ways.": "которое можно получить разными способами.",
+    "Scripts can be run on any": "Скрипты можно запускать на любом",
+    "you have root access to, but not all servers you find will have useable RAM.":
+      "к которому у вас есть root-доступ, но не на всех найденных серверах будет доступно ОЗУ.",
+    "Being actual JavaScript, Bitburner also contains some quirks and limitations.":
+      "Поскольку Bitburner использует настоящий JavaScript, в нём есть свои особенности и ограничения.",
+    "For this reason, it is not possible for Bitburner scripts to run the same way at all times.":
+      "Поэтому скрипты Bitburner не могут работать совершенно одинаково во всех ситуациях.",
+    "However, you will continue to earn money and exp when Bitburner is not running, though at a slower rate.":
+      "Однако деньги и опыт продолжат начисляться даже тогда, когда Bitburner не запущен, хотя и медленнее.",
+    "Many commands and functions target other scripts running on the same or a different server.":
+      "Многие команды и функции обращаются к другим скриптам, работающим на этом или другом сервере.",
+    "Therefore, there must be a way to specify which script you want to affect.":
+      "Поэтому нужно указать, на какой именно скрипт должно повлиять действие.",
+    "One way to identify a script is by its unique PID (Process IDentifier).":
+      "Один из способов идентифицировать скрипт — использовать его уникальный PID (идентификатор процесса).",
+    "A PID number is returned from": "Номер PID возвращается методом",
+    "and is also shown in the output of": "и также отображается в выводе",
+    "A second way to identify scripts is by filename, hostname":
+      "Второй способ идентифицировать скрипты — по имени файла, имени хоста",
+    "and arguments.": "и аргументам.",
+    "However, you will probably run multiple copies of a script with the same arguments, so this method is not necessarily":
+      "Однако, скорее всего, вы будете запускать несколько копий скрипта с одинаковыми аргументами, поэтому этот способ не обязательно будет",
+    "to a script.": "уникальным для скрипта.",
+    "In case of multiple matches, most functions will return an arbitrary one (typically the oldest).":
+      "Если найдено несколько совпадений, большинство функций вернёт произвольный результат, обычно самый старый.",
+    "In order to reference a file,": "Чтобы сослаться на файл,",
+    "require the full absolute file path.": "требуют указать полный абсолютный путь к файлу.",
+    "A full file path must begin with a forward slash (/) if that file is not in the root directory.":
+      "Полный путь к файлу должен начинаться с косой черты (/), если файл находится не в корневом каталоге.",
+    "See": "См.",
+    "for more details.": "для получения дополнительной информации.",
+    Server: "Сервер",
+    server: "сервер",
+    Script: "Скрипт",
+    "this page": "этой странице",
+    arguments: "аргументы",
+    flags: "флаги",
+    exact: "точным",
+    "How Scripts Work Offline": "Как работают скрипты в офлайн-режиме",
+    "[Note --": "[Примечание: ",
+    "[See": "[См.",
+    "Remember that scripts are identified by their arguments as well as their name, and":
+      "Помните, что скрипты определяются не только именем, но и аргументами.",
+    "If searching by filename, arguments must be an":
+      "При поиске по имени файла аргументы должны быть",
+    "absolute file path": "абсолютный путь к файлу",
+    "begin with a forward slash (/) if that file is not in the root directory. For details on references in terminal commands, see":
+      "начинаться с косой черты (/), если файл находится не в корневом каталоге. Подробнее о ссылках в командах терминала см.",
+    must: "должен",
+    terminal: "терминал",
+    "it you must also add": "для неё нужно также добавить",
+    "Examples:": "Примеры:",
+    "usage.": "использование.",
+    "match - both the order and": "совпадением — важны и порядок, и",
+    "of the arguments you supply matter.": "переданных аргументов.",
+    "require the": "требуют",
+    full: "полный",
+    "absolute file path. For example": "абсолютный путь к файлу. Например:",
+    "A full file path": "Полный путь к файлу",
+    "must begin with a forward slash (/) if that file is not in the root directory. For details on references in terminal commands, see":
+      "должен начинаться с косой черты (/), если файл находится не в корневом каталоге. Подробнее о ссылках в командах терминала см.",
+    ", and": ", и",
+    "or the": "или",
+    "terminal command detailed below": "команду терминала, описанную ниже",
+    '"n" threads': 'потоков «n»',
+    usage: "использование",
+    Examples: "Примеры:",
+    Run: "Запуск",
+    "single-threaded with no arguments::": "в одном потоке без аргументов:",
+    "with 10 threads and no arguments:": "с десятью потоками и без аргументов:",
+    "single-threaded with three arguments:": "в одном потоке с тремя аргументами:",
+    "with 50 threads and a single argument:": "с пятьюдесятью потоками и одним аргументом:",
+    "in order to": "чтобы",
+    "argument to the": "аргумент к команде",
+    "command as so:": "команды:",
+    "When running a script, you can use": "При запуске скрипта можно использовать",
+    "which the script's logic can access and act on, allowing flexibility in your script designs.":
+      "к которым логика скрипта может обращаться и применять их, что делает конструкции скриптов гибче.",
+    "For example allowing you to get different results or attack different targets without re-writing your code:":
+      "Например, это позволяет получать разные результаты или атаковать разные цели без переписывания кода:",
+    "A script can be run with multiple threads, which we call \"multithreading.\"":
+      "Скрипт можно запустить с несколькими потоками — это называется «многопоточностью».",
+    "Multithreading affects every call to the": "Многопоточность влияет на каждый вызов",
+    "methods, multiplying their effects by the number of threads used.":
+      "методов, умножая их эффект на количество используемых потоков.",
+    "For example, if a script run with 1 thread is able to hack":
+      "Например, если скрипт с одним потоком может украсть при взломе",
+    "then running the same script with 5 threads would hack":
+      "то при запуске того же скрипта с пятью потоками он украдёт",
+    "Scripts will not actually become multithreaded in the real-world sense - Javascript is a \"single-threaded\" coding language.":
+      "Скрипты не становятся многопоточными в буквальном смысле: JavaScript — однопоточный язык программирования.",
+    "When \"multithreading\" a script, the total":
+      "При запуске скрипта с «многопоточностью» общую стоимость",
+    "cost can be calculated by simply multiplying the":
+      "можно рассчитать простым умножением стоимости",
+    "cost of a single instance of your script by the number of threads you will use.":
+      "одного экземпляра скрипта на количество используемых потоков.",
+    "Sometimes it might be necessary for a script to never end and keep doing a particular task.":
+      "Иногда скрипту необходимо работать бесконечно и постоянно выполнять определённую задачу.",
+    "In that case you would want to write your script in a never-ending loop, like":
+      "В таком случае скрипт следует написать в виде бесконечного цикла, например",
+    "However, if you are not careful, this can crash your game.":
+      "Однако неосторожность может привести к сбою игры.",
+    "If the code inside the loop doesn't": "Если код внутри цикла не использует",
+    "for some time, it will never give other scripts and the game itself time to process.":
+      "в течение некоторого времени, другие скрипты и сама игра не получат времени на обработку.",
+    "To help you find this potential bug, any":
+      "Чтобы помочь найти эту потенциальную ошибку, любой",
+    "loop without any": "цикл без",
+    "statement inside it will be marked.": "оператора внутри будет отмечен.",
+    "A red decoration will appear on the left side of the script editor, telling you about the issue.":
+      "В левой части редактора скриптов появится красная отметка с информацией о проблеме.",
+    "If you are really sure that this is not an oversight, you can suppress the warning using the comment":
+      "Если вы уверены, что это не ошибка, предупреждение можно отключить комментарием",
+    "directly above the loop.": "непосредственно над циклом.",
+    "Working with Scripts in Terminal": "Работа со скриптами в терминале",
+    "Here are some": "Вот несколько",
+    "commands you will find useful when working with scripts:":
+      "команд, которые пригодятся при работе со скриптами:",
+    "Prints the logs of the script specified by the name and arguments to":
+      "Выводит логи скрипта, указанного по имени и аргументам, в",
+    "Remember that scripts are uniquely identified by their arguments as well as their name, and":
+      "Помните, что скрипты однозначно определяются не только именем, но и аргументами.",
+    "Arguments should be separated by a space.": "Аргументы нужно разделять пробелом.",
+    "For example, if you ran a script": "Например, если вы запустили скрипт",
+    "with the argument": "с аргументом",
+    "then in order to": "то для выполнения команды",
+    "it you must also add the": "для него нужно также добавить",
+    "as an argument for the": "как аргумент команды",
+    "Shows the current server's": "Показывает текущее использование и доступность",
+    "usage and availability": "на сервере",
+    "Stops a script that is running with the specified PID, or script name and arguments.":
+      "Останавливает скрипт по указанному PID либо по имени скрипта и аргументам.",
+    "Check how much": "Показывает, сколько",
+    "a script requires to run with": "требуется скрипту для запуска с",
+    "Create/Edit a script.": "Создаёт или редактирует скрипт.",
+    "The name of a script must end with a script extension":
+      "Имя скрипта должно заканчиваться расширением скрипта",
+    "You can also create a text file with a text extension":
+      "Также можно создать текстовый файл с расширением",
+    "Displays all scripts that are actively running on the current":
+      "Показывает все активно работающие скрипты на текущем",
+    "Permanently delete a script from the": "Безвозвратно удаляет скрипт с",
+    "Can only be undone with a save import.":
+      "Отменить это можно только импортом сохранения.",
+    "Run a script with n threads and the specified arguments.":
+      "Запускает скрипт с указанным числом потоков и аргументами.",
+    "Each argument should be separated by a space.": "Каждый аргумент нужно разделять пробелом.",
+    "Both the thread count and arguments are optional.":
+      "Количество потоков и аргументы необязательны.",
+    "If neither are specified, then the script will be run with a single thread and no arguments.":
+      "Если они не указаны, скрипт запустится с одним потоком и без аргументов.",
+    "Displays the logs of the script specified by the PID or filename and arguments.":
+      "Показывает логи скрипта, указанного по PID либо имени файла и аргументам.",
+    "Remember that scripts are identified by their arguments as well as their filename.":
+      "Помните, что скрипты определяются не только именем файла, но и аргументами.",
+    "Prints all scripts running on the server and their":
+      "Выводит все работающие на сервере скрипты и их",
+    "Server Statistics": "Характеристики сервера",
+    "Identifying Servers": "Идентификация серверов",
+    "Cloud Servers": "Облачные серверы",
+    "Hackable Servers": "Взламываемые серверы",
+    "Server Connections": "Соединения между серверами",
+    "In this game, a server refers to a computer that can be connected to, accessed, and manipulated through the":
+      "В этой игре сервер — это компьютер, к которому можно подключиться, получить доступ и которым можно управлять через",
+    "All servers in the game are connected to each other to form a large, global network.":
+      "Все серверы в игре соединены друг с другом, образуя большую глобальную сеть.",
+    "To learn about how to navigate this network and connect to other servers, see the":
+      "Чтобы узнать, как перемещаться по этой сети и подключаться к другим серверам, см.",
+    "Each server has its own statistics, such as":
+      "У каждого сервера есть свои характеристики, например",
+    "required hacking level, and number of ports required to successfully":
+      "необходимый уровень взлома и количество портов, нужных для успешного выполнения",
+    "Perhaps the most important property of a server to make note of is its":
+      "Пожалуй, самое важное свойство сервера — его",
+    "which refers to how much memory is available on that machine.":
+      "то есть объём доступной памяти на этой машине.",
+    "is important because it is required to run":
+      "важно, поскольку оно необходимо для запуска",
+    "More": "Больше",
+    "allows the user to run more powerful and complicated":
+      "позволяет запускать более мощные и сложные",
+    "as well as executing scripts with more threads.":
+      "а также выполнять скрипты с большим количеством потоков.",
+    "commands can be used to check how much":
+      "можно использовать, чтобы проверить, сколько",
+    "a server has.": "есть на сервере.",
+    "Some servers have some randomized statistics, such as":
+      "Некоторые характеристики серверов генерируются случайно, например",
+    "max Money, or required hacking level.":
+      "максимальный запас денег или необходимый уровень взлома.",
+    "These statistics are randomly generated from a range of values.":
+      "Эти характеристики случайно выбираются из заданного диапазона.",
+    "A server is identified by its hostname.":
+      "Сервер определяется своим именем хоста.",
+    "A hostname is a label assigned to a server.":
+      "Имя хоста — это метка, присвоенная серверу.",
+    "A hostname will usually give you a general idea of what the server is.":
+      "По имени хоста обычно можно понять, что это за сервер.",
+    "For example, the company Nova Medical might have a server with the hostname":
+      "Например, у компании Nova Medical может быть сервер с именем хоста",
+    "Hostnames are unique.": "Имена хостов уникальны.",
+    "This means that if one server has the the hostname":
+      "Это означает, что если один сервер имеет имя хоста",
+    "then no other server in the game can have that that hostname.":
+      "то никакой другой сервер в игре не может иметь такое же имя.",
+    "There are many": "В игре есть множество",
+    "in the game that will require you to target a specific server by hostname.":
+      "которые требуют выбрать конкретный сервер по имени хоста.",
+    "The player starts with a single server: their home computer.":
+      "Игрок начинает с единственного сервера — домашнего компьютера.",
+    "This server will have the hostname": "Этот сервер имеет имя хоста",
+    "The player's home computer is special for a variety of reasons:":
+      "Домашний компьютер игрока особенный по нескольким причинам:",
+    "The home computer's": "У домашнего компьютера",
+    "can be upgraded.": "можно увеличить.",
+    "This can be done by visiting certain locations in the":
+      "Это можно сделать, посетив определённые места в разделе",
+    "The home computer persists through":
+      "Домашний компьютер сохраняется после установки",
+    "This means that you will not lose any": "Это означает, что вы не потеряете",
+    "upgrades or": "улучшения или",
+    "on your home computer when you install":
+      "на домашнем компьютере при установке",
+    "(you will, however, lose programs and messages on your home computer).":
+      "(однако программы и сообщения на домашнем компьютере будут потеряны).",
+    "The player can also purchase access to additional cloud servers for their use.":
+      "Игрок также может приобрести доступ к дополнительным облачным серверам.",
+    "These are virtual machines hosted remotely that the player has access to.":
+      "Это виртуальные машины, размещённые удалённо, к которым игрок получает доступ.",
+    "The advantage of cloud servers is that, in terms of":
+      "Преимущество облачных серверов в том, что с точки зрения",
+    "they are cheaper than upgrading your home computer.":
+      "они дешевле улучшения домашнего компьютера.",
+    "The disadvantage is that access to your cloud servers is lost when you install":
+      "Недостаток в том, что доступ к облачным серверам теряется после установки",
+    "and you will need to purchase access again.":
+      "и его придётся приобретать заново.",
+    "Most servers that are not owned by the player can be":
+      "Большинство серверов, которыми игрок не владеет, можно",
+    "for money and exp.": "ради денег и опыта.",
+    "Different servers have different levels of security, but also offer different rewards when being hacked.":
+      "У разных серверов разный уровень безопасности и разные награды за взлом.",
+    "The servers are in a randomly organized tree-structure.":
+      "Серверы расположены в случайно организованной древовидной структуре.",
+    "The distance from the home computer to each server is fixed, but the exact route to them is randomized when you install":
+      "Расстояние от домашнего компьютера до каждого сервера фиксировано, но точный маршрут к ним меняется после установки",
+    "In general, the further away from home computer a server is the higher its statistics are.":
+      "В целом чем дальше сервер находится от домашнего компьютера, тем выше его характеристики.",
 
     // Frequently visible messages
     "Auto-saves are disabled!": "Автосохранение отключено!",
@@ -331,6 +825,121 @@
     "go to previous tab": "перейти на предыдущую вкладку",
     "An error occurred while loading monaco-vim:": "При загрузке monaco-vim произошла ошибка:",
     "You saved a file on a non-home server!": "Вы сохранили файл не на домашнем сервере!",
+
+    // Documentation page: Augmentations. Keep inline links, menu identifiers,
+    // and API/code names intact while translating the explanatory text around them.
+    "Advances in science and medicine have led to powerful new technologies that allow people to augment themselves beyond normal human capabilities.":
+      "Развитие науки и медицины привело к появлению мощных новых технологий, позволяющих людям выходить за пределы обычных человеческих возможностей с помощью аугментаций.",
+    "There are many different types of Augmentations, ranging from cybernetic to genetic to biological.":
+      "Существует множество разных типов аугментаций: от кибернетических до генетических и биологических.",
+    "Acquiring these Augmentations enhances the user's physical and mental faculties.":
+      "Получение этих аугментаций улучшает физические и умственные способности пользователя.",
+    "Augmentations provide persistent upgrades in the form of multipliers.":
+      "Аугментации дают постоянные улучшения в виде множителей.",
+    "These multipliers apply to a wide variety of things such as stats, experience gain, and ":
+      "Эти множители влияют на самые разные параметры, например характеристики, получение опыта и ",
+    "These multipliers apply to a wide variety of things such as stats, experience gain, and":
+      "Эти множители влияют на самые разные параметры, например характеристики, получение опыта и",
+    ", just to name a few. The effects of Augmentations stack multiplicatively.":
+      ", если назвать лишь несколько примеров. Эффекты аугментаций складываются мультипликативно.",
+    ", just to name a few. The effects of Augmentations stack multiplicatively. Your multipliers can be viewed in the":
+      ", если назвать лишь несколько примеров. Эффекты аугментаций складываются мультипликативно. Свои множители можно посмотреть на страницах",
+    "Your multipliers can be viewed in the ": "Свои множители можно посмотреть на страницах ",
+    " pages.": " страницах.",
+    "How to acquire Augmentations": "Как получить аугментации",
+    "Because of how powerful Augmentations are, the technology behind them is kept private and secret by the corporations and organizations that create them.":
+      "Из-за высокой мощности аугментаций корпорации и организации, создающие их, держат лежащие в их основе технологии в тайне.",
+    "Therefore, the only way for the player to obtain Augmentations is through ":
+      "Поэтому единственный способ получить аугментации — через ",
+    "Therefore, the only way for the player to obtain Augmentations is through":
+      "Поэтому единственный способ получить аугментации — через",
+    "After joining a ": "После вступления во ",
+    ". After joining a": ". После вступления во",
+    " and earning enough ": " и получения достаточного количества ",
+    "and earning enough": "и получения достаточного количества",
+    " in it, you will be able to purchase its Augmentations.":
+      " в ней вы сможете покупать её аугментации.",
+    "in it, you will be able to purchase its Augmentations. Different":
+      "в ней вы сможете покупать её аугментации. Разные",
+    "Different ": "Разные ",
+    " offer different Augmentations.": " предлагают разные аугментации.",
+    "offer different Augmentations.": "предлагают разные аугментации.",
+    "Augmentations must be purchased in order to be installed, and they are fairly expensive.":
+      "Аугментации нужно купить перед установкой, и стоят они довольно дорого.",
+    "They also require ": "Кроме того, для них требуется ",
+    " with a ": " с ",
+    "with a": "с",
+    " before they will let you purchase their Augmentations.":
+      ", прежде чем вам разрешат покупать их аугментации.",
+    "before they will let you purchase their Augmentations.":
+      ", прежде чем вам разрешат покупать их аугментации.",
+    "Installing Augmentations": "Установка аугментаций",
+    "You will not gain the benefits of your purchased Augmentations until you install them.":
+      "Вы не получите преимуществ купленных аугментаций, пока не установите их.",
+    "You can choose to install Augmentations through the ":
+      "Установить аугментации можно через вкладку меню ",
+    "You can choose to install Augmentations through the":
+      "Установить аугментации можно через вкладку меню",
+    "menu tab, found under ": " , расположенную в разделе ",
+    "menu tab, found under": " , расположенную в разделе",
+    "Unfortunately, installing Augmentations has side effects.":
+      "К сожалению, установка аугментаций имеет побочные эффекты.",
+    "You will lose most of the progress you've made, including your skills, stats, and money.":
+      "Вы потеряете большую часть достигнутого прогресса, включая навыки, характеристики и деньги.",
+    "You will have to start over, but you will have all of the Augmentations you have installed to help you progress.":
+      "Вам придётся начать заново, но все установленные аугментации останутся и помогут развиваться дальше.",
+    "This is the game's \"soft reset\" or \"prestige\" mechanic.":
+      "Это игровая механика «мягкого сброса» или «престижа».",
+    "To summarize, here is a list of everything you will ":
+      "Итак, вот список всего, что вы ",
+    "To summarize, here is a list of everything you will":
+      "Итак, вот список всего, что вы",
+    LOSE: "ПОТЕРЯЕТЕ",
+    "when you install an Augmentation:": "при установке аугментации:",
+    "Stats/Skills": "Характеристики/навыки",
+    "Scripts on all servers EXCEPT your home computer":
+      "Скрипты на всех серверах, кроме домашнего компьютера",
+    servers: "серверов",
+    "Cloud servers": "Облачные серверы",
+    Favor: "Благосклонность",
+    "Jobs and ": "Работа и ",
+    memberships: "членство",
+    Stocks: "Акции",
+    "Cloud ": "Облачные ",
+    "TOR router": "Маршрутизатор TOR",
+    "Here is everything you will ": "Вот список всего, что вы ",
+    "Every Augmentation you have previously installed":
+      "Все ранее установленные аугментации",
+    "Scripts on your home computer": "Скрипты на домашнем компьютере",
+    "Core Upgrades on your home computer": "улучшения ядер на домашнем компьютере",
+    "World Stock Exchange account": "аккаунт Всемирной фондовой биржи",
+    "TIX API": "TIX API",
+    "Access": "доступ",
+    "Purchasing Multiple Augmentations": "Покупка нескольких аугментаций",
+    "You do not have to install an Augmentation right after you purchase it.":
+      "Необязательно устанавливать аугментацию сразу после покупки.",
+    "You can purchase as many Augmentations as you'd like before you choose to install them.":
+      "Можно купить любое количество аугментаций, а затем установить их одновременно.",
+    "When you install your purchased Augmentations they will ":
+      "После установки купленных аугментаций они ",
+    "When you install your purchased Augmentations they will":
+      "После установки купленных аугментаций они",
+    "get installed at once.": "установятся одновременно.",
+    "There are a few drawbacks to this, however.": "Однако у этого есть несколько недостатков.",
+    "First, obviously, you won't gain the benefits of your purchased Augmentations until after you install them.":
+      "Во-первых, до установки вы не получите преимуществ купленных аугментаций.",
+    "Second, purchasing multiple Augmentations before installing them will cause the Augmentations to get progressively more expensive.":
+      "Во-вторых, покупка нескольких аугментаций до установки будет постепенно увеличивать их стоимость.",
+    "When you purchase an Augmentation, the price of purchasing another Augmentation doubles.":
+      "После покупки аугментации цена следующей аугментации удваивается.",
+    "This multiplier stacks for each Augmentation you purchase.":
+      "Этот множитель накапливается для каждой купленной аугментации.",
+    "Once you install your purchased Augmentations, their costs are reset back to the original prices.":
+      "После установки купленных аугментаций их стоимость возвращается к исходной.",
+    "You can only purchase each augmentation once, with the exception of ":
+      "Каждую аугментацию можно купить только один раз, кроме ",
+    "You can only purchase each augmentation once, with the exception of":
+      "Каждую аугментацию можно купить только один раз, кроме",
 
     // Augmentation, BitNode and progress screens
     "It's always a good idea to backup/export your save!": "Всегда полезно создать резервную копию или экспортировать сохранение!",
@@ -646,7 +1255,6 @@
     "You gained": "Вы получили",
     "reputation divided amongst your factions": "репутации, распределённой между вашими фракциями",
     "You are currently working as a": "Сейчас вы работаете в должности",
-    at: "в",
     "Current Company Reputation:": "Репутация в текущей компании:",
     "Current Faction Reputation:": "Репутация в текущей фракции:",
     "You are currently": "Сейчас вы",
@@ -1070,7 +1678,6 @@
     "You are currently working on grafting": "Сейчас вы вживляете",
     "Stop grafting": "Прекратить вживление",
     "If you cancel, your work will": "Если отменить, работа",
-    "not": "не",
     "carrying out hacking contracts": "выполняете контракты на взлом",
     "carrying out field missions": "выполняете полевые задания",
     "performing security detail": "несёте охранную службу",
@@ -2418,7 +3025,7 @@
     "Church of the Machine God": "Церковь Бога-машины",
     "Shadowed Walkway": "Тёмный переход",
     "Central Intelligence Agency": "Центральное разведывательное управление",
-    "Sector-12 City Hall": "Мэрия Сектора-12",
+    "Sector-12 City Hall": "Мэрия Sector-12",
     "National Security Agency": "Агентство национальной безопасности",
     "Iron Gym": "Зал Iron",
     "Powerhouse Gym": "Зал Powerhouse",
@@ -2461,7 +3068,6 @@
     "An eerie aura surrounds this area. You feel you should leave.": "Это место окружает зловещая аура. Вам кажется, что стоит уйти.",
     "You don't have enough money to buy": "У вас недостаточно денег, чтобы купить",
     "You bought": "Вы купили",
-    "for": "за",
     "The city is dark and quiet. It stretches out below this decrepit walkway, a seemingly endless expanse of decaying concrete and rusted metal.":
       "Город тёмен и тих. Он простирается под этим ветхим переходом, кажущийся бесконечным простор из разрушающегося бетона и ржавого металла.",
     "Nearby, an ancient automat sits askew, its screen flickering with static, still covered with ads for the compact disks it sells for credits.":
@@ -3854,7 +4460,6 @@
     "shares (": "акций (",
     ") will cost": ") будет стоить",
     "will result in a gain": "принесёт прибыль",
-    "of": "в размере",
     "You do not have this many shares in the Long position": "У вас нет такого количества акций в длинной позиции",
     "You do not have this many shares in the Short position": "У вас нет такого количества акций в короткой позиции",
     "Invalid input for quantity (number of shares):": "Недопустимое количество акций:",
@@ -4667,11 +5272,82 @@
     "It is possible write four as a sum in exactly four different ways":
       "Четвёрку можно представить в виде суммы ровно четырьмя различными способами",
 
-    not: "не",
   });
 
   const protectedSelector =
     "script,style,noscript,textarea,code,pre code,[contenteditable=\"true\"],.monaco-editor,.ace_editor,.terminal-input,#terminal,.textfield,.code";
+
+  // Terminal commands and their arguments stay in the original form. Only
+  // the explanatory text from `help` output is translated below.
+  const terminalHelpTranslations = Object.freeze({
+    "Command /help not found.": "Команда /help не найдена.",
+    "Type 'help name' to learn more about the command":
+      "Введите «help name», чтобы узнать больше о команде",
+    "Create or display Terminal aliases": "Создать или показать псевдонимы терминала",
+    "Get information about the current machine": "Получить сведения о текущей машине",
+    "Install a backdoor on the current machine": "Установить бэкдор на текущую машину",
+    "Purchase a program through the Dark Web": "Купить программу через Тёмную сеть",
+    "Display the contents of a file": "Показать содержимое файла",
+    "Change to a new directory": "Перейти в новый каталог",
+    "Display changelog": "Показать список изменений",
+    "Print a script's logs to Terminal": "Вывести журналы скрипта в терминал",
+    "Clear all text on the terminal": "Очистить весь текст в терминале",
+    "See 'clear' command": "См. команду «clear»",
+    "Connects to a remote server": "Подключиться к удалённому серверу",
+    "Copy a file": "Скопировать файл",
+    "Downloads scripts or text files to your computer":
+      "Скачать скрипты или текстовые файлы на компьютер",
+    "Upload scripts or text files from your computer":
+      "Загрузить скрипты или текстовые файлы с компьютера",
+    "Evaluate a mathematical expression": "Вычислить математическое выражение",
+    "Check the machine's memory (RAM) usage": "Проверить использование памяти (ОЗУ) машины",
+    "Search for PATTERN (string/regular expression) in each FILE and print results to terminal":
+      "Найти ШАБЛОН (строку/регулярное выражение) в каждом ФАЙЛЕ и вывести результаты в терминал",
+    "Spoof money in a servers bank account, increasing the amount available.":
+      "Подделать деньги на банковском счёте сервера, увеличив доступную сумму.",
+    "Hack the current machine": "Взломать текущую машину",
+    "Display this help text, or the help text for a command":
+      "Показать этот текст справки или справку по команде",
+    "Display the terminal history": "Показать историю терминала",
+    "Connect to home computer": "Подключиться к домашнему компьютеру",
+    "Displays the hostname of the machine": "Показать имя хоста машины",
+    "Displays the IP address of the machine": "Показать IP-адрес машины",
+    "Stops the specified script on the current server":
+      "Остановить указанный скрипт на текущем сервере",
+    "Stops all running scripts on the current machine":
+      "Остановить все запущенные скрипты на текущей машине",
+    "Displays all files on the machine": "Показать все файлы на машине",
+    "Displays the number of CPU cores on the machine":
+      "Показать количество ядер процессора на машине",
+    "Displays the amount of RAM required to run the script":
+      "Показать объём ОЗУ, необходимый для запуска скрипта",
+    "Move/rename a text or script file": "Переместить или переименовать текстовый файл или скрипт",
+    "Text editor - Open up and edit one or more scripts or text files":
+      "Текстовый редактор — открыть и изменить один или несколько скриптов или текстовых файлов",
+    "Display all scripts that are currently running": "Показать все запущенные скрипты",
+    "Delete a file from the server": "Удалить файл с сервера",
+    "Run a program, a script, or a coding contract":
+      "Запустить программу, скрипт или контракт на программирование",
+    "Prints all immediately-available network connections":
+      "Показать все доступные непосредственно сетевые подключения",
+    "Prints info for all servers up to d nodes away":
+      "Показать сведения обо всех серверах на расстоянии до d узлов",
+    "Copies scripts, text files, or .lit files to a destination server":
+      "Скопировать скрипты, текстовые файлы или файлы .lit на сервер назначения",
+    "Shows whether you have root access on this computer":
+      "Показать, есть ли у вас root-доступ на этом компьютере",
+    "Displays dynamic logs for the specified script":
+      "Показывать динамический журнал указанного скрипта",
+    "Displays all running scripts and their RAM usage":
+      "Показать все запущенные скрипты и их использование ОЗУ",
+    "Deletes the specified alias": "Удалить указанный псевдоним",
+    "Reduce the security of the current machine": "Снизить уровень защиты текущей машины",
+    "Retrieves code/text from a web server": "Получить код или текст с веб-сервера",
+    "Text editor - Open up and edit one or more scripts or text files in vim mode":
+      "Текстовый редактор — открыть и изменить один или несколько скриптов или текстовых файлов в режиме vim",
+    "Open up and edit one or more scripts or text files in vim mode":
+      "Открыть и изменить один или несколько скриптов или текстовых файлов в режиме vim",
+  });
 
   function isProtected(node) {
     const parent = node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
@@ -4712,6 +5388,26 @@
       if (translated.includes(source)) translated = translated.split(source).join(translations[source]);
     }
     return translated;
+  }
+
+  function translateTerminalHelp() {
+    const terminal = document.querySelector("#terminal");
+    if (!terminal) return;
+
+    const walker = document.createTreeWalker(terminal, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    let current;
+    while ((current = walker.nextNode())) nodes.push(current);
+
+    for (const node of nodes) {
+      let translated = node.nodeValue || "";
+      for (const source of Object.keys(terminalHelpTranslations).sort((a, b) => b.length - a.length)) {
+        if (translated.includes(source)) {
+          translated = translated.split(source).join(terminalHelpTranslations[source]);
+        }
+      }
+      if (translated !== node.nodeValue) node.nodeValue = translated;
+    }
   }
 
   function translateText(value) {
@@ -4765,11 +5461,43 @@
     }
   }
 
-  function start() {
-    if (document.title && !/RU by memasevich/i.test(document.title)) {
-      document.title += " — RU by memasevich";
+  // The terminal is intentionally protected so commands and code stay intact.
+  // Add the translator credit only to the game's own version banner, never to
+  // user scripts, commands, filenames, server names, or terminal output.
+  function annotateTerminalVersion() {
+    const terminal = document.querySelector("#terminal");
+    if (!terminal) return;
+
+    const walker = document.createTreeWalker(terminal, NodeFilter.SHOW_TEXT);
+    const versionPattern = /^\s*Bitburner v\d+\.\d+\.\d+\s+\([^\r\n)]+\)\s*$/;
+    const nodes = [];
+    let current;
+    while ((current = walker.nextNode())) nodes.push(current);
+
+    for (const node of nodes) {
+      const value = node.nodeValue || "";
+      if (versionPattern.test(value)) {
+        const match = /^(\s*)([\s\S]*?)(\s*)$/.exec(value);
+        node.nodeValue = `${match[1]}${match[2]} — RU by memasevich${match[3]}`;
+      }
     }
+  }
+
+  function start() {
+    const titleSuffix = " — RU by memasevich";
+    const ensureTitle = () => {
+      if (document.title && !/RU by memasevich/i.test(document.title)) {
+        document.title += titleSuffix;
+      }
+    };
+
+    // The game bundle can rewrite document.title after this layer starts.
+    // Re-apply the credit so the Electron window title keeps the RU marker.
+    ensureTitle();
+    window.setInterval(ensureTitle, 500);
     scan(document.body);
+    annotateTerminalVersion();
+    translateTerminalHelp();
     const observer = new MutationObserver((records) => {
       for (const record of records) {
         if (record.type === "characterData") {
@@ -4778,6 +5506,8 @@
           for (const node of record.addedNodes) scan(node);
         }
       }
+      annotateTerminalVersion();
+      translateTerminalHelp();
     });
     observer.observe(document.body, { childList: true, subtree: true, characterData: true });
     window.BitburnerRussianTranslation = { version: "0.1.0", translations };
