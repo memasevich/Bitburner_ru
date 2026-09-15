@@ -127,7 +127,6 @@ Steam восстановит оригинальные файлы, а русиф�
 - Telegram: [@memasev1ch](https://t.me/memasev1ch)
 - Boosty: [boosty.to/memasevich](https://boosty.to/memasevich)
 - Поддержать разработку: [boosty.to/memasevich/donate](https://boosty.to/memasevich/donate)
-- DonatePay: [поддержать автора](https://donatepay.ru/don/1497838)
 
 ## Благодарность
 
