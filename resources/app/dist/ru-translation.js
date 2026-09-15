@@ -5696,6 +5696,27 @@
       .map(([source, target]) => [normalizeDocumentationText(source), target]),
   );
 
+  // Documentation text is rendered as many separate text nodes around links
+  // and inline-code spans. Fragment-level dynamic replacements such as
+  // "You can go to the" or "Before we write the" therefore create broken
+  // hybrids ("... page", "... here are some things..."). The complete-page
+  // documentation sidecar handles those blocks; keep the old dynamic fallback
+  // for the rest of the UI only.
+  function isDocumentationTextNode(node) {
+    const element = node && (node.nodeType === Node.TEXT_NODE ? node.parentElement : node);
+    if (!element) return false;
+    const heading = document.querySelector("h1");
+    if (!heading) return false;
+    const semanticRoot = heading.closest("main,[role='main']");
+    if (semanticRoot) return semanticRoot.contains(element);
+    let root = heading.parentElement;
+    for (let index = 0; root && index < 6; index += 1) {
+      if (root.contains(element)) return true;
+      root = root.parentElement;
+    }
+    return false;
+  }
+
   // Terminal commands and their arguments stay in the original form. Only
   // the explanatory text from `help` output is translated below.
   const terminalHelpTranslations = Object.freeze({
@@ -5829,7 +5850,7 @@
     }
   }
 
-  function translateText(value) {
+  function translateText(value, contextNode) {
     const match = /^(\s*)([\s\S]*?)(\s*)$/.exec(value);
     if (!match || match[2] === "") return value;
     const normalized = normalizeDocumentationText(match[2]);
@@ -5839,7 +5860,13 @@
     // mixed Russian/English sentences from generic UI fragments.
     const isLongProse = match[2].length >= 48 && /\s/.test(match[2]);
     const translatedValue =
-      translated === undefined && isLongProse ? match[2] : translated === undefined ? translateDynamicText(match[2]) : translated;
+      translated === undefined && isLongProse
+        ? match[2]
+        : translated === undefined && isDocumentationTextNode(contextNode)
+          ? match[2]
+          : translated === undefined
+            ? translateDynamicText(match[2])
+            : translated;
     return translatedValue === match[2] ? value : match[1] + translatedValue + match[3];
   }
 
@@ -5855,7 +5882,7 @@
   function translateAttribute(element, attribute) {
     const value = element.getAttribute(attribute);
     if (value == null) return;
-    const translated = translateText(value);
+    const translated = translateText(value, element);
     if (translated !== value) element.setAttribute(attribute, translated);
   }
 
@@ -5864,7 +5891,7 @@
 
     if (root.nodeType === Node.TEXT_NODE) {
       if (!isProtected(root)) {
-        const translated = translateText(root.nodeValue || "");
+        const translated = translateText(root.nodeValue || "", root);
         if (translated !== root.nodeValue) root.nodeValue = translated;
       }
       return;
@@ -5882,7 +5909,7 @@
     while ((current = walker.nextNode())) textNodes.push(current);
     for (const node of textNodes) {
       if (!isProtected(node)) {
-        const translated = translateText(node.nodeValue || "");
+        const translated = translateText(node.nodeValue || "", node);
         if (translated !== node.nodeValue) node.nodeValue = translated;
       }
     }
