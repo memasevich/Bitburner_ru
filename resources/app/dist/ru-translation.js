@@ -5679,6 +5679,17 @@
   const protectedSelector =
     "script,style,noscript,textarea,code,pre code,[contenteditable=\"true\"],.monaco-editor,.ace_editor,.terminal-input,#terminal,.textfield,.code";
 
+  // Markdown rendered by the game can add insignificant whitespace around
+  // links and inline elements. Keep a normalized lookup for full sentences so
+  // those sentences are translated as a unit instead of being assembled from
+  // dangerous fragments such as "and" or " of ".
+  const normalizeDocumentationText = (value) => value.replace(/\s+/g, " ").trim();
+  const normalizedTranslations = new Map(
+    Object.entries(translations)
+      .filter(([source]) => source.length >= 12 && /\s/.test(source))
+      .map(([source, target]) => [normalizeDocumentationText(source), target]),
+  );
+
   // Terminal commands and their arguments stay in the original form. Only
   // the explanatory text from `help` output is translated below.
   const terminalHelpTranslations = Object.freeze({
@@ -5815,9 +5826,24 @@
   function translateText(value) {
     const match = /^(\s*)([\s\S]*?)(\s*)$/.exec(value);
     if (!match || match[2] === "") return value;
-    const translated = translations[match[2]];
-    const translatedValue = translated === undefined ? translateDynamicText(match[2]) : translated;
+    const normalized = normalizeDocumentationText(match[2]);
+    const translated = translations[match[2]] ?? normalizedTranslations.get(normalized);
+    // Long prose is frequently split around Markdown links. If there is no
+    // complete-sentence translation, leave it intact rather than producing
+    // mixed Russian/English sentences from generic UI fragments.
+    const isLongProse = match[2].length >= 48 && /\s/.test(match[2]);
+    const translatedValue =
+      translated === undefined && isLongProse ? match[2] : translated === undefined ? translateDynamicText(match[2]) : translated;
     return translatedValue === match[2] ? value : match[1] + translatedValue + match[3];
+  }
+
+  function translateDocumentationHeadings() {
+    for (const heading of document.querySelectorAll("h1,h2,h3,h4,h5,h6")) {
+      if (isProtected(heading)) continue;
+      const source = normalizeDocumentationText(heading.textContent || "");
+      const translated = translations[source] ?? normalizedTranslations.get(source);
+      if (translated && translated !== heading.textContent) heading.textContent = translated;
+    }
   }
 
   function translateAttribute(element, attribute) {
@@ -5898,6 +5924,7 @@
     ensureTitle();
     window.setInterval(ensureTitle, 500);
     scan(document.body);
+    translateDocumentationHeadings();
     annotateTerminalVersion();
     translateTerminalHelp();
     const observer = new MutationObserver((records) => {
@@ -5908,6 +5935,7 @@
           for (const node of record.addedNodes) scan(node);
         }
       }
+      translateDocumentationHeadings();
       annotateTerminalVersion();
       translateTerminalHelp();
     });
