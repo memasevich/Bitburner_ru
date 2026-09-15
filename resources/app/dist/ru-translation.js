@@ -5299,6 +5299,8 @@
     "The Stock Market": "Фондовый рынок",
     "Getting Started": "Начало работы",
     "Note:": "Примечание:",
+    "Note": "Примечание",
+    ": The": ": ",
     "and strategies in this guide aren't necessarily optimal or comprehensive. This guide is tailored to help those with minimal programming knowledge experience Bitburner during early stages of the game.":
       "и стратегии из этого руководства не обязательно оптимальны или исчерпывающи. Руководство рассчитано на игроков с минимальными знаниями программирования и поможет познакомиться с Bitburner на ранних этапах игры.",
     "If you are confused or overwhelmed by the game, especially the coding and scripting aspects, this guide is perfect for you!":
@@ -5307,9 +5309,13 @@
       "Bitburner — инкрементальная RPG в киберпанк-сеттинге. Вы будете развиваться, повышая",
     "earning money, and with practice, advancing your real-world coding skills. After reaching certain criteria, you will receive invitations from in-game":
       "зарабатывая деньги и совершенствуя реальные навыки программирования. Достигнув определённых условий, вы получите приглашения от внутриигровых",
+    ", earning money, and with practice, advancing your real-world coding skills. After reaching certain criteria, you will receive invitations from in-game":
+      ", зарабатывая деньги и совершенствуя реальные навыки программирования. Достигнув определённых условий, вы получите приглашения от внутриигровых",
     "and working for them will unlock various": "а работа в них откроет различные",
     "which are purchased and \"installed,\" adding a persistent bonus to":
       "которые можно покупать и «устанавливать», получая постоянный бонус к",
+    ", which are purchased and \"installed,\" adding a persistent bonus to":
+      ", которые можно покупать и «устанавливать», получая постоянный бонус к",
     "and other abilities. Working with Factions and installing Augmentations is a basic step for progressing in Bitburner.":
       "и другим способностям. Работа с фракциями и установка аугментаций — базовый этап развития в Bitburner.",
     "The game has an open, minimalistic storyline that can be played in multiple ways to reach your goals. Since this guide is written as a basic introduction to Bitburner, it will not expose the entire scope or storyline available.":
