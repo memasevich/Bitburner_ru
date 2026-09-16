@@ -1,6 +1,6 @@
 # Bitburner v3.0.1 — русификатор RU by memasevich
 
-![Bitburner — русификатор by memasevich](assets/bitburner-ru-banner.png)
+![Bitburner — русификатор by memasevich](assets/bitburner-ru-banner.webp)
 
 Русификатор Bitburner для игроков, которым хочется разобраться в игре и получать удовольствие от неё без постоянного перевода английского текста.
 
@@ -137,6 +137,6 @@ Steam восстановит оригинальные файлы, а русиф�
 ---
 
 <p align="center">
-  <img src="assets/memasevich-logo.png" alt="memasevich" width="420" />
+  <img src="assets/memasevich-logo.webp" alt="memasevich" width="420" />
 </p>
 
