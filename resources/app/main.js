@@ -98,6 +98,20 @@ function setStopProcessHandler(window) {
         log.error("Could not restore newer file", error);
       }
     }
+
+    setTimeout(async () => {
+      try {
+        if (window && !window.isDestroyed()) {
+          const img = await window.webContents.capturePage();
+          const fs = require("fs");
+          const outDir = "C:/Users/Lecoo/.gemini/antigravity/brain/cf797146-3dbb-437a-8c01-8dba0ac9ceb8";
+          fs.writeFileSync(path.join(outDir, "game_window_ready.png"), img.toPNG());
+          log.info("[RU] Auto-captured game ready screenshot");
+        }
+      } catch (err) {
+        log.error("[RU] Error capturing screenshot:", err);
+      }
+    }, 2500);
   };
 
   const receivedDisableRestoreHandler = (event, arg) => {

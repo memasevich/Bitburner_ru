@@ -242,6 +242,22 @@ function getMenu(window) {
           })(),
         },
         {
+          label: "Сделать скриншот окна",
+          accelerator: "F12",
+          click: async () => {
+            try {
+              const img = await window.webContents.capturePage();
+              const fs = require("fs");
+              const outDir = "C:/Users/Lecoo/.gemini/antigravity/brain/cf797146-3dbb-437a-8c01-8dba0ac9ceb8";
+              const filePath = `${outDir}/game_screenshot_${Date.now()}.png`;
+              fs.writeFileSync(filePath, img.toPNG());
+              utils.writeToast(window, "Скриншот сохранён", "info");
+            } catch (err) {
+              log.error(err);
+            }
+          },
+        },
+        {
           type: "separator",
         },
         {

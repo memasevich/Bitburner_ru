@@ -5680,6 +5680,78 @@
     "Can I skip the Chemical division in round 2 and invest all funds in the Agriculture division?":
       "Можно ли пропустить химическое подразделение во втором раунде и вложить все средства в сельскохозяйственное?",
 
+    "Create program": "Создать программу",
+    "This page displays any programs that you are able to create. Writing the code for a program takes time, which can vary based on how complex the program is. If you are working on creating a program you can cancel at any time. Your progress will be saved and you can continue later.": "На этой странице показаны все программы, которые вы можете создать. Написание кода программы занимает время, которое зависит от её сложности. При создании программы вы можете отменить процесс в любой момент. Прогресс сохранится, и вы сможете продолжить позже.",
+    "Resume focus": "Возобновить концентрацию",
+    "Unlocks at hacking level:": "Открывается на уровне взлома:",
+    "Unlocks at hacking level: ": "Открывается на уровне взлома: ",
+    "Unlocks after you gain ": "Откроется после получения ещё ",
+    " more hacking levels": " уровней взлома",
+    "Current completion:": "Текущий прогресс:",
+    "Current completion: ": "Текущий прогресс: ",
+    "This virus is used to gain root access to a machine if enough ports are opened.": "Этот вирус используется для получения root-доступа к машине, если открыто достаточно портов.",
+    "This program executes a brute force attack that opens SSH ports": "Эта программа выполняет атаку методом перебора, открывая порты SSH",
+    "This program cracks open FTP ports": "Эта программа взламывает порты FTP",
+    "This program opens SMTP ports by redirecting data": "Эта программа открывает порты SMTP путём перенаправления данных",
+    "This virus opens up HTTP ports": "Этот вирус открывает порты HTTP",
+    "This virus opens SQL ports": "Этот вирус открывает порты SQL",
+    "This program allows you to use the scan-analyze command with a depth up to 5": "Эта программа позволяет использовать команду scan-analyze с глубиной до 5",
+    "This program allows you to use the scan-analyze command with a depth up to 10": "Эта программа позволяет использовать команду scan-analyze с глубиной до 10",
+    "This program is used to display hacking and Netscript-related information about servers": "Эта программа выводит информацию о взломе и параметры Netscript для серверов",
+    "This program allows you to directly connect to other servers through the 'scan-analyze' command": "Эта программа позволяет напрямую подключаться к другим серверам через команду scan-analyze",
+    "This program allows you to use the formulas API": "Эта программа позволяет использовать formulas API",
+    "This program creates a portal to the BitNode Nexus (allows you to restart and switch BitNodes)": "Эта программа создаёт портал в BitNode Nexus (позволяет перезапустить и сменить BitNode)",
+    "You can share free RAM of your home computer with your factions to get a bonus multiplier for reputation gain. Each time you share your free RAM, you get a boost for ": "Вы можете выделить свободное ОЗУ домашнего компьютера вашим фракциям, чтобы получить множитель бонуса к приросту репутации. Каждый раз при выделении ОЗУ вы получаете ускорение на ",
+    "You can share free RAM of your home computer with your factions to get a bonus multiplier for reputation gain. Each time you share your free RAM, you get a boost for": "Вы можете выделить свободное ОЗУ домашнего компьютера вашим фракциям, чтобы получить множитель бонуса к приросту репутации. Каждый раз при выделении ОЗУ вы получаете ускорение на",
+    " seconds. After that, you lose the boost and get back your shared RAM. You can share free RAM of other servers that you have admin rights on by using the ns.share() API.": " сек. После этого бонус спадает, и выделенное ОЗУ возвращается. Вы также можете выделять свободное ОЗУ других серверов с root-доступом с помощью API ns.share().",
+    "seconds. After that, you lose the boost and get back your shared RAM. You can share free RAM of other servers that you have admin rights on by using the ns.share() API.": "сек. После этого бонус спадает, и выделенное ОЗУ возвращается. Вы также можете выделять свободное ОЗУ других серверов с root-доступом с помощью API ns.share().",
+    "You can share free RAM of your home computer with your factions to get a bonus multiplier for reputation gain. Each time you share your free RAM, you get a boost for 10 seconds. After that, you lose the boost and get back your shared RAM. You can share free RAM of other servers that you have admin rights on by using the ns.share() API.": "Вы можете выделить свободное ОЗУ домашнего компьютера вашим фракциям, чтобы получить множитель бонуса к приросту репутации. Каждый раз при выделении ОЗУ вы получаете ускорение на 10 сек. После этого бонус спадает, и выделенное ОЗУ возвращается. Вы также можете выделять свободное ОЗУ других серверов с root-доступом с помощью API ns.share().",
+    "Free RAM on home computer: ": "Свободное ОЗУ домашнего компьютера: ",
+    "Free RAM on home computer:": "Свободное ОЗУ домашнего компьютера:",
+    "Current bonus: ": "Текущий бонус: ",
+    "Current bonus:": "Текущий бонус:",
+    "Bonus with ": "Бонус при выделении ",
+    "Bonus with": "Бонус при выделении",
+    "\"You can order bigger cloud servers via scripts. We don't take custom orders in person.\"": "«Более мощные облачные серверы можно заказывать через скрипты. Индивидуальные заказы лично мы не принимаем.»",
+    "You can order bigger cloud servers via scripts. We don't take custom orders in person.": "Более мощные облачные серверы можно заказывать через скрипты. Индивидуальные заказы лично мы не принимаем.",
+    "Cloud Server - ": "облачный сервер — ",
+    "Cloud Server - ": "облачный сервер — ",
+    "Cloud Server -": "облачный сервер —",
+    "\"Cores increase the effectiveness of grow() and weaken() on 'home'\"": "«Ядра повышают эффективность grow() и weaken() на сервере 'home'»",
+    "Cores increase the effectiveness of grow() and weaken() on 'home'": "Ядра повышают эффективность grow() и weaken() на сервере 'home'",
+    "Upgrade 'home' cores ": "Улучшить ядра 'home' ",
+    "Upgrade 'home' cores ": "Улучшить ядра 'home' ",
+    "Upgrade 'home' cores": "Улучшить ядра 'home'",
+    "Upgrade 'home' RAM ": "Улучшить ОЗУ 'home' ",
+    "Upgrade 'home' RAM ": "Улучшить ОЗУ 'home' ",
+    "Upgrade 'home' RAM": "Улучшить ОЗУ 'home'",
+    "- Max": "— Макс.",
+    "- Max ": "— Макс. ",
+    "Buy WSE Account - ": "Купить аккаунт WSE — ",
+    "Buy WSE Account - ": "Купить аккаунт WSE — ",
+    "Buy WSE Account -": "Купить аккаунт WSE —",
+    "Buy Trade Information eXchange (TIX) API Access - ": "Купить доступ к API Trade Information eXchange (TIX) — ",
+    "Buy Trade Information eXchange (TIX) API Access - ": "Купить доступ к API Trade Information eXchange (TIX) — ",
+    "Buy Trade Information eXchange (TIX) API Access -": "Купить доступ к API Trade Information eXchange (TIX) —",
+    "Buy 4S Market Data Access - ": "Купить доступ к данным рынка 4S — ",
+    "Buy 4S Market Data Access - ": "Купить доступ к данным рынка 4S — ",
+    "Buy 4S Market Data Access -": "Купить доступ к данным рынка 4S —",
+    "Buy 4S Market Data TIX API Access - ": "Купить доступ к API данных рынка 4S — ",
+    "Buy 4S Market Data TIX API Access - ": "Купить доступ к API данных рынка 4S — ",
+    "Buy 4S Market Data TIX API Access -": "Купить доступ к API данных рынка 4S —",
+    "4S Market Data UI Access ": "Доступ к данным рынка 4S через интерфейс ",
+    "4S Market Data UI Access": "Доступ к данным рынка 4S через интерфейс",
+    "TIX API Access ": "Доступ к TIX API ",
+    "WSE Account ": "Аккаунт WSE ",
+    "4S Market Data TIX API Access ": "Доступ к API данных рынка 4S ",
+    "favor": "благосклонности",
+    " favor": " благосклонности",
+    "rep": "репутации",
+    " rep": " репутации",
+    "elapsed": "прошло",
+    " elapsed": " прошло",
+    "remaining": "осталось",
+    " remaining": " осталось",
   });
 
   const protectedSelector =
@@ -5822,7 +5894,16 @@
       .replace(/\bseconds?\b/g, "сек")
       .replace(/\bminutes?\b/g, "мин")
       .replace(/\bhours?\b/g, "ч")
-      .replace(/\bdays?\b/g, "дн");
+      .replace(/\bdays?\b/g, "дн")
+      .replace(/(\d+(?:[.,]\d+)?(?:[kmbtepqQsSoOn])?)\s*\bfavor\b/gi, "$1 благосклонности")
+      .replace(/(\d+(?:[.,]\d+)?(?:[kmbtepqQsSoOn])?)\s*\brep\b/gi, "$1 репутации")
+      .replace(/(\d+(?:[.,]\d+)?\s*(?:дн|ч|мин|сек|мс|days?|hours?|minutes?|seconds?|milliseconds?))\s*\belapsed\b/gi, "$1 прошло")
+      .replace(/(\d+(?:[.,]\d+)?\s*(?:дн|ч|мин|сек|мс|days?|hours?|minutes?|seconds?|milliseconds?))\s*\bremaining\b/gi, "$1 осталось")
+      .replace(/\belapsed\b/gi, "прошло")
+      .replace(/\bremaining\b/gi, "осталось")
+      .replace(/\s*-\s*Volatility:\s*/gi, " — Волатильность: ")
+      .replace(/\s*-\s*Price Forecast:\s*/gi, " — Прогноз цены: ")
+      .replace(/^Purchase\s+([\d.,]+(?:[KMGTPEB]i?B)?)\s+Cloud Server\s*[-—]\s*$/i, "Купить облачный сервер $1 — ");
     for (const source of Object.keys(translations).sort((a, b) => b.length - a.length)) {
       if (source.length < 4 || (!/\s/.test(source) && !/[.:!?]/.test(source))) continue;
       if (translated.includes(source)) translated = translated.split(source).join(translations[source]);
@@ -5858,11 +5939,12 @@
     // Long prose is frequently split around Markdown links. If there is no
     // complete-sentence translation, leave it intact rather than producing
     // mixed Russian/English sentences from generic UI fragments.
-    const isLongProse = match[2].length >= 48 && /\s/.test(match[2]);
+    const isDoc = isDocumentationTextNode(contextNode);
+    const isLongProse = isDoc && match[2].length >= 48 && /\s/.test(match[2]);
     const translatedValue =
       translated === undefined && isLongProse
         ? match[2]
-        : translated === undefined && isDocumentationTextNode(contextNode)
+        : translated === undefined && isDoc
           ? match[2]
           : translated === undefined
             ? translateDynamicText(match[2])
