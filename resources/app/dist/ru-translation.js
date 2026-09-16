@@ -385,7 +385,6 @@
     "and arguments.": "и аргументам.",
     "However, you will probably run multiple copies of a script with the same arguments, so this method is not necessarily":
       "Однако, скорее всего, вы будете запускать несколько копий скрипта с одинаковыми аргументами, поэтому этот способ не обязательно будет",
-    "to a script.": "уникальным для скрипта.",
     "In case of multiple matches, most functions will return an arbitrary one (typically the oldest).":
       "Если найдено несколько совпадений, большинство функций вернёт произвольный результат, обычно самый старый.",
     "In order to reference a file,": "Чтобы сослаться на файл,",
@@ -4202,7 +4201,6 @@
     "hacking exp / sec": "опыта взлома / сек",
     "each": "каждый",
     LOG: "ЖУРНАЛ",
-    " of ": " из ",
 
     // Infiltration introduction, stages, and reward screen.
     "Cancel Infiltration": "Отменить проникновение",
@@ -5752,6 +5750,70 @@
     " elapsed": " прошло",
     "remaining": "осталось",
     " remaining": " осталось",
+    // Augmentations screen & confirmation dialog
+    "Install Augmentations": "Установить аугментации",
+    "Sort in Order": "Сортировать по порядку",
+    "Sort by Time of Acquirement": "Сортировать по времени получения",
+    "No Augmentations have been installed yet": "Аугментации ещё не установлены",
+    "No Augmentations have been purchased yet": "Аугментации ещё не куплены",
+    "Backup Save ": "Сохранить резервную копию ",
+    "(+1 favor to all factions)": "(+1 к расположению у всех фракций)",
+    "Sorts the Augmentations alphabetically in numeral order": "Сортирует аугментации по алфавиту и номерам",
+    "Sorts the Augmentations based on when you acquired them (same as default)": "Сортирует аугментации по времени их получения (по умолчанию)",
+    "It's always a good idea to backup/export your save!": "Всегда полезно создать резервную копию или экспортировать сохранение!",
+    "'I never asked for this'": "«Я об этом не просил»",
+    "Installing will reset": "Установка сбросит:",
+    "- money": "— деньги",
+    "- skill / experience": "— навыки / опыт",
+    "- every server except home": "— все серверы, кроме home",
+    "- factions and reputation": "— фракции и репутацию",
+    "- current work activity": "— текущую работу",
+    "You will keep:": "Вы сохраните:",
+    "- All scripts on home": "— все скрипты на home",
+    "- home ram and cores": "— ОЗУ и ядра home",
+    "It is recommended to install several Augmentations at once.": "Рекомендуется устанавливать несколько аугментаций за раз.",
+    "Installing Augmentations lets you start over with the perks and benefits granted by all of the Augmentations you have ever installed. Also, you will keep any scripts and RAM/Core upgrades on your home computer (but you will lose all programs besides NUKE.exe)": "Установка аугментаций позволяет начать заново со всеми бонусами и преимуществами от когда-либо установленных вами аугментаций. Вы сохраните все скрипты и улучшения ОЗУ/ядер на домашнем компьютере (но потеряете все программы, кроме NUKE.exe)",
+
+    // Script editor empty screen
+    "Use ": "Используйте ",
+    "Use": "Использовать",
+    " in": " в",
+    "the terminal to open files": "терминале для открытия файлов",
+
+    // Documentation UI & NS API table
+    "NS interface": "Интерфейс NS",
+    "Collection of all functions passed to scripts": "Коллекция всех функций, передаваемых в скрипты",
+    "Signature:": "Сигнатура:",
+    "Remarks": "Примечания",
+    "Basic usage example:": "Пример базового использования:",
+    "Properties": "Свойства",
+    "Property": "Свойство",
+    "Modifiers": "Модификаторы",
+    "Type": "Тип",
+    "Description": "Описание",
+    "Method": "Метод",
+    "Methods": "Методы",
+    "Parameters": "Параметры",
+    "Parameter": "Параметр",
+    "Returns": "Возвращает",
+    "Returns:": "Возвращает:",
+    "Arguments passed into the script.": "Аргументы, переданные в скрипт.",
+    "These arguments can be accessed as a normal array by using the [] operator (args[0], args[1], etc...). Arguments can be string, number, or boolean. Use args.length to get the number of arguments that were passed into a script.": "К этим аргументам можно обращаться как к обычному массиву с помощью оператора [] (args[0], args[1] и т. д.). Аргументы могут быть строкой, числом или логическим значением. Используйте args.length, чтобы узнать количество аргументов, переданных в скрипт.",
+    "These arguments can be accessed as a normal array by using the [] operator (args[0], args[1], etc...). Arguments can be string, number, or boolean. Use args.length to get the number of arguments that were passed to the script.": "К этим аргументам можно обращаться как к обычному массиву с помощью оператора [] (args[0], args[1] и т. д.). Аргументы могут быть строкой, числом или логическим значением. Используйте args.length, чтобы узнать количество аргументов, переданных в скрипт.",
+    "Namespace for Bladeburner functions. Contains spoilers.": "Пространство имён для функций Bladeburner. Содержит спойлеры.",
+    "Namespace for cloud functions.": "Пространство имён для облачных функций.",
+    "Namespace for coding contract functions.": "Пространство имён для функций контрактов на программирование.",
+    "Namespace for coding_contract functions.": "Пространство имён для функций контрактов на программирование.",
+    "Namespace for corporation functions. Contains spoilers.": "Пространство имён для функций корпораций. Содержит спойлеры.",
+    "Namespace for darknet functions. Contains spoilers.": "Пространство имён для функций даркнета. Содержит спойлеры.",
+    "Namespace for formatting functions.": "Пространство имён для функций форматирования.",
+    "Namespace for formulas functions.": "Пространство имён для функций формул.",
+    "Namespace for gang functions. Contains spoilers.": "Пространство имён для функций банд. Содержит спойлеры.",
+    "Namespace for Go functions.": "Пространство имён для функций Go.",
+    "Namespace for grafting functions. Contains spoilers.": "Пространство имён для функций пересадки аугментаций (grafting). Содержит спойлеры.",
+    "Namespace for hacknet functions. Some of this API contains spoilers.": "Пространство имён для функций hacknet. Часть этого API содержит спойлеры.",
+    "Namespace for infiltration functions.": "Пространство имён для функций проникновения (infiltration)."
+
   });
 
   const protectedSelector =
@@ -5863,7 +5925,11 @@
 
   function isProtected(node) {
     const parent = node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
-    return parent != null && parent.closest(protectedSelector) != null;
+    if (parent == null) return false;
+    if (parent.closest(protectedSelector) != null) return true;
+    const link = parent.closest("a");
+    if (link && (link.getAttribute("href") || "").includes("bitburner.")) return true;
+    return false;
   }
 
   function translateDynamicText(value) {
@@ -5901,6 +5967,7 @@
       .replace(/(\d+(?:[.,]\d+)?\s*(?:дн|ч|мин|сек|мс|days?|hours?|minutes?|seconds?|milliseconds?))\s*\bremaining\b/gi, "$1 осталось")
       .replace(/\belapsed\b/gi, "прошло")
       .replace(/\bremaining\b/gi, "осталось")
+      .replace(/(\b\d+\b)\s+of\s+(\b\d+\b)/gi, "$1 из $2")
       .replace(/\s*-\s*Volatility:\s*/gi, " — Волатильность: ")
       .replace(/\s*-\s*Price Forecast:\s*/gi, " — Прогноз цены: ")
       .replace(/^Purchase\s+([\d.,]+(?:[KMGTPEB]i?B)?)\s+Cloud Server\s*[-—]\s*$/i, "Купить облачный сервер $1 — ");
@@ -5935,7 +6002,7 @@
     const match = /^(\s*)([\s\S]*?)(\s*)$/.exec(value);
     if (!match || match[2] === "") return value;
     const normalized = normalizeDocumentationText(match[2]);
-    const translated = translations[match[2]] ?? normalizedTranslations.get(normalized);
+    const translated = translations[value] ?? translations[match[2]] ?? normalizedTranslations.get(normalized);
     // Long prose is frequently split around Markdown links. If there is no
     // complete-sentence translation, leave it intact rather than producing
     // mixed Russian/English sentences from generic UI fragments.
