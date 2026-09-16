@@ -422,10 +422,7 @@
     "absolute file path. For example": "абсолютный путь к файлу. Например:",
     "A full file path": "Полный путь к файлу",
     "must begin with a forward slash (/) if that file is not in the root directory. For details on references in terminal commands, see":
-      "должен начинаться с косой черты (/), если файл находится не в корневом каталоге. Подробнее о ссылках в командах терминала см.",
-    ", and": ", и",
-    "or the": "или",
-    "terminal command detailed below": "команду терминала, описанную ниже",
+      "должен начинаться с косой черты (/), если файл находится не в корневом каталоге. Подробнее о ссылках в командах терминала см.",    "terminal command detailed below": "команду терминала, описанную ниже",
     '"n" threads': 'потоков «n»',
     usage: "использование",
     Examples: "Примеры:",
@@ -866,9 +863,7 @@
     "Augmentations must be purchased in order to be installed, and they are fairly expensive.":
       "Аугментации нужно купить перед установкой, и стоят они довольно дорого.",
     "They also require ": "Кроме того, для них требуется ",
-    " with a ": " с ",
-    "with a": "с",
-    " before they will let you purchase their Augmentations.":
+    " with a ": " с ",    " before they will let you purchase their Augmentations.":
       ", прежде чем вам разрешат покупать их аугментации.",
     "before they will let you purchase their Augmentations.":
       ", прежде чем вам разрешат покупать их аугментации.",
@@ -1259,9 +1254,7 @@
     "You are currently": "Сейчас вы",
 
     // Faction requirements and lore
-    "Backdoor access to": "Доступ по бэкдору к",
-    " server": " сервер",
-    "Employed at": "Работает в",
+    "Backdoor access to": "Доступ по бэкдору к",    "Employed at": "Работает в",
     " reputation with": " репутации с",
     "Employed as a": "Работает в должности",
     "CTO, CFO, or CEO of a company": "CTO, CFO или CEO компании",
@@ -1768,9 +1761,7 @@
     "Grand Theft Auto": "Угон автомобиля",
     Kidnap: "Похищение",
     Assassination: "Покушение",
-    Heist: "Грандиозное ограбление",
-    "chance of success": "шанс успеха",
-    "Attempt to shoplift from a low-end retailer": "Попытка совершить мелкую кражу в недорогом магазине",
+    Heist: "Грандиозное ограбление",    "Attempt to shoplift from a low-end retailer": "Попытка совершить мелкую кражу в недорогом магазине",
     "Attempt to commit armed robbery on a high-end store": "Попытка вооружённого ограбления дорогого магазина",
     "Attempt to mug a random person on the street": "Попытка ограбить случайного прохожего",
     "Attempt to rob property from someone's house": "Попытка украсть имущество из чужого дома",
@@ -4236,9 +4227,7 @@
     "Infiltration successful!": "Проникновение успешно!",
     "You ": "Вы ",
     "have gained ": "получили ",
-    " rep for ": " репутации в ",
-    " and ": " и ",
-    "can trade the confidential information you found for money or reputation.": "можете обменять найденную конфиденциальную информацию на деньги или репутацию.",
+    " rep for ": " репутации в ",    "can trade the confidential information you found for money or reputation.": "можете обменять найденную конфиденциальную информацию на деньги или репутацию.",
     "Trade for": "Обменять на",
     "reputation": "репутацию",
     "Sell for": "Продать за",
@@ -5812,8 +5801,124 @@
     "Namespace for Go functions.": "Пространство имён для функций Go.",
     "Namespace for grafting functions. Contains spoilers.": "Пространство имён для функций пересадки аугментаций (grafting). Содержит спойлеры.",
     "Namespace for hacknet functions. Some of this API contains spoilers.": "Пространство имён для функций hacknet. Часть этого API содержит спойлеры.",
-    "Namespace for infiltration functions.": "Пространство имён для функций проникновения (infiltration)."
-
+    "Namespace for infiltration functions.": "Пространство имён для функций проникновения (infiltration).",
+    "Dynamically import a script. Only scripts located on the same server can be imported. A dynamic import will not adjust RAM usage. This must be done manually with [ramOverride](./bitburner.ns.ramoverride.md)<!-- -->.": "Динамически импортировать скрипт. Можно импортировать только скрипты, расположенные на том же сервере. Динамический импорт не корректирует использование ОЗУ. Это необходимо делать вручную с помощью ramOverride.",
+    "Dynamically import a script. Only scripts located on the same server can be imported. A dynamic import will not adjust RAM usage. This must be done manually with .": "Динамически импортировать скрипт. Можно импортировать только скрипты, расположенные на том же сервере. Динамический импорт не корректирует использование ОЗУ. Это необходимо делать вручную с помощью .",
+    "Start another script on any server.": "Запустить другой скрипт на любом сервере.",
+    "Terminates the current script immediately.": "Немедленно завершает текущий скрипт.",
+    "Check if a file exists.": "Проверить существование файла.",
+    "Parse command line flags.": "Разобрать флаги командной строки.",
+    "Get the current BitNode multipliers.": "Получить текущие множители BitNode.",
+    "Returns the amount of Faction favor required to be able to donate to a faction.": "Возвращает количество расположения во фракции, необходимое для совершения пожертвований.",
+    "Get the metadata of a file.": "Получить метаданные файла.",
+    "Get the RAM cost of a netscript function.": "Получить стоимость функции Netscript в ОЗУ.",
+    "The base RAM cost per script thread can also be retrieved by using \"baseCost\" as argument to this function.": "Базовую стоимость ОЗУ на поток скрипта также можно получить, передав аргумент «baseCost» в эту функцию.",
+    "The base RAM cost per script thread can also be retrieved by using `\"baseCost\"` as argument to this function.": "Базовую стоимость ОЗУ на поток скрипта также можно получить, передав аргумент `\"baseCost\"` в эту функцию.",
+    "Get the execution time of a grow() call.": "Получить время выполнения вызова grow().",
+    "Returns the player’s current hacking level.": "Возвращает текущий уровень взлома игрока.",
+    "Returns the player's current hacking level.": "Возвращает текущий уровень взлома игрока.",
+    "Get hacking related multipliers.": "Получить множители, связанные со взломом.",
+    "Get hacknet related multipliers.": "Получить множители, связанные с Hacknet.",
+    "Get the execution time of a hack() call.": "Получить время выполнения вызова hack().",
+    "Returns a string with the hostname of the server that the script is running on.": "Возвращает строку с именем хоста сервера, на котором выполняется скрипт.",
+    "Returns a string with the IP address of the server that the script is running on.": "Возвращает строку с IP-адресом сервера, на котором выполняется скрипт.",
+    "Get information about the sources of income for this run.": "Получить информацию об источниках дохода за текущий цикл.",
+    "Get information about the player.": "Получить информацию об игроке.",
+    "Get all data on a port.": "Получить все данные из сетевого порта.",
+    "Get an array of recently killed scripts across all servers.": "Получить массив недавно завершённых скриптов со всех серверов.",
+    "Get information about resets.": "Получить информацию о сбросах.",
+    "Get general info about a running script.": "Получить общую информацию о работающем скрипте.",
+    "Get the exp gain of a script.": "Получить прирост опыта от скрипта.",
+    "Get the income of a script.": "Получить доход от скрипта.",
+    "Get all the logs of a script.": "Получить все журналы скрипта.",
+    "Returns the current script name.": "Возвращает имя текущего скрипта.",
+    "Get the ram cost of a script.": "Получить стоимость скрипта в ОЗУ.",
+    "Returns data of a server.": "Возвращает данные сервера.",
+    "If the server is a darknet server, it will also contain the \"isOnline\" field. If the darknet server has recently gone offline, the returned object will be a dummy server object with `isOnline: false`<!-- -->.": "Если сервер принадлежит даркнету, объект также содержит поле «isOnline». Если сервер даркнета недавно отключился, возвращённый объект будет фиктивным объектом сервера со значением `isOnline: false`<!-- -->.",
+    "If the server is a darknet server, it will also contain the \"isOnline\" field. If the darknet server has recently gone offline, the returned object will be a dummy server object with isOnline: false.": "Если сервер принадлежит даркнету, объект также содержит поле «isOnline». Если сервер даркнета недавно отключился, возвращённый объект будет фиктивным объектом сервера со значением isOnline: false.",
+    "If the server is a darknet server, it will also contain the \"isOnline\" field. If the darknet server has recently gone offline, the returned object will be a dummy server object with ": "Если сервер принадлежит даркнету, объект также содержит поле «isOnline». Если сервер даркнета недавно отключился, возвращённый объект будет фиктивным объектом сервера со значением ",
+    "Get the base security level of a server.": "Получить базовый уровень защиты сервера.",
+    "Get a server growth parameter.": "Получить параметр роста сервера.",
+    "Get the maximum money available on a server.": "Получить максимальную сумму денег, доступную на сервере.",
+    "Get the maximum amount of RAM on a server.": "Получить максимальный объём ОЗУ на сервере.",
+    "Returns the minimum security level of the target server.": "Возвращает минимальный уровень защиты целевого сервера.",
+    "Get money available on a server.": "Получить текущую сумму денег на сервере.",
+    "Returns the number of open ports required to successfully run NUKE.exe on the specified server.": "Возвращает количество открытых портов, необходимое для успешного запуска NUKE.exe на указанном сервере.",
+    "Returns the required hacking level of the target server.": "Возвращает требуемый уровень взлома для целевого сервера.",
+    "Get server security level.": "Получить текущий уровень защиты сервера.",
+    "Get the used RAM on a server. This includes ram used by running scripts as well as blocked ram on darknet servers.": "Получить занятый объём ОЗУ на сервере. Сюда входит память, занятая работающими скриптами, а также заблокированное ОЗУ на серверах даркнета.",
+    "Share power has a multiplicative effect on rep/second while doing hacking work for a faction. If you do non-hacking work, share power still increases the reputation gain rate, but the effect is non-linear.\n\nShare power increases incrementally for every thread of share running on your server network, but at a sharply decreasing rate.": "Мощность разделения ресурсов оказывает мультипликативный эффект на прирост репутации в секунду при выполнении хакерской работы для фракции. Для нехакерской работы мощность разделения по-прежнему увеличивает скорость получения репутации, но зависимость нелинейна.\n\nМощность разделения увеличивается с каждым потоком команды share в сети серверов, но с резко убывающей эффективностью.",
+    "Share power has a multiplicative effect on rep/second while doing hacking work for a faction. If you do non-hacking work, share power still increases the reputation gain rate, but the effect is non-linear.": "Мощность разделения ресурсов оказывает мультипликативный эффект на прирост репутации в секунду при выполнении хакерской работы для фракции. Для нехакерской работы мощность разделения по-прежнему увеличивает скорость получения репутации, но зависимость нелинейна.",
+    "Share power increases incrementally for every thread of share running on your server network, but at a sharply decreasing rate.": "Мощность разделения увеличивается с каждым потоком команды share в сети серверов, но с резко убывающей эффективностью.",
+    "Get the exp gain of all scripts.": "Получить суммарный прирост опыта со всех скриптов.",
+    "Get the income of all scripts.": "Получить суммарный доход со всех скриптов.",
+    "Get the execution time of a weaken() call.": "Получить время выполнения вызова weaken().",
+    "Spoof money in a server's bank account, increasing the amount available.": "Сфальсифицировать средства на банковском счёте сервера, увеличивая доступную сумму.",
+    "Calculate the number of grow threads needed for a given multiplicative growth factor.": "Рассчитать количество потоков grow, необходимое для достижения заданного коэффициента роста.",
+    "Calculate the security increase for a number of grow threads.": "Рассчитать повышение уровня защиты при заданном количестве потоков grow.",
+    "Steal a server's money.": "Украсть деньги с сервера.",
+    "Steal a server.": "Украсть деньги с сервера.",
+    "Get the part of money stolen with a single thread.": "Получить долю денег, похищаемую одним потоком.",
+    "Get the part of money stolen with single thread.": "Получить долю денег, похищаемую одним потоком.",
+    "Get the chance of successfully hacking a server.": "Получить вероятность успешного взлома сервера.",
+    "Get the security increase for a number of threads.": "Рассчитать повышение уровня защиты при заданном количестве потоков hack.",
+    "Calculate the decimal number of threads needed to hack a specified amount of money from a target host.": "Рассчитать дробное число потоков, необходимое для взлома заданной суммы денег с целевого сервера.",
+    "Check if you have root access on a server.": "Проверить наличие root-доступа к серверу.",
+    "Returns whether the player has access to the darkweb.": "Возвращает наличие у игрока доступа к дарквебу (TOR).",
+    "Runs HTTPWorm.exe on a server.": "Запустить программу HTTPWorm.exe на сервере.",
+    "Checks the status of the logging for the given NS function.": "Проверить статус записи в журнал для указанной функции NS.",
+    "Checks the status of the logging for given NS function.": "Проверить статус записи в журнал для указанной функции NS.",
+    "Check if a script is running.": "Проверить, работает ли скрипт.",
+    "Terminate the script with the provided PID.": "Завершить скрипт с указанным PID.",
+    "Terminate the script(s) with the provided filename, host, and script arguments.": "Завершить скрипт(ы) с указанным именем файла, хостом и аргументами.",
+    "Terminate all scripts on a server.": "Завершить все скрипты на сервере.",
+    "List files on a server.": "Вывести список файлов на сервере.",
+    "Move a file on the target server.": "Переместить файл на целевом сервере.",
+    "Listen for a port write.": "Ожидать записи данных в сетевой порт.",
+    "Runs NUKE.exe on a server.": "Запустить программу NUKE.exe на сервере.",
+    "Get a copy of the data from a port without popping it.": "Получить копию данных из порта без их извлечения.",
+    "Prints one or more values or variables to the script’s logs.": "Выводит одно или несколько значений либо переменных в журнал скрипта.",
+    "Prints one or more values or variables to the script's logs.": "Выводит одно или несколько значений либо переменных в журнал скрипта.",
+    "Prints a formatted string to the script’s logs.": "Выводит форматированную строку в журнал скрипта.",
+    "Prints a formatted string to the script's logs.": "Выводит форматированную строку в журнал скрипта.",
+    "Prints a ReactNode to the script logs.": "Выводит элемент ReactNode в журнал скрипта.",
+    "Prompt the player with an input modal.": "Показать игроку модальное окно ввода.",
+    "List running scripts on a server.": "Вывести список работающих скриптов на сервере.",
+    "Change the current static RAM allocation of the script.": "Изменить статически выделенный объём ОЗУ для скрипта.",
+    "Read content of a file.": "Прочитать содержимое файла.",
+    "Read data from a port.": "Прочитать данные из сетевого порта.",
+    "Runs relaySMTP.exe on a server.": "Запустить программу relaySMTP.exe на сервере.",
+    "Delete a file.": "Удалить файл.",
+    "Start another script on the current server.": "Запустить другой скрипт на текущем сервере.",
+    "Get the list of hostnames or IP addresses connected to a server. This function does not return darknet servers (e.g., darkweb). Use [probe](./bitburner.darknet.probe.md) if you want to list darknet servers.": "Получить список имён хостов или IP-адресов, подключённых к серверу. Эта функция не возвращает серверы даркнета (например darkweb). Используйте [probe](./bitburner.darknet.probe.md), если хотите получить список серверов даркнета.",
+    "Get the list of hostnames or IP addresses connected to a server. This function does not return darknet servers (e.g., darkweb). Use  if you want to list darknet servers.": "Получить список имён хостов или IP-адресов, подключённых к серверу. Эта функция не возвращает серверы даркнета (например darkweb). Используйте probe, если хотите получить список серверов даркнета.",
+    "Copy file between servers.": "Скопировать файлы между серверами.",
+    "Kill all scripts with a filename.": "Завершить все скрипты с указанным именем файла.",
+    "Kill all scripts with filename.": "Завершить все скрипты с указанным именем файла.",
+    "Check if any script with a filename is running.": "Проверить, запущен ли какой-либо скрипт с указанным именем файла.",
+    "Check if any script with filename is running.": "Проверить, запущен ли какой-либо скрипт с указанным именем файла.",
+    "Returns the currently running script.": "Возвращает информацию о текущем работающем скрипте.",
+    "Returns a boolean denoting whether or not the specified server exists.": "Возвращает логическое значение, указывающее, существует ли указанный сервер.",
+    "Share the server's ram with your factions to increase the reputation gain rate of faction work. This boost is applied to all faction work of all factions.": "Выделить свободное ОЗУ сервера вашим фракциям для увеличения скорости получения репутации за фракционную работу. Этот бонус распространяется на работу во всех фракциях.",
+    "Share the server's ram with your factions to increase the rep gain rate of faction work. This boost is applied to all faction work of all factions.": "Выделить свободное ОЗУ сервера вашим фракциям для увеличения скорости получения репутации за фракционную работу. Этот бонус распространяется на работу во всех фракциях.",
+    "Suspends the script for n milliseconds.": "Приостанавливает выполнение скрипта на n миллисекунд.",
+    "Suspends the script for n ms.": "Приостанавливает выполнение скрипта на n миллисекунд.",
+    "Terminate current script and start another in a defined number of milliseconds.": "Завершить текущий скрипт и запустить другой через указанное число миллисекунд.",
+    "Terminate current script and start another in a defined number of ms.": "Завершить текущий скрипт и запустить другой через указанное число миллисекунд.",
+    "Format a string.": "Форматировать строку.",
+    "Runs SQLInject.exe on a server.": "Запустить программу SQLInject.exe на сервере.",
+    "Queue a toast (bottom-right notification).": "Отобразить всплывающее уведомление (в правом нижнем углу).",
+    "Prints one or more values or variables to the Terminal.": "Выводит одно или несколько значений либо переменных в терминал.",
+    "Prints a raw value or a variable to the Terminal.": "Выводит форматированную строку или переменную в терминал.",
+    "Prints a ReactNode to the terminal.": "Выводит элемент ReactNode в терминал.",
+    "Attempt to write to a port.": "Попытаться записать данные в сетевой порт.",
+    "Format a string with an array of arguments.": "Форматировать строку с передачей массива аргументов.",
+    "Reduce a server's security level.": "Снизить уровень защиты сервера (weaken).",
+    "Reduce the security level of a server (weaken).": "Снизить уровень защиты сервера (weaken).",
+    "Predict the effect of weaken.": "Рассчитать прогнозируемый эффект от weaken.",
+    "Download a file from the internet.": "Скачать файл из интернета.",
+    "Write data to a file.": "Записать данные в файл.",
+    "Write data to a port.": "Записать данные в сетевой порт.",
   });
 
   const protectedSelector =
@@ -5839,12 +5944,13 @@
   function isDocumentationTextNode(node) {
     const element = node && (node.nodeType === Node.TEXT_NODE ? node.parentElement : node);
     if (!element) return false;
-    const heading = document.querySelector("h1");
+    if (element.closest && element.closest("#untyped-react-markdown-root, .markdown, [class*='markdown'], [class*='doc'], [class*='Doc']")) return true;
+    const heading = document.querySelector("h1, h2");
     if (!heading) return false;
     const semanticRoot = heading.closest("main,[role='main']");
     if (semanticRoot) return semanticRoot.contains(element);
     let root = heading.parentElement;
-    for (let index = 0; root && index < 6; index += 1) {
+    for (let index = 0; root && index < 8; index += 1) {
       if (root.contains(element)) return true;
       root = root.parentElement;
     }
@@ -5973,7 +6079,13 @@
       .replace(/^Purchase\s+([\d.,]+(?:[KMGTPEB]i?B)?)\s+Cloud Server\s*[-—]\s*$/i, "Купить облачный сервер $1 — ");
     for (const source of Object.keys(translations).sort((a, b) => b.length - a.length)) {
       if (source.length < 4 || (!/\s/.test(source) && !/[.:!?]/.test(source))) continue;
-      if (translated.includes(source)) translated = translated.split(source).join(translations[source]);
+      if (translated.includes(source)) {
+        const idx = translated.indexOf(source);
+        const charBefore = idx > 0 ? translated[idx - 1] : " ";
+        const charAfter = idx + source.length < translated.length ? translated[idx + source.length] : " ";
+        if (/[a-zA-Z]/.test(charBefore) || /[a-zA-Z]/.test(charAfter)) continue;
+        translated = translated.split(source).join(translations[source]);
+      }
     }
     return translated;
   }
