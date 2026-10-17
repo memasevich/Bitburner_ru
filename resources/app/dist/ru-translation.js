@@ -28,6 +28,9 @@
     "contains reference materials for all NS APIs.": "содержит справочную информацию обо всех API NS.",
     "contains questions often asked by beginners of the game.": "содержит ответы на часто задаваемые новичками вопросы.",
     "This documentation page is the best place to get up-to-date information, especially when you get stuck. If you have a question and cannot find the answer here, please ask us on Discord.": "Эта страница документации — лучший источник актуальной информации, особенно если вы застряли. Если у вас возник вопрос и вы не нашли здесь ответа, спросите нас в Discord.",
+    // Tutorial: remaining terminal explanations
+    "NUKE.exe on your computer. We'll get to what this does later.": "NUKE.exe. Позже узнаем, для чего она нужна.",
+    "It is also possible to run scan-analyze with a higher depth. Let's try a depth of two with the following command:": "Команду scan-analyze можно запустить с большей глубиной. Попробуем глубину 2. Введите:",
     // Main navigation
     Terminal: "Терминал",
     "Script Editor": "Редактор скриптов",
@@ -1226,7 +1229,7 @@
     "Try doing that now.": "Попробуйте сделать это сейчас.",
     "From any server you can get back home using": "С любого сервера можно вернуться домой с помощью",
     "Let's head home before creating our first script!": "Вернёмся домой перед созданием первого скрипта!",
-    "NS API documentation": "Документация API NS",
+    "NS API documentation": "документация по API NS",
     "through the main navigation menu now.": "через главное меню навигации.",
     "Beginner's guide": "Руководство для начинающих",
     "Exit Tutorial": "Выйти из обучения",
@@ -6139,6 +6142,9 @@
     const normalized = normalizeDocumentationText(match[2]);
     if (normalized === "The" && contextNode?.parentElement?.closest(".MuiPaper-root")?.textContent?.includes("Beginner's guide")) {
       return match[1] + "«" + match[3];
+    }
+    if (normalized === "NS API documentation" && contextNode?.parentElement?.closest(".MuiPaper-root")?.textContent?.includes("Это редактор скриптов")) {
+      return match[1] + "документацию по API NS" + match[3];
     }
     const translated = translations[value] ?? translations[match[2]] ?? normalizedTranslations.get(normalized);
     // Long prose is frequently split around Markdown links. If there is no
