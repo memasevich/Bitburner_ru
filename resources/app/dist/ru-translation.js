@@ -5,6 +5,15 @@
   // touch terminal commands, Netscript, filenames, server names, save data, or
   // text inside the script editor.
   const translations = Object.freeze({
+    // Tutorial: hacking and script editor
+    "You are now attempting to hack the server. Performing a hack takes time and only has a certain percentage chance of success. This time and success chance is determined by a variety of factors, including your hacking skill and the server's security level.": "Вы пытаетесь взломать сервер. Взлом занимает время и имеет определённый шанс на успех. Время и вероятность успеха зависят от ряда факторов, в том числе от вашего навыка взлома и уровня защиты сервера.",
+    "If your attempt to hack the server is successful, you will steal a certain percentage of the server's total money. This percentage is affected by your hacking skill and the server's security level.": "Если взлом сервера завершится успешно, вы украдёте часть всех денег на сервере. Размер этой части зависит от вашего навыка взлома и уровня защиты сервера.",
+    "The amount of money on a server is not limitless. So, if you constantly hack a server and deplete its money, then you will encounter diminishing returns in your hacking. You will need to use": "Количество денег на сервере ограничено. Если постоянно взламывать сервер и исчерпывать его средства, эффективность взлома будет снижаться. Чтобы восстановить деньги, используйте",
+    "which tricks the company into adding money to their server and": "чтобы обманом заставить компанию пополнить деньги на сервере, а",
+    "which increases the speed of hack and grow.": "чтобы увеличить скорость взлома и роста средств.",
+    "Use the search tool at the bottom to find and have a quick glance at documentation of any NS APIs.": "Воспользуйтесь инструментом поиска внизу, чтобы быстро найти и просмотреть документацию по API Netscript.",
+    "To save and close the script editor, click the button below.": "Чтобы сохранить скрипт и закрыть редактор, нажмите кнопку ниже.",
+
     // Main navigation
     Terminal: "Терминал",
     "Script Editor": "Редактор скриптов",
