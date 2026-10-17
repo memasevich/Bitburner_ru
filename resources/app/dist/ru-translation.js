@@ -12,8 +12,22 @@
     "which tricks the company into adding money to their server and": "чтобы обманом заставить компанию пополнить деньги на сервере, а",
     "which increases the speed of hack and grow.": "чтобы увеличить скорость взлома и роста средств.",
     "Use the search tool at the bottom to find and have a quick glance at documentation of any NS APIs.": "Воспользуйтесь инструментом поиска внизу, чтобы быстро найти и просмотреть документацию по API Netscript.",
-    "To save and close the script editor, click the button below.": "Чтобы сохранить скрипт и закрыть редактор, нажмите кнопку ниже.",
 
+    // Tutorial: remaining visible instructional text
+    "( \"ls\" is short for \"list\" )": "(«ls» — сокращение от английского list («список»))",
+    "shows all available network connections. In other words, it displays a list of all servers that can be connected to from your current machine. A server is identified by its hostname.": "показывает все доступные сетевые подключения. Иными словами, здесь отображается список серверов, к которым можно подключиться с текущей машины. Сервер определяется по имени хоста.",
+    "shows more detailed information about each server that you can connect to (servers that are a distance of one node away).": "показывает более подробную информацию о каждом доступном для подключения сервере (то есть сервере на расстоянии одного узла).",
+    "Now you can see information about all servers that are up to two nodes away, as well as figure out how to navigate to those servers through the network. You can only connect to a server that is one node away. To connect to a machine, use": "Теперь вы видите информацию о серверах на расстоянии до двух узлов и можете понять, как пройти к ним по сети. Подключиться можно только к серверу на расстоянии одного узла. Чтобы подключиться к машине, используйте",
+    "In the year 2077, currency has become digital and decentralized. People and corporations store their money on servers and computers. Using your hacking abilities, you can hack servers to steal money and gain experience.": "В 2077 году деньги стали цифровыми и децентрализованными. Люди и корпорации хранят их на серверах и компьютерах. Используя навыки взлома, вы можете похищать деньги с серверов и получать опыт.",
+    "For this server, the required hacking skill is only 1, which means you can hack it right now. However, in order to hack a server you must first gain root access. The NUKE.exe program that we saw earlier on your home computer is a virus that will grant you root access to a machine if there are enough open ports.": "Для взлома этого сервера нужен всего 1 уровень навыка взлома — вы уже можете его взломать. Но сначала необходимо получить root-доступ. Программа NUKE.exe, которую мы видели на домашнем компьютере, — это вирус, который откроет root-доступ к машине, если на ней открыто достаточно портов.",
+    ", press the link at the bottom.": ", нажмите ссылку внизу.",
+    "Let's go back to": "Вернёмся к",
+    "The log for this script won't show much right now (it might show nothing at all) because it just started running...but check back again in a few minutes!": "Пока в журнале этого скрипта будет мало записей (возможно, вообще ничего), потому что он только начал работать... Загляните сюда снова через несколько минут!",
+    "Let's go to": "Перейдём в раздел",
+    "contains the guide for new players, navigating you through most of the early game.": "» поможет новым игрокам освоиться и пройти большую часть начального этапа игры.",
+    "contains reference materials for all NS APIs.": "содержит справочную информацию обо всех API NS.",
+    "contains questions often asked by beginners of the game.": "содержит ответы на часто задаваемые новичками вопросы.",
+    "This documentation page is the best place to get up-to-date information, especially when you get stuck. If you have a question and cannot find the answer here, please ask us on Discord.": "Эта страница документации — лучший источник актуальной информации, особенно если вы застряли. Если у вас возник вопрос и вы не нашли здесь ответа, спросите нас в Discord.",
     // Main navigation
     Terminal: "Терминал",
     "Script Editor": "Редактор скриптов",
@@ -4650,7 +4664,7 @@
       "Ядра повышают эффективность grow() и weaken() на сервере 'home'",
     "More RAM means more scripts on 'home'": "Больше ОЗУ — больше скриптов на сервере 'home'",
     "Welcome to Bitburner, a cyberpunk-themed incremental RPG! The game takes place in a dark, dystopian future... The year is 2077...":
-      "Добро пожаловать в Bitburner — инкрементальную RPG в киберпанк-сеттинге! Игра разворачивается в мрачном антиутопическом будущем... На дворе 2077 год...",
+      "Добро пожаловать в Bitburner — ролевую игру с постепенным развитием в стиле киберпанк! Игра разворачивается в мрачном антиутопическом будущем... На дворе 2077 год...",
     "This tutorial will show you the basics of the game. You may skip the tutorial at any time.":
       "В этом обучении показаны основы игры. Вы можете пропустить его в любой момент.",
     "You can replay this tutorial by going to the Options tab and pressing \"Reset tutorial\".":
@@ -6123,6 +6137,9 @@
     const match = /^(\s*)([\s\S]*?)(\s*)$/.exec(value);
     if (!match || match[2] === "") return value;
     const normalized = normalizeDocumentationText(match[2]);
+    if (normalized === "The" && contextNode?.parentElement?.closest(".MuiPaper-root")?.textContent?.includes("Beginner's guide")) {
+      return match[1] + "«" + match[3];
+    }
     const translated = translations[value] ?? translations[match[2]] ?? normalizedTranslations.get(normalized);
     // Long prose is frequently split around Markdown links. If there is no
     // complete-sentence translation, leave it intact rather than producing
