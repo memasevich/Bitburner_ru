@@ -22,6 +22,7 @@ app.on("window-all-closed", () => {
 require("./steamworksUtils");
 const gameWindow = require("./gameWindow");
 const utils = require("./utils");
+const updater = require("./updater");
 const storage = require("./storage");
 const debounce = require("lodash/debounce");
 const Store = require("electron-store");
@@ -99,19 +100,14 @@ function setStopProcessHandler(window) {
       }
     }
 
-    setTimeout(async () => {
-      try {
-        if (window && !window.isDestroyed()) {
-          const img = await window.webContents.capturePage();
-          const fs = require("fs");
-          const outDir = "C:/Users/Lecoo/.gemini/antigravity/brain/cf797146-3dbb-437a-8c01-8dba0ac9ceb8";
-          fs.writeFileSync(path.join(outDir, "game_window_ready.png"), img.toPNG());
-          log.info("[RU] Auto-captured game ready screenshot");
-        }
-      } catch (err) {
-        log.error("[RU] Error capturing screenshot:", err);
+    // Check for translation updates quietly in the background
+    setTimeout(() => {
+      if (window && !window.isDestroyed()) {
+        updater.checkForUpdates(window).catch((err) => {
+          log.debug("[RU Updater] Uncaught error in checkForUpdates:", err);
+        });
       }
-    }, 2500);
+    }, 1500);
   };
 
   const receivedDisableRestoreHandler = (event, arg) => {

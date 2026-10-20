@@ -1,0 +1,8 @@
+{
+  "version": "0.2.0",
+  "updatedAt": "2026-10-20",
+  "changelog": "ASCII city maps preserved, dual naming for city locations, expanded dictionary, zero cheats.",
+  "files": [
+    "ru-translation.js"
+  ]
+}
