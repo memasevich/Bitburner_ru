@@ -3041,16 +3041,16 @@
     "Church of the Machine God": "Церковь Бога-машины",
     "Shadowed Walkway": "Тёмный переход",
     "Central Intelligence Agency": "Центральное разведывательное управление",
-    "Sector-12 City Hall": "Мэрия Sector-12",
-    "National Security Agency": "Агентство национальной безопасности",
-    "Iron Gym": "Зал Iron",
-    "Powerhouse Gym": "Зал Powerhouse",
-    "Rothman University": "Университет Ротмана",
-    "ZB Institute of Technology": "Технологический институт ZB",
-    Hospital: "Больница",
-    "The Slums": "Трущобы",
-    "Travel Agency": "Туристическое агентство",
-    "World Stock Exchange": "Всемирная фондовая биржа",
+    "Sector-12 City Hall": "Sector-12 City Hall (Мэрия)",
+    "National Security Agency": "National Security Agency (АНБ)",
+    "Iron Gym": "Iron Gym (Зал Iron)",
+    "Powerhouse Gym": "Powerhouse Gym (Зал Powerhouse)",
+    "Rothman University": "Rothman University (Университет Ротмана)",
+    "ZB Institute of Technology": "ZB Institute of Technology (Институт ZB)",
+    Hospital: "Hospital (Больница)",
+    "The Slums": "The Slums (Трущобы)",
+    "Travel Agency": "Travel Agency (Турагентство)",
+    "World Stock Exchange": "World Stock Exchange (Фондовая биржа)",
     "The Void": "Пустота",
     "Return to World": "Вернуться в мир",
     "Backdoor installed on": "Бэкдор установлен на",
@@ -4957,6 +4957,83 @@
     "Calm purple and grey theme with some bright colors subtly popping up.":
       "Спокойная фиолетово-серая тема с ненавязчивыми яркими акцентами.",
 
+    "Hashes:": "Хэши:",
+    "IPvGO Max Rep Converted to Favor": "Макс. репутация IPvGO в благосклонность",
+    "Click on this to upgrade your Source-File -1!": "Нажмите сюда, чтобы улучшить Исходный файл −1!",
+    "Continue with current save": "Продолжить с текущим сохранением",
+    "Import newer save and reload": "Импортировать более новое сохранение и перезагрузить",
+    "These are two different games!": "Это две разные игры!",
+    "Current Game": "Текущая игра",
+    "Being Imported": "Импортируется",
+    "Game Identifier": "Идентификатор игры",
+    "Take me back!": "Вернуться назад!",
+    "Proceed with import": "Продолжить импорт",
+    "Forcefully kill all running scripts? This will also save your game and reload the game.":
+      "Принудительно завершить все запущенные скрипты? Это также сохранит и перезагрузит игру.",
+    "KILL": "УБИТЬ",
+    "Quick b1t_flum3.exe": "Быстрый b1t_flum3.exe",
+    "Run b1t_flum3.exe": "Запустить b1t_flum3.exe",
+    "Quick w0rld_d34m0n": "Быстрый w0rld_d34m0n",
+    "Hack w0rld_d34m0n": "Взломать w0rld_d34m0n",
+    "Destroy Corporation": "Уничтожить корпорацию",
+    "Create Corporation": "Создать корпорацию",
+    "Leave Gang": "Покинуть банду",
+    "Create Gang": "Создать банду",
+    "Leave BladeBurner": "Покинуть Bladeburner",
+    "Join BladeBurner": "Вступить в Bladeburner",
+    // Bladeburner UI
+    "Stamina:": "Выносливость:",
+    "Stamina Penalty:": "Штраф к выносливости:",
+    "Team Size:": "Размер команды:",
+    "Team Members Lost:": "Потеряно членов команды:",
+    "Num Times Hospitalized:": "Число госпитализаций:",
+    "Money Lost From Hospitalizations:": "Денег потеряно на госпитализациях:",
+    "Current City:": "Текущий город:",
+    "Est. Synthoid Population:": "Оценка популяции синтоидов:",
+    "Synthoid Communities:": "Сообщества синтоидов:",
+    "City Chaos:": "Хаос в городе:",
+    "Bladeburner Console": "Консоль Bladeburner",
+    "Type 'help' to see console commands": "Введите 'help' для просмотра консольных команд",
+    "This is your Bladeburner division's estimate of how many Synthoids exist in your current city. An accurate population estimate increases success rate estimates.":
+      "Это оценка вашего подразделения Bladeburner о количестве синтоидов в текущем городе. Точная оценка численности повышает точность расчёта шансов на успех.",
+    "You should be careful with actions that decrease Synthoid population by percentage. Those actions can kill a large number of Synthoids in a short amount of time. Low population count decreases the success chance of most actions. If the population count is too low, you will need to move to another city.":
+      "Будьте осторожны с действиями, снижающими популяцию синтоидов в процентах. Они могут уничтожить много синтоидов за короткое время. Малая популяция снижает шансы успеха большинства действий. При слишком низкой численности придётся переехать в другой город.",
+    "The intelligence agency notifies us that Synthoid population is ":
+      "Разведка сообщает, что популяция синтоидов составляет ",
+    "This is your Bladeburner division's estimate of how many Synthoid communities exist in your current city.":
+      "Это оценка вашего подразделения Bladeburner о числе сообществ синтоидов в текущем городе.",
+    "Tensions and conflicts between humans and Synthoids increase the city's chaos level. High chaos level makes contracts and operations harder.":
+      "Напряжённость и конфликты между людьми и синтоидами повышают уровень хаоса в городе. Высокий уровень хаоса усложняет контракты и операции.",
+
+    // Gang UI
+    "Respect:": "Уважение:",
+    "Wanted Level:": "Уровень розыска:",
+    "Total Respect:": "Всего уважения:",
+    "If a gang member is not earning much money or respect, the task you assigned might be too difficult. Consider assigning an easier task, or training them. Tasks closer to the top of the dropdown list are generally easier. Alternatively, low production might be a sign that your wanted level is too high. Consider doing":
+      "Если член банды приносит мало денег или уважения, назначенная задача может быть слишком сложной. Попробуйте назначить более лёгкое задание или заняться тренировкой. Задачи в верхней части списка, как правило, проще. Кроме того, низкая эффективность может означать, что уровень розыска слишком высок. Попробуйте выполнять",
+    "Ethical Hacking or ": "этичный хакинг или ",
+    "Vigilante Justice to lower your wanted level.": "самосуд, чтобы снизить уровень розыска.",
+    "Installing Augmentations does NOT reset progress with your Gang, however ascension multipliers will decrease slightly. Furthermore, after installing Augmentations, you will automatically join whatever Faction you created your gang with.":
+      "Установка аугментаций НЕ сбрасывает прогресс вашей банды, однако множители возвышения немного снизятся. Кроме того, после установки аугментаций вы автоматически вступите во фракцию, в которой создали банду.",
+    "You can also manage your gang programmatically through Netscript using the Gang API.":
+      "Вы также можете управлять бандой программно через Netscript с помощью Gang API.",
+
+    // Corporation & Sleeves
+    "Bribe Factions": "Подкупить фракции",
+    "Sell CEO position": "Продать должность CEO",
+    "Earnings": "Доходы",
+
+    // Milestones
+    "Completing fl1ght.exe": "Завершение fl1ght.exe",
+
+    // Theme Browser
+    "If you've created a theme that you believe should be added in game's theme browser, feel free to":
+      "Если вы создали тему, которую стоит добавить в каталог тем игры, не стесняйтесь",
+    "create a pull request": "создать Pull Request",
+    "Head over to the": "Загляните в",
+    "discord channel for more.": "канал Discord для подробностей.",
+
+
     "Find Largest Prime Factor": "Поиск наибольшего простого множителя",
     "Subarray with Maximum Sum": "Подмассив с максимальной суммой",
     "Total Ways to Sum": "Общее число разложений на сумму",
@@ -5945,6 +6022,160 @@
     "Download a file from the internet.": "Скачать файл из интернета.",
     "Write data to a file.": "Записать данные в файл.",
     "Write data to a port.": "Записать данные в сетевой порт.",
+
+    // === New UI & Gameplay Translations ===
+    "You have not purchased any Augmentations to install!": "Вы не приобрели ни одной аугментации для установки!",
+    "You slowly drift to sleep as scientists put you under in order to install your new Augmentations...": "Вы медленно засыпаете, пока учёные вводят наркоз для установки новых аугментаций...",
+    "This Source-File can only be acquired with obscure knowledge of the game, Javascript, and the web ecosystem.": "Этот Исходный файл можно получить только благодаря глубоким знаниям игры, JavaScript и веб-экосистемы.",
+    "It increases all of the player's multipliers by 0.1%": "Он увеличивает все множители игрока на 0.1%",
+    "You have found the following exploits:": "Вы нашли следующие эксплойты:",
+    "Certain": "Некоторые",
+    "gangs": "банды",
+    "faction": "фракция",
+    "Developed by a pioneer in Grafting research, this implant gently integrates biological and mechanical interfaces.": "Разработанный первопроходцем в области пересадки, этот имплант мягко объединяет биологические и механические интерфейсы.",
+    "Magneto-turboencabulator based on technology by Micha Eike Sprenger, based on the principle of power generation by a differential logarithmic telemeter of a conductor.": "Магнито-турбоэнкабулятор по технологии Михи Айке Шпренгера, работающий на принципе генерации энергии дифференциальным логарифмическим телеметром проводника.",
+    "The left arm of a legendary BitRunner who ascended beyond the digital realm. It burns with cool violet flame.": "Левая рука легендарного БитРаннера, вознёсшегося за пределы цифрового мира. Она пылает холодным фиолетовым пламенем.",
+    "A bionic eye implant that enhances the user's sight far beyond normal human limitations.": "Бионический глазной имплант, улучшающий зрение владельца далеко за пределы обычных человеческих возможностей.",
+    "A skin implant that reinforces the skin with highly advanced light-absorbing nanorods.": "Кожный имплант, армирующий кожу высокотехнологичными светопоглощающими наностержнями.",
+    "A cranial implant that increases the attractive force of the user's speech and personality.": "Черепной имплант, увеличивающий силу притяжения речи и обаяния владельца.",
+    "Synthetic nanofibers are woven into the skin's extracellular matrix, significantly increasing defense.": "Синтетические нановолокна вплетены во внеклеточный матрикс кожи, значительно повышая защиту.",
+    "The NEMEAN Subdermal Weave is a thin, lightweight, graphene-based weave that resides just beneath the skin.": "Подкожное плетение NEMEAN — это тонкий, лёгкий графененовый слой, располагающийся прямо под кожей.",
+    "The latest version of the 'Augmented Targeting' implant adds predictive trajectory calculations to the user's optical processing.": "Новейшая версия импланта Augmented Targeting добавляет расчёт траекторий в систему зрительной обработки владельца.",
+    "A highly advanced bionic hand. This prosthetic not only enhances physical dexterity, but contains internal interfaces for hacking.": "Высокотехнологичная бионическая кисть. Этот протез не только повышает физическую ловкость, но и содержит интерфейсы для прямого взлома.",
+    "The amount of material this office can produce.": "Количество материалов, которое может произвести данный офис.",
+    "This value is based off the productivity of your": "Это значение зависит от производительности ваших сотрудников",
+    "Operations, Engineering, and Management employees.": "должностей Operations, Engineering и Management.",
+    "The amount of any given Product this office can produce.": "Количество любого Продукта, которое может произвести данный офис.",
+    "This office's sales effectivity for all materials and products.": "Эффективность продаж офиса для всех материалов и продуктов.",
+    "It is based on your Business employees and your advertising.": "Она зависит от сотрудников Business и вашей рекламы.",
+    "This will be further modified by demand and competition for each item.": "Значение дополнительно корректируется спросом и конкуренцией на каждый товар.",
+    "Production gain from owning production-boosting materials such as": "Прирост производства от владения усиливающими материалами, такими как",
+    "hardware, Robots, AI Cores, and Real Estate.": "Hardware, Robots, AI Cores и Real Estate.",
+    "Hire": "Нанять",
+    "AdVert.Inc": "AdVert.Inc",
+    "Hire AdVert -&nbsp;": "Купить рекламу AdVert — ",
+    "There was an error calculating your Corporations funds and they got reset to 0.": "Произошла ошибка при расчёте средств корпорации, баланс сброшен до 0.",
+    "Would you like to join": "Хотите вступить в",
+    "Joining this faction will prevent you from joining its enemies until your next augmentation.": "Вступление в эту фракцию заблокирует вступление во враждебные ей фракции до следующей установки аугментаций.",
+    " is enemies with:": " враждует с:",
+    "is enemies with:": "враждует с:",
+    "Decide later": "Решить позже",
+    "Join": "Вступить",
+    "Note that the passive reputation gain is disabled in some BitNodes.": "Обратите внимание: пассивный прирост репутации отключен в некоторых BitNodes.",
+    "Corporate executives with the right moral flexiblity may be invited to find out who they are truly working for.": "Топ-менеджеры корпораций с должной моральной гибкостью могут получить приглашение и узнать, на кого они работают на самом деле.",
+    "The World doesn't care about right or wrong. It only cares about power.": "Миру плевать на добро и зло. Имеет значение только власть.",
+    "That's terror. Terror, fear, and corruption. All born into the system, all propagated by the system.": "Это террор. Террор, страх и коррупция. Порождённые системой, поддерживаемые системой.",
+    "Discovery:": "Обнаружение:",
+    "All Factions:": "Все фракции:",
+    "All Reputation:": "Вся репутация:",
+    "All Favor:": "Вся благосклонность:",
+    "Tons": "Огромное количество",
+    "You do not have enough money to purchase this. You need": "Недостаточно денег для покупки. Вам нужно",
+    "in commission fees.": "на оплату комиссии.",
+    "You do not have enough money to purchase this short position. You need": "Недостаточно денег для открытия короткой позиции. Вам нужно",
+    "Buy 4S Market Data TIX API Access -&nbsp;": "Купить доступ к API 4S Market Data TIX — ",
+    "Buy WSE Account -&nbsp;": "Купить аккаунт WSE — ",
+    "TIX API Access": "Доступ к API TIX",
+    "Buy Trade Information eXchange (TIX) API Access -&nbsp;": "Купить доступ к API Trade Information eXchange (TIX) — ",
+    "Buy 4S Market Data Access -&nbsp;": "Купить доступ к 4S Market Data — ",
+    "Stock": "Акция",
+    "Price cap": "Лимит цены",
+    "Symbol:": "Тикер:",
+    "Price:": "Цена:",
+    "Set": "Задать",
+    "Money Lost From Hospitalizations:": "Потери денег от госпитализаций:",
+    "Rank:": "Ранг:",
+    "SP:": "Очки навыков:",
+    "Cycles:": "Циклы:",
+    "Chaos:": "Хаос:",
+    "Strength:&nbsp;": "Сила: ",
+    "Defense:&nbsp;": "Защита: ",
+    "Dexterity:&nbsp;": "Ловкость: ",
+    "Agility:&nbsp;": "Скорость: ",
+    "Charisma:&nbsp;": "Харизма: ",
+    "Intelligence:&nbsp;": "Интеллект: ",
+    "Hacking Level multiplier:&nbsp;": "Множитель уровня взлома: ",
+    "Hacking Experience multiplier:&nbsp;": "Множитель опыта взлома: ",
+    "Strength Level multiplier:&nbsp;": "Множитель уровня силы: ",
+    "Strength Experience multiplier:&nbsp;": "Множитель опыта силы: ",
+    "Defense Level multiplier:&nbsp;": "Множитель уровня защиты: ",
+    "Defense Experience multiplier:&nbsp;": "Множитель опыта защиты: ",
+    "Dexterity Level multiplier:&nbsp;": "Множитель уровня ловкости: ",
+    "Dexterity Experience multiplier:&nbsp;": "Множитель опыта ловкости: ",
+    "Agility Level multiplier:&nbsp;": "Множитель уровня скорости: ",
+    "Agility Experience multiplier:&nbsp;": "Множитель опыта скорости: ",
+    "Charisma Level multiplier:&nbsp;": "Множитель уровня харизмы: ",
+    "Charisma Experience multiplier:&nbsp;": "Множитель опыта харизмы: ",
+    "Faction Reputation Gain multiplier:&nbsp;": "Множитель репутации во фракциях: ",
+    "Company Reputation Gain multiplier:&nbsp;": "Множитель репутации в компаниях: ",
+    "Salary multiplier:&nbsp;": "Множитель зарплаты: ",
+    "Crime Money multiplier:&nbsp;": "Множитель дохода от преступлений: ",
+    "Crime Success multiplier:&nbsp;": "Множитель успеха преступлений: ",
+    "Augmentations will appear below as they become available.": "Аугментации появятся ниже, как только станут доступны.",
+    "Working for": "Работает на",
+    "Working at": "Работает в",
+    "Money earned since you last installed Augmentations": "Заработано денег с момента последней установки аугментаций",
+    "Money earned in this BitNode": "Заработано денег в этом BitNode",
+    "Displays your current multipliers.": "Показывает текущие множители характеристик.",
+    "BitNode Multipliers": "Множители BitNode",
+    "you spent a total of": "вы потратили всего",
+    "You earned a total of:": "Вы заработали всего:",
+    "You have": "У вас есть",
+    "reputation with them.": "репутации с ними.",
+    "They now have a total of": "Теперь у них всего",
+    "reputation.": "репутации.",
+    "Your money was not returned to you.": "Ваши деньги не были возвращены.",
+    "└ Threads:": "└ Потоков:",
+    "└ Online Time:": "└ Время в сети:",
+    "└ Offline Time:": "└ Время оффлайн:",
+    "└ Total online production:": "└ Суммарная добыча в сети:",
+    "└ Online production rate:": "└ Скорость добычи в сети:",
+    "└ Total offline production:": "└ Суммарная добыча оффлайн:",
+    "Unique Hostname": "Уникальное имя хоста",
+    "Create a Corporation": "Основать Корпорацию",
+    "Enter the secret lab": "Войти в секретную лабораторию",
+    "A decrepit altar stands in the middle of a dilapidated church.": "Ветхий алтарь возвышается посреди полуразрушенной церкви.",
+    "A symbol is carved in the altar.": "На алтаре высечен таинственный символ.",
+    "ID: N/A": "ID: Н/Д",
+    "Effect: N/A": "Эффект: Н/Д",
+    "Base Power: N/A": "Базовая сила: Н/Д",
+    "Charge: N/A": "Заряд: Н/Д",
+    "Import your game from a text file.": "Импортировать игру из текстового файла.",
+    "Importing new save game data will": "Импорт новых данных сохранения",
+    "the current game data!": "текущие данные игры!",
+    "Proceed with import": "Продолжить импорт",
+    "Take me back!": "Вернуться назад!",
+    "Disable Recovery Mode": "Отключить режим восстановления",
+    "Submit Issue to GitHub": "Отправить отчёт об ошибке на GitHub",
+    "Do NOT take a screenshot of this screen. You must post the bug report text below.": "НЕ делайте скриншот этого экрана. Скопируйте и отправьте текст отчёта об ошибке ниже.",
+    "Bug Report Text": "Текст отчёта об ошибке",
+    "Make a reddit post": "Опубликовать на Reddit",
+    "File an issue on github": "Создать задачу на GitHub",
+    "Post in the #bug-report channel on Discord.": "Написать в канал #bug-report в Discord.",
+    "Export crash report": "Экспортировать отчёт о сбое",
+    "Please include your save file and the crash report.": "Пожалуйста, приложите файл сохранения и отчёт о сбое.",
+    "You can disable the recovery mode, but the game may not work correctly, and your save data may be corrupted.": "Вы можете отключить режим восстановления, однако игра может работать некорректно, а данные сохранения могут быть повреждены.",
+    "You can also manage your gang programmatically through Netscript using the Gang API.": "Вы также можете управлять бандой программно через Netscript с помощью Gang API.",
+    "Alright cheater get out of here. You're not allowed here anymore.": "Так-так, шулер, убирайся отсюда. Тебе здесь больше не рады.",
+    "You do not have enough money.": "У вас недостаточно денег.",
+    "Gameplay:": "Игровой процесс:",
+    "WASD": "WASD",
+    "Level 1: Permanent access to WSE and TIX API": "Уровень 1: Постоянный доступ к WSE и API TIX",
+    "Level 2: Ability to short stocks in other BitNodes": "Уровень 2: Возможность открывать короткие позиции по акциям в других BitNodes",
+    "Level 3: Ability to use limit/stop orders in other BitNodes": "Уровень 3: Возможность использовать лимитные/стоп-ордера в других BitNodes",
+    "This Source-File also increases your hacking growth multipliers by:": "Этот Исходный файл также увеличивает множители роста взлома на:",
+    "Level 1: Permanently unlocks the Hacknet Server in other BitNodes": "Уровень 1: Навсегда открывает серверы Hacknet в других BitNodes",
+    "Level 2: You start with 128GB of RAM on your home computer when entering a new BitNode": "Уровень 2: Вы начинаете с 128GB ОЗУ на домашнем компьютере при входе в новый BitNode",
+    "Level 3: Grants a highly-upgraded Hacknet Server when entering a new BitNode": "Уровень 3: Предоставляет значительно улучшенный сервер Hacknet при входе в новый BitNode",
+    "This Source-File also increases hacknet production and reduces hacknet costs by:": "Этот Исходный файл также увеличивает производство Hacknet и снижает затраты на него на:",
+    "It also reduces the price increase for every augmentation bought by:": "Он также снижает рост цен на каждую купленную аугментацию на:",
+    "Level 1: 200k rep equivalent": "Уровень 1: эквивалент 200k репутации",
+    "Level 2: 300k rep equivalent": "Уровень 2: эквивалент 300k репутации",
+    "Level 3: 400k rep equivalent": "Уровень 3: эквивалент 400k репутации",
+    "and increases the reputation converted to favor for winning two games in a row to:": "и увеличивает репутацию, конвертируемую в благосклонность за две победы подряд, до:",
+    "Level 2: Your charisma level increases job salary and rep gain. Also increases authentication speed by 20%": "Уровень 2: Уровень харизмы повышает зарплату и прирост репутации на работе. Также увеличивает скорость аутентификации на 20%",
+    "Soft Reset!": "Мягкий сброс!",
+    "Others": "Другие",
   });
 
   const protectedSelector =
@@ -5971,15 +6202,6 @@
     const element = node && (node.nodeType === Node.TEXT_NODE ? node.parentElement : node);
     if (!element) return false;
     if (element.closest && element.closest("#untyped-react-markdown-root, .markdown, [class*='markdown'], [class*='doc'], [class*='Doc']")) return true;
-    const heading = document.querySelector("h1, h2");
-    if (!heading) return false;
-    const semanticRoot = heading.closest("main,[role='main']");
-    if (semanticRoot) return semanticRoot.contains(element);
-    let root = heading.parentElement;
-    for (let index = 0; root && index < 8; index += 1) {
-      if (root.contains(element)) return true;
-      root = root.parentElement;
-    }
     return false;
   }
 
@@ -6065,9 +6287,60 @@
   }
 
   function translateDynamicText(value) {
+    const acquireSF = /^Acquire SF(\d+)\.(\d+)$/i.exec(value);
+    if (acquireSF) {
+      return `Получить SF${acquireSF[1]}.${acquireSF[2]}`;
+    }
+
+    const unlockedAch = /^Unlocked Achievement:\s*["“](.+?)["”]$/i.exec(value);
+    if (unlockedAch) {
+      const achName = translations[unlockedAch[1]] || unlockedAch[1];
+      return `Разблокировано достижение: «${achName}»`;
+    }
+
     const applyForJob = /^Apply for ([\s\S]+) Job$/.exec(value);
     if (applyForJob) {
       return `Подать заявку на должность ${translations[applyForJob[1]] || applyForJob[1]}`;
+    }
+
+    const workingFor = /^Working for ([\s\S]+)$/.exec(value);
+    if (workingFor) {
+      return `Работает на ${translations[workingFor[1]] || workingFor[1]}`;
+    }
+
+    const workingAt = /^Working at ([\s\S]+)$/.exec(value);
+    if (workingAt) {
+      return `Работает в ${translations[workingAt[1]] || workingAt[1]}`;
+    }
+
+    const factionJoin = /^Would you like to join ([\s\S]+?)\?$/.exec(value);
+    if (factionJoin) {
+      return `Хотите вступить в ${translations[factionJoin[1]] || factionJoin[1]}?`;
+    }
+
+    const notEnoughMoney = /^You do not have enough money to purchase this\. You need ([\s\S]+?) in commission fees\.?$/.exec(value);
+    if (notEnoughMoney) {
+      return `Недостаточно денег для покупки. Вам нужно ${notEnoughMoney[1]} на оплату комиссии.`;
+    }
+
+    const notEnoughMoneyShort = /^You do not have enough money to purchase this short position\. You need ([\s\S]+?) in commission fees\.?$/.exec(value);
+    if (notEnoughMoneyShort) {
+      return `Недостаточно денег для открытия короткой позиции. Вам нужно ${notEnoughMoneyShort[1]} на оплату комиссии.`;
+    }
+
+    const augPurchased = /^You purchased ([\s\S]+?)\. Its enhancements will not take effect until they are installed\.?$/.exec(value);
+    if (augPurchased) {
+      return `Вы приобрели ${translations[augPurchased[1]] || augPurchased[1]}. Улучшения вступят в силу только после их установки.`;
+    }
+
+    const openedOffice = /^Opened a new office in ([\s\S]+?)!$/.exec(value);
+    if (openedOffice) {
+      return `Открыт новый офис в ${translations[openedOffice[1]] || openedOffice[1]}!`;
+    }
+
+    const researched = /^Researched ([\s\S]+?)\. It may take a market cycle.*$/.exec(value);
+    if (researched) {
+      return `Исследовано: ${translations[researched[1]] || researched[1]}. Изменения вступят в силу в следующем рыночном цикле.`;
     }
 
     const fileRequirement = /^Have the file '([\s\S]+)'$/.exec(value);
@@ -6237,6 +6510,7 @@
     }
   }
 
+
   function start() {
     const titleSuffix = " — RU by memasevich";
     const ensureTitle = () => {
@@ -6266,7 +6540,7 @@
       translateTerminalHelp();
     });
     observer.observe(document.body, { childList: true, subtree: true, characterData: true });
-    window.BitburnerRussianTranslation = { version: "0.1.0", translations };
+    window.BitburnerRussianTranslation = { version: "0.2.0", translations };
   }
 
   if (document.readyState === "loading") {
