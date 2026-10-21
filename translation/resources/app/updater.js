@@ -33,7 +33,7 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 
-const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/memasevich/Bitburner_ru/main/resources/app/dist";
+const GITHUB_RAW_BASE = "https://raw.githubusercontent.com/memasevich/Bitburner_ru/main/translation/resources/app/dist";
 const VERSION_URL = `${GITHUB_RAW_BASE}/version.json`;
 const TIMEOUT_MS = 2500;
 

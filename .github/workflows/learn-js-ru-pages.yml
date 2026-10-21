@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'learn-js-ru/**'
+      - 'website/learn-js-ru/**'
       - '.github/workflows/learn-js-ru-pages.yml'
   workflow_dispatch:
 
@@ -29,7 +29,7 @@ jobs:
       - name: Arrange the tutorial under its own path
         run: |
           mkdir -p _site/learn-js-ru
-          cp -R learn-js-ru/. _site/learn-js-ru/
+          cp -R website/learn-js-ru/. _site/learn-js-ru/
       - name: Prepare Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
