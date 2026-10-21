@@ -6277,8 +6277,14 @@
       "Открыть и изменить один или несколько скриптов или текстовых файлов в режиме vim",
   });
 
+  const knownTranslations = new Set(Object.values(translations));
+
   const cachedDynamicSources = Object.keys(translations)
-    .filter((source) => source.length >= 4 && source.length <= 80 && (/\s/.test(source) || /[.:!?]/.test(source)))
+    .filter((source) => {
+      const target = translations[source];
+      if (target && target.includes(source)) return false; // Prevent infinite self-duplication (e.g. Dual Naming)
+      return source.length >= 4 && source.length <= 80 && (/\s/.test(source) || /[.:!?]/.test(source));
+    })
     .sort((a, b) => b.length - a.length);
 
   const cachedTerminalHelpSources = Object.keys(terminalHelpTranslations)
@@ -6394,12 +6400,14 @@
     for (let i = 0; i < cachedDynamicSources.length; i++) {
       const source = cachedDynamicSources[i];
       if (source.length > translated.length) continue;
+      const target = translations[source];
+      if (target && translated.includes(target)) continue;
       if (translated.includes(source)) {
         const idx = translated.indexOf(source);
         const charBefore = idx > 0 ? translated[idx - 1] : " ";
         const charAfter = idx + source.length < translated.length ? translated[idx + source.length] : " ";
         if (/[a-zA-Z]/.test(charBefore) || /[a-zA-Z]/.test(charAfter)) continue;
-        translated = translated.split(source).join(translations[source]);
+        translated = translated.split(source).join(target);
         if (!/[a-zA-Z]/.test(translated)) break;
       }
     }
@@ -6433,6 +6441,12 @@
   function translateText(value, contextNode) {
     const match = /^(\s*)([\s\S]*?)(\s*)$/.exec(value);
     if (!match || match[2] === "") return value;
+
+    // Fast-path: already translated strings should never be re-processed
+    if (knownTranslations.has(value) || knownTranslations.has(match[2])) {
+      return value;
+    }
+
     const normalized = normalizeDocumentationText(match[2]);
     if (normalized === "The" && contextNode?.parentElement?.closest(".MuiPaper-root")?.textContent?.includes("Beginner's guide")) {
       return match[1] + "«" + match[3];
