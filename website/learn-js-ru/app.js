@@ -72,7 +72,7 @@
   function runCode() {
     const source = editor.value;
     const documentSource = `<!doctype html><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval'; connect-src 'none'; img-src 'none'; style-src 'none'; media-src 'none'; font-src 'none'; form-action 'none'; base-uri 'none'"><script>
-      addEventListener('message', (event) => {
+      addEventListener('message', async (event) => {
         if (!event.data || event.data.type !== 'run') return;
         const results = [];
         const printable = (value) => {
@@ -82,9 +82,9 @@
         };
         const sandboxConsole = { log: (...values) => results.push(values.map(printable).join(' ')), warn: (...values) => results.push('Предупреждение: ' + values.map(printable).join(' ')), error: (...values) => results.push('Ошибка: ' + values.map(printable).join(' ')) };
         try {
-          const execute = new Function('console', '"use strict";' + String.fromCharCode(10) + event.data.code);
-          const result = execute(sandboxConsole);
-          if (result && typeof result.then === 'function') result.catch(error => parent.postMessage({type:'result', error:String(error)}, '*'));
+          const AsyncFunction = Object.getPrototypeOf(async function() {}).constructor;
+          const execute = new AsyncFunction('console', '"use strict";' + String.fromCharCode(10) + event.data.code);
+          await execute(sandboxConsole);
           parent.postMessage({type:'result', lines:results}, '*');
         } catch (error) { parent.postMessage({type:'result', error: error && error.message ? error.message : String(error)}, '*'); }
       });

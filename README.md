@@ -6,29 +6,29 @@
 
 <p align="center">
   Русификатор игры и бесплатный интерактивный курс JavaScript для начинающих.
-  <br />Версия игры: <b>Bitburner v3.0.1</b> · Перевод: <b>RU by memasevich</b>
+  <br />Версия игры: <b>Bitburner v3.0.1</b> · Русификатор: <b>0.2.3 — RU by memasevich</b>
 </p>
 
 <p align="center">
-  <a href="https://github.com/memasevich/Bitburner_ru/archive/refs/heads/main.zip"><b>⬇ Скачать архив проекта (.zip)</b></a>
+  <a href="https://github.com/memasevich/Bitburner_ru/raw/refs/heads/main/downloads/Bitburner-RU-v0.2.3.zip"><b>⬇ Скачать только русификатор (.zip)</b></a>
   &nbsp; · &nbsp;
   <a href="https://github.com/memasevich/Bitburner_ru/tree/main/translation/resources/app"><b>📁 Где лежат файлы перевода</b></a>
   &nbsp; · &nbsp;
   <a href="https://memasevich.github.io/Bitburner_ru/learn-js-ru/"><b>🎓 Открыть курс JavaScript</b></a>
 </p>
 
-> **Нужен только перевод?** Скачайте ZIP по первой ссылке. В архиве откройте `translation\resources\app` — именно её содержимое нужно скопировать в папку игры. Учебный сайт и папку `assets` в игру копировать не нужно.
+> **По первой ссылке скачивается отдельный архив только с русификатором.** Если нужен весь исходный проект (включая учебный сайт и материалы), [скачайте ZIP репозитория](https://github.com/memasevich/Bitburner_ru/archive/refs/heads/main.zip). В игру копируются только файлы русификатора.
 
 ## Как установить перевод
 
 1. **Закройте Bitburner**, если игра запущена.
-2. Нажмите [«Скачать архив проекта (.zip)»](https://github.com/memasevich/Bitburner_ru/archive/refs/heads/main.zip) и распакуйте архив.
-3. В распакованной папке откройте `translation\resources\app`.
+2. Нажмите [«Скачать только русификатор (.zip)»](https://github.com/memasevich/Bitburner_ru/raw/refs/heads/main/downloads/Bitburner-RU-v0.2.3.zip) и распакуйте архив.
+3. Выделите всё содержимое распакованной папки — включая папку `dist`.
 4. Откройте папку игры. Для Steam это обычно `Steam\steamapps\common\Bitburner\resources\app`.
-5. **Скопируйте содержимое** `translation\resources\app` в `resources\app` игры и согласитесь на замену файлов.
+5. **Скопируйте выбранные файлы и папку `dist`** в `resources\app` игры и согласитесь на замену файлов.
 6. Запустите игру. В заголовке окна должна появиться отметка `Bitburner v3.0.1 (3162fd2) — RU by memasevich`.
 
-Перед установкой рекомендуется сделать резервную копию папки игры. В архиве находится и учебный сайт — для установки русификатора он не требуется.
+Перед установкой рекомендуется сделать резервную копию папки игры. Архив по ссылке содержит только перевод; учебный сайт доступен отдельно и в папку игры не устанавливается.
 
 ## Учебный сайт: JavaScript с нуля
 
