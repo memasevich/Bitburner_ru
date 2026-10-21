@@ -11,3 +11,96 @@
 .course-attribution{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(250px,1fr) minmax(360px,1.35fr);align-items:center;gap:20px 36px;max-width:1800px;margin:0 auto;padding:16px clamp(20px,3vw,48px);border-bottom:1px solid #29362c;background-color:#12170f;background-image:linear-gradient(180deg,rgba(95,226,120,.035) 1px,transparent 1px);background-size:100% 26px}.course-attribution::before{content:"";position:absolute;z-index:-1;inset:0 auto 0 0;width:2px;background:#55e879;box-shadow:0 0 12px rgba(85,232,121,.24)}.course-attribution .footer-credit{min-width:0}.course-attribution .footer-credit img{width:48px;height:48px;padding:3px;border:1px solid #3c8c50;border-radius:5px;background:#0c110d;box-shadow:0 0 15px rgba(85,232,121,.11)}.course-attribution .footer-credit strong{font-size:12px;color:#e3f4e5}.course-attribution .footer-credit span,.course-attribution .footer-sources>span:first-child{font-size:11px}.course-attribution .footer-credit .course-attribution-kicker{margin-bottom:3px;color:#70e98a;font:9px var(--mono);letter-spacing:.045em}.course-attribution .footer-sources{gap:5px}.course-attribution .footer-sources>span:last-child{gap:8px 18px}.course-attribution .footer-sources a{color:#91e9a4;text-decoration:none;font-size:11px}.course-attribution .footer-sources a:hover{color:#c3ffcc;text-decoration:underline}.course-attribution a:focus-visible{outline:2px solid #77ec91;outline-offset:3px;border-radius:2px}
 @media(max-width:760px){.course-attribution{grid-template-columns:minmax(0,1fr);gap:12px;padding:14px 17px}.course-attribution .footer-credit{align-items:flex-start}.course-attribution .footer-sources{padding-left:60px}}
 @media(max-width:420px){.course-attribution .footer-sources{padding-left:0}.course-attribution .footer-sources>span:last-child{gap:7px 14px}}
+
+/* Bitburner learning lab: one terminal-inspired visual system across the course. */
+:root{--bg:#090d0a;--panel:#101711;--panel-2:#151f17;--line:#2a3d2d;--line-soft:#1c2a1f;--text:#e7eee7;--muted:#a2afa3;--faint:#768177;--green:#67e681;--terminal:#67e681;--terminal-soft:#a4f2b1;--copper:#b85e36}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{background:radial-gradient(ellipse at 52% -24%,#18301d 0,transparent 48%),var(--bg);color:var(--text)}
+.topbar{position:relative;z-index:2;height:70px;padding-inline:clamp(18px,3vw,42px);background:#111711;border-bottom:1px solid #314331;box-shadow:0 8px 28px #0005}
+.topbar::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--copper) 0 15%,var(--terminal) 15% 37%,transparent 72%)}
+.brand{min-width:230px;gap:12px}
+.brand-mark{width:38px;height:38px;border:1px solid #4b8d57;border-radius:4px;color:var(--terminal-soft);background:#0c170e;box-shadow:inset 0 0 18px #63e67e12;font-size:16px}
+.brand-copy strong{font-size:15px;letter-spacing:.03em}
+.brand-copy span{color:#9cae9e;letter-spacing:.06em}
+.topbar-meta{color:#a8b5a9;font:11px var(--mono);letter-spacing:.02em}
+.status-dot{background:var(--terminal);box-shadow:0 0 9px #67e68166}
+.topbar-divider{color:#637164}
+.game-link{color:var(--terminal-soft);font:11px var(--mono);letter-spacing:.02em}
+.game-link:hover,.page-footer a:hover{color:#d5ffdb}
+.course-attribution{border-bottom-color:#2b3e2d;background-color:#10170f;background-image:linear-gradient(180deg,#83ef8c08 1px,transparent 1px);box-shadow:inset 0 -1px #0004}
+.course-attribution::before{width:3px;background:var(--terminal);box-shadow:0 0 14px #67e68135}
+.course-attribution .footer-credit img{border-color:#4d9859;background:#0a110b;box-shadow:0 0 18px #67e68118}
+.course-attribution .footer-credit strong{color:#eff8ee}
+.course-attribution .footer-credit .course-attribution-kicker{color:var(--terminal)}
+.course-attribution .footer-sources a{color:#a4efb1}
+.course-attribution .footer-sources a:hover{color:#e0ffe3}
+.workspace{align-items:start;min-height:calc(100vh - 70px)}
+.sidebar{position:sticky;top:0;height:100vh;max-height:100vh;min-height:0;padding:25px 17px 17px 20px;background:#0e140f;border-right-color:#27382a}
+.sidebar #lesson-nav{min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 3px 12px 0;scrollbar-color:#3b5940 transparent;scrollbar-width:thin}
+.sidebar-heading{color:#9eab9f}
+.sidebar-heading span:last-child{color:var(--terminal-soft)}
+.progress-track{background:#233126;border-radius:2px}
+.progress-track span{background:var(--terminal);box-shadow:0 0 10px #67e68155}
+.search-wrap{border-color:#2b3d2e;border-radius:4px;background:#111a13}
+.search-wrap:focus-within{border-color:#5bbd6d;box-shadow:0 0 0 2px #67e68118}
+.search-wrap input::placeholder{color:#829085}
+.nav-group-title{color:#7f9081}
+.lesson-link{border-radius:3px;color:#aeb9af}
+.lesson-link:hover{background:#18251a;color:#f0f7f0}
+.lesson-link.active{position:relative;background:#17271a;color:#d8f6dc;box-shadow:inset 0 0 0 1px #35553a}
+.lesson-link.active::before{content:"";position:absolute;inset:7px auto 7px 0;width:2px;background:var(--terminal);box-shadow:0 0 8px #67e68166}
+.nav-index{color:#829085}
+.sidebar-foot{border-top-color:#28382a;color:#a0ada1}
+.keyboard-hint{color:var(--terminal-soft)}
+.main-content{max-width:930px;padding:34px clamp(28px,4vw,58px) 30px}
+.lesson-toolbar{margin-bottom:34px;padding-bottom:13px;border-bottom:1px solid #202e22}
+.crumb,.lesson-count{color:#91a093}
+.crumb b,.lesson-kicker{color:var(--terminal-soft)}
+.lesson-title{color:#f0f5ee;letter-spacing:-.04em}
+.lesson-lead{color:#bdc9be}
+.lesson-content h2{color:#e6eee6;margin-top:36px}
+.lesson-content p,.lesson-content ul{color:#b7c3b8}
+.lesson-content strong{color:#eef6ee}
+.lesson-content code:not(pre code){color:#b9f4c3;background:#17271a;border:1px solid #2a4930;border-radius:3px}
+.lesson-content li::marker{color:var(--terminal)}
+.callout{border-left-color:var(--terminal);background:#121c14;color:#bbc8bc;border-radius:0 3px 3px 0}
+.callout strong{color:#c9f5d0}
+.lesson-example-label{color:#9eada0}
+.lesson-example-label::before{background:var(--terminal)}
+.lesson-actions{border-top-color:#27372a}
+.complete-button{border-color:#38563c;border-radius:3px;background:#142018;color:#b8efc0}
+.complete-button:hover{border-color:#69d57d;background:#1a2b1d}
+.complete-button.is-complete{border-color:#4b8754;background:#15251a;color:#a6f2b2}
+.pager-button{border-radius:3px}
+.pager-button:hover:not(:disabled){border-color:#4c8655;color:#d4f6d9}
+.pager-next{background:#18271b;border-color:#3b6141;color:#c3f0ca}
+.page-footer{border-top-color:#27372a;color:#8d9a8e}
+.page-footer a{color:#a6eab1}
+.practice-panel{position:sticky;top:0;align-self:start;max-height:100vh;overflow:auto;border-left-color:#27382a;background:#0e140f;padding:26px 20px 22px;scrollbar-color:#3b5940 transparent;scrollbar-width:thin}
+.eyebrow{color:var(--terminal-soft)}
+.practice-head h2{color:#eef5ee}
+.lock-icon{color:var(--terminal)}
+.practice-note{color:#a7b3a8}
+.editor-frame{border-color:#324334;border-radius:4px;background:#0b100c;box-shadow:0 8px 24px #0003}
+.editor-top{border-bottom-color:#28362a;background:#151d16;color:#9aa89b}
+.traffic-lights i:first-child{background:#b85e36}
+.traffic-lights i:nth-child(2){background:#c99a4d}
+.traffic-lights i:nth-child(3){background:#65c978}
+.editor-top button{color:#a8b7a9}
+#code-editor{background:#0b100c;color:#aaf2b5;caret-color:#c8ffd0}
+#code-editor:focus{box-shadow:inset 0 0 0 1px #4f925a}
+.line-number{border-right-color:#202d22;color:#728275}
+.run-button{border-color:#67e681;border-radius:3px;background:#67e681;color:#09100a;box-shadow:0 4px 18px #67e68120}
+.run-button:hover{filter:brightness(1.08)}
+.run-button kbd{border-color:#14532155;color:#153d1e}
+.output-head{color:#a0aea1}
+.output-head button{color:#99a79a}
+.code-output{border-color:#2d3e30;border-radius:4px;background:#090e0a;color:#c5f2ca}
+.output-placeholder{color:#819083}
+.safety-note{border:1px solid #26392a;border-radius:3px;background:#111a13;color:#a8b9aa}
+.safety-note>span:first-child{color:var(--terminal)}
+:where(a,button,input,textarea):focus-visible{outline:2px solid #8af49a;outline-offset:3px}
+@media(max-width:1180px){.sidebar{padding-left:15px;padding-right:13px}.main-content{padding-left:30px;padding-right:30px}}
+@media(max-width:920px){.workspace{align-items:stretch}.sidebar{position:sticky;top:0;max-height:100vh;height:100vh;grid-row:1/span 2}.practice-panel{position:static;max-height:none;overflow:visible}}
+@media(max-width:620px){.topbar{height:58px;padding-inline:15px}.topbar::before{height:2px}.brand-mark{width:34px;height:34px}.brand-copy strong{font-size:14px}.workspace{align-items:stretch;min-height:calc(100vh - 58px)}.sidebar{position:static;height:auto;max-height:none;min-height:0;padding:12px 14px 10px}.sidebar #lesson-nav{overflow-y:hidden;overscroll-behavior:auto}.main-content{padding:22px 17px 20px}.lesson-toolbar{margin-bottom:25px;padding-bottom:11px}.lesson-title{font-size:clamp(29px,8vw,36px)}.practice-panel{position:static;max-height:none;overflow:visible;border-left:0;border-top:1px solid #27382a;padding:20px 17px 25px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
