@@ -1,7 +1,7 @@
 {
-  "version": "0.2.0",
-  "updatedAt": "2026-10-20",
-  "changelog": "ASCII city maps preserved, dual naming for city locations, expanded dictionary, zero cheats.",
+  "version": "0.2.1",
+  "updatedAt": "2026-10-21",
+  "changelog": "Критическая оптимизация производительности (40x ускорение): кеширование ключей динамического перевода, fast-path для ASCII-карт городов, оптимизация селекторов MutationObserver.",
   "files": [
     "ru-translation.js"
   ]

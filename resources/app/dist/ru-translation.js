@@ -6277,6 +6277,13 @@
       "Открыть и изменить один или несколько скриптов или текстовых файлов в режиме vim",
   });
 
+  const cachedDynamicSources = Object.keys(translations)
+    .filter((source) => source.length >= 4 && (/\s/.test(source) || /[.:!?]/.test(source)))
+    .sort((a, b) => b.length - a.length);
+
+  const cachedTerminalHelpSources = Object.keys(terminalHelpTranslations)
+    .sort((a, b) => b.length - a.length);
+
   function isProtected(node) {
     const parent = node.nodeType === Node.ELEMENT_NODE ? node : node.parentElement;
     if (parent == null) return false;
@@ -6376,14 +6383,20 @@
       .replace(/\s*-\s*Volatility:\s*/gi, " — Волатильность: ")
       .replace(/\s*-\s*Price Forecast:\s*/gi, " — Прогноз цены: ")
       .replace(/^Purchase\s+([\d.,]+(?:[KMGTPEB]i?B)?)\s+Cloud Server\s*[-—]\s*$/i, "Купить облачный сервер $1 — ");
-    for (const source of Object.keys(translations).sort((a, b) => b.length - a.length)) {
-      if (source.length < 4 || (!/\s/.test(source) && !/[.:!?]/.test(source))) continue;
+
+    // Fast path: if there are no Latin characters, no English source can match.
+    // This immediately skips ASCII map characters (| - + o x \ / etc), numbers, and pre-translated text.
+    if (!/[a-zA-Z]/.test(translated)) return translated;
+
+    for (let i = 0; i < cachedDynamicSources.length; i++) {
+      const source = cachedDynamicSources[i];
       if (translated.includes(source)) {
         const idx = translated.indexOf(source);
         const charBefore = idx > 0 ? translated[idx - 1] : " ";
         const charAfter = idx + source.length < translated.length ? translated[idx + source.length] : " ";
         if (/[a-zA-Z]/.test(charBefore) || /[a-zA-Z]/.test(charAfter)) continue;
         translated = translated.split(source).join(translations[source]);
+        if (!/[a-zA-Z]/.test(translated)) break;
       }
     }
     return translated;
@@ -6398,9 +6411,13 @@
     let current;
     while ((current = walker.nextNode())) nodes.push(current);
 
-    for (const node of nodes) {
+    for (let i = 0; i < nodes.length; i++) {
+      const node = nodes[i];
       let translated = node.nodeValue || "";
-      for (const source of Object.keys(terminalHelpTranslations).sort((a, b) => b.length - a.length)) {
+      if (!/[a-zA-Z]/.test(translated)) continue;
+
+      for (let j = 0; j < cachedTerminalHelpSources.length; j++) {
+        const source = cachedTerminalHelpSources[j];
         if (translated.includes(source)) {
           translated = translated.split(source).join(terminalHelpTranslations[source]);
         }
@@ -6528,19 +6545,36 @@
     annotateTerminalVersion();
     translateTerminalHelp();
     const observer = new MutationObserver((records) => {
-      for (const record of records) {
+      let hasTerminalChanges = false;
+      let hasHeadingsChanges = false;
+
+      for (let i = 0; i < records.length; i++) {
+        const record = records[i];
         if (record.type === "characterData") {
           scan(record.target);
         } else {
-          for (const node of record.addedNodes) scan(node);
+          for (let j = 0; j < record.addedNodes.length; j++) {
+            const node = record.addedNodes[j];
+            scan(node);
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              if (!hasHeadingsChanges && (node.matches("h1,h2,h3,h4,h5,h6") || node.querySelector("h1,h2,h3,h4,h5,h6"))) {
+                hasHeadingsChanges = true;
+              }
+              if (!hasTerminalChanges && (node.id === "terminal" || node.querySelector("#terminal"))) {
+                hasTerminalChanges = true;
+              }
+            }
+          }
         }
       }
-      translateDocumentationHeadings();
-      annotateTerminalVersion();
-      translateTerminalHelp();
+      if (hasHeadingsChanges) translateDocumentationHeadings();
+      if (hasTerminalChanges) {
+        annotateTerminalVersion();
+        translateTerminalHelp();
+      }
     });
     observer.observe(document.body, { childList: true, subtree: true, characterData: true });
-    window.BitburnerRussianTranslation = { version: "0.2.0", translations };
+    window.BitburnerRussianTranslation = { version: "0.2.1", translations };
   }
 
   if (document.readyState === "loading") {
