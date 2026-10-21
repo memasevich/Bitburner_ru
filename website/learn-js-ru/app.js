@@ -1,5 +1,6 @@
 (() => {
   const lessons = window.COURSE_LESSONS;
+  const bitburnerNotes = window.COURSE_BITBURNER_NOTES || {};
   const nav = document.querySelector('#lesson-nav');
   const article = document.querySelector('#lesson-content');
   const editor = document.querySelector('#code-editor');
@@ -46,6 +47,14 @@
     document.querySelector('#lesson-category').textContent = lesson.category;
     document.querySelector('#lesson-number').textContent = `УРОК ${String(index + 1).padStart(2, '0')}`;
     article.innerHTML = `<div class="lesson-kicker">${lesson.group} · ${String(index + 1).padStart(2, '0')}</div><h1 class="lesson-title">${lesson.title}</h1><p class="lesson-lead">${lesson.lead}</p><div class="lesson-content">${lesson.body}</div><div class="lesson-example-label">ПРИМЕР ДЛЯ ПРАКТИКИ</div>`;
+    if (bitburnerNotes[lesson.id]) {
+      const note = document.createElement('div');
+      note.className = 'callout';
+      const label = document.createElement('strong');
+      label.textContent = 'Параллель с Bitburner: ';
+      note.append(label, document.createTextNode(bitburnerNotes[lesson.id]));
+      article.querySelector('.lesson-content').append(note);
+    }
     editor.value = lesson.code;
     output.innerHTML = '<span class="output-placeholder">Запусти пример, чтобы увидеть результат…</span>';
     document.querySelector('#complete-button').classList.toggle('is-complete', completed.has(lesson.id));
