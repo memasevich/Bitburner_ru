@@ -6278,7 +6278,7 @@
   });
 
   const cachedDynamicSources = Object.keys(translations)
-    .filter((source) => source.length >= 4 && (/\s/.test(source) || /[.:!?]/.test(source)))
+    .filter((source) => source.length >= 4 && source.length <= 80 && (/\s/.test(source) || /[.:!?]/.test(source)))
     .sort((a, b) => b.length - a.length);
 
   const cachedTerminalHelpSources = Object.keys(terminalHelpTranslations)
@@ -6388,8 +6388,12 @@
     // This immediately skips ASCII map characters (| - + o x \ / etc), numbers, and pre-translated text.
     if (!/[a-zA-Z]/.test(translated)) return translated;
 
+    // Fast path: if string has no whitespace and no punctuation, it cannot match any dynamic multi-word phrase
+    if (!/\s/.test(translated) && !/[.:!?]/.test(translated)) return translated;
+
     for (let i = 0; i < cachedDynamicSources.length; i++) {
       const source = cachedDynamicSources[i];
+      if (source.length > translated.length) continue;
       if (translated.includes(source)) {
         const idx = translated.indexOf(source);
         const charBefore = idx > 0 ? translated[idx - 1] : " ";
@@ -6482,25 +6486,33 @@
 
     if (root.nodeType !== Node.ELEMENT_NODE || isProtected(root)) return;
 
-    for (const attribute of ["title", "aria-label", "placeholder", "alt"]) {
-      translateAttribute(root, attribute);
+    if (root.getAttribute) {
+      for (const attribute of ["title", "aria-label", "placeholder", "alt"]) {
+        translateAttribute(root, attribute);
+      }
     }
+
+    const hasProtectedChildren = Boolean(root.querySelector && root.querySelector(protectedSelector));
 
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
     const textNodes = [];
     let current;
     while ((current = walker.nextNode())) textNodes.push(current);
-    for (const node of textNodes) {
-      if (!isProtected(node)) {
-        const translated = translateText(node.nodeValue || "", node);
-        if (translated !== node.nodeValue) node.nodeValue = translated;
-      }
+    for (let i = 0; i < textNodes.length; i++) {
+      const node = textNodes[i];
+      if (hasProtectedChildren && isProtected(node)) continue;
+      const translated = translateText(node.nodeValue || "", node);
+      if (translated !== node.nodeValue) node.nodeValue = translated;
     }
 
-    for (const element of root.querySelectorAll("[title], [aria-label], [placeholder], [alt]")) {
-      if (isProtected(element)) continue;
-      for (const attribute of ["title", "aria-label", "placeholder", "alt"]) {
-        translateAttribute(element, attribute);
+    if (root.querySelectorAll) {
+      const attrElements = root.querySelectorAll("[title], [aria-label], [placeholder], [alt]");
+      for (let i = 0; i < attrElements.length; i++) {
+        const element = attrElements[i];
+        if (hasProtectedChildren && isProtected(element)) continue;
+        for (const attribute of ["title", "aria-label", "placeholder", "alt"]) {
+          translateAttribute(element, attribute);
+        }
       }
     }
   }
@@ -6544,37 +6556,54 @@
     translateDocumentationHeadings();
     annotateTerminalVersion();
     translateTerminalHelp();
-    const observer = new MutationObserver((records) => {
-      let hasTerminalChanges = false;
-      let hasHeadingsChanges = false;
+    let scanTimer = null;
+    let pendingNodes = [];
+    let hasTerminalChanges = false;
+    let hasHeadingsChanges = false;
 
+    const observer = new MutationObserver((records) => {
       for (let i = 0; i < records.length; i++) {
         const record = records[i];
         if (record.type === "characterData") {
-          scan(record.target);
+          pendingNodes.push(record.target);
         } else {
           for (let j = 0; j < record.addedNodes.length; j++) {
             const node = record.addedNodes[j];
-            scan(node);
+            pendingNodes.push(node);
             if (node.nodeType === Node.ELEMENT_NODE) {
-              if (!hasHeadingsChanges && (node.matches("h1,h2,h3,h4,h5,h6") || node.querySelector("h1,h2,h3,h4,h5,h6"))) {
+              if (!hasHeadingsChanges && (node.matches("h1,h2,h3,h4,h5,h6") || (node.querySelector && node.querySelector("h1,h2,h3,h4,h5,h6")))) {
                 hasHeadingsChanges = true;
               }
-              if (!hasTerminalChanges && (node.id === "terminal" || node.querySelector("#terminal"))) {
+              if (!hasTerminalChanges && (node.id === "terminal" || (node.querySelector && node.querySelector("#terminal")))) {
                 hasTerminalChanges = true;
               }
             }
           }
         }
       }
-      if (hasHeadingsChanges) translateDocumentationHeadings();
-      if (hasTerminalChanges) {
-        annotateTerminalVersion();
-        translateTerminalHelp();
+
+      if (!scanTimer) {
+        scanTimer = setTimeout(() => {
+          scanTimer = null;
+          const nodes = pendingNodes;
+          pendingNodes = [];
+          for (let i = 0; i < nodes.length; i++) {
+            scan(nodes[i]);
+          }
+          if (hasHeadingsChanges) {
+            hasHeadingsChanges = false;
+            translateDocumentationHeadings();
+          }
+          if (hasTerminalChanges) {
+            hasTerminalChanges = false;
+            annotateTerminalVersion();
+            translateTerminalHelp();
+          }
+        }, 16);
       }
     });
     observer.observe(document.body, { childList: true, subtree: true, characterData: true });
-    window.BitburnerRussianTranslation = { version: "0.2.1", translations };
+    window.BitburnerRussianTranslation = { version: "0.2.2", translations };
   }
 
   if (document.readyState === "loading") {
