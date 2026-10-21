@@ -22,8 +22,8 @@
 
       <div class="workspace">
         <aside class="sidebar" aria-label="Навигация по курсу">
-          <div class="sidebar-heading"><span>МАРШРУТ</span><span id="progress-label">0 / 39</span></div>
-          <div class="progress-track" role="progressbar" aria-label="Прогресс по курсу" aria-valuemin="0" aria-valuemax="39" aria-valuenow="0"><span id="progress-bar"></span></div>
+          <div class="sidebar-heading"><span>МАРШРУТ</span><span id="progress-label">0 / 43</span></div>
+          <div class="progress-track" role="progressbar" aria-label="Прогресс по курсу" aria-valuemin="0" aria-valuemax="43" aria-valuenow="0"><span id="progress-bar"></span></div>
           <label class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><span class="visually-hidden">Найти урок</span><input id="lesson-search" type="search" placeholder="Найти урок…" autocomplete="off"></label>
           <nav id="lesson-nav"></nav>
           <div class="sidebar-foot"><span class="keyboard-hint">Подсказка</span><p>Попробуй изменить пример и запусти его. Ошибки — часть обучения.</p></div>
@@ -36,7 +36,14 @@
             <button id="complete-button" class="complete-button" type="button"><span aria-hidden="true">✓</span> Отметить урок пройденным</button>
             <div class="pager"><button id="prev-button" class="pager-button" type="button">← <span>Назад</span></button><button id="next-button" class="pager-button pager-next" type="button"><span>Следующий урок</span> →</button></div>
           </div>
-          <footer class="page-footer"><span>Учись в своём темпе — прогресс хранится в этом браузере.</span><a href="https://github.com/memasevich/Bitburner_ru" target="_blank" rel="noreferrer">Исходный проект ↗</a></footer>
+          <footer class="page-footer">
+            <div class="footer-credit">
+              <img src="./assets/memasevich-logo.png" alt="Логотип Memasevich" width="54" height="54" loading="lazy">
+              <div><strong>Курс создан Memasevich</strong><span>Уроки адаптированы для новичков и связаны с практикой Bitburner.</span></div>
+            </div>
+            <div class="footer-sources"><span>При подготовке использованы темы и материалы:</span><span><a href="https://www.learn-js.org/en/Welcome" target="_blank" rel="noreferrer">Learn-js.org ↗</a><a href="https://www.programiz.com/javascript/get-started" target="_blank" rel="noreferrer">Programiz ↗</a><a href="https://github.com/memasevich/Bitburner_ru" target="_blank" rel="noreferrer">Проект на GitHub ↗</a></span></div>
+            <span class="footer-progress-note">Прогресс сохраняется в этом браузере.</span>
+          </footer>
         </main>
 
         <aside class="practice-panel" aria-label="Редактор JavaScript">
@@ -54,7 +61,7 @@
       </div>
     </div>
     <iframe id="sandbox" title="Изолированная среда выполнения JavaScript" sandbox="allow-scripts" hidden></iframe>
-    <script src="./lessons.js?v=course39-bitburner2" defer></script>
-    <script src="./app.js?v=course39-bitburner2" defer></script>
+    <script src="./lessons.js?v=course43-credit1" defer></script>
+    <script src="./app.js?v=course43-credit1" defer></script>
   </body>
 </html>
