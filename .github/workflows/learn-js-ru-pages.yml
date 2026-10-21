@@ -26,10 +26,14 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      - name: Arrange the tutorial under its own path
+        run: |
+          mkdir -p _site/learn-js-ru
+          cp -R learn-js-ru/. _site/learn-js-ru/
       - name: Prepare Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: learn-js-ru
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

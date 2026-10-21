@@ -8,7 +8,7 @@
 
 ## Публикация
 
-Содержимое этой папки публикуется отдельным GitHub Pages workflow. В настройках репозитория GitHub Pages должен быть выбран источник **GitHub Actions**. Адрес проекта будет иметь вид `https://memasevich.github.io/Bitburner_ru/learn-js-ru/`, если владелец репозитория не настроит отдельный домен.
+Содержимое этой папки публикуется отдельным GitHub Pages workflow по адресу `https://memasevich.github.io/Bitburner_ru/learn-js-ru/`. GitHub Pages в репозитории должен быть включён с источником **GitHub Actions**. Для собственного домена владелец должен отдельно настроить домен и DNS.
 
 ## Безопасность примеров
 
