@@ -53,7 +53,7 @@
       const label = document.createElement('strong');
       label.textContent = 'Параллель с Bitburner: ';
       note.append(label, document.createTextNode(bitburnerNotes[lesson.id]));
-      article.querySelector('.lesson-content').append(note);
+      article.querySelector('.lesson-lead').after(note);
     }
     editor.value = lesson.code;
     output.innerHTML = '<span class="output-placeholder">Запусти пример, чтобы увидеть результат…</span>';
