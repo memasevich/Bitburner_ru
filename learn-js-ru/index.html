@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101016">
+    <meta name="description" content="Интерактивный курс JavaScript на русском: короткие уроки, примеры кода и практика для начинающих и игроков Bitburner.">
+    <title>JavaScript с нуля — учебная лаборатория</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#lesson">Перейти к уроку</a>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#welcome" aria-label="JavaScript с нуля — на главную">
+          <span class="brand-mark" aria-hidden="true">JS</span>
+          <span class="brand-copy"><strong>кодовая</strong><span>учебная лаборатория</span></span>
+        </a>
+        <div class="topbar-meta"><span class="status-dot"></span> Практика в браузере <span class="topbar-divider">·</span> без регистрации</div>
+        <a class="game-link" href="https://github.com/memasevich/Bitburner_ru" target="_blank" rel="noreferrer">Проект Bitburner <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <div class="workspace">
+        <aside class="sidebar" aria-label="Навигация по курсу">
+          <div class="sidebar-heading"><span>МАРШРУТ</span><span id="progress-label">0 / 9</span></div>
+          <div class="progress-track" role="progressbar" aria-label="Прогресс по курсу" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0"><span id="progress-bar"></span></div>
+          <label class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><span class="visually-hidden">Найти урок</span><input id="lesson-search" type="search" placeholder="Найти урок…" autocomplete="off"></label>
+          <nav id="lesson-nav"></nav>
+          <div class="sidebar-foot"><span class="keyboard-hint">Подсказка</span><p>Попробуй изменить пример и запусти его. Ошибки — часть обучения.</p></div>
+        </aside>
+
+        <main id="lesson" class="main-content" tabindex="-1">
+          <div class="lesson-toolbar"><span class="crumb">КУРС <span aria-hidden="true">/</span> <b id="lesson-category">ОСНОВЫ</b></span><span id="lesson-number" class="lesson-count">УРОК 01</span></div>
+          <article id="lesson-content" aria-live="polite"></article>
+          <div class="lesson-actions">
+            <button id="complete-button" class="complete-button" type="button"><span aria-hidden="true">✓</span> Отметить урок пройденным</button>
+            <div class="pager"><button id="prev-button" class="pager-button" type="button">← <span>Назад</span></button><button id="next-button" class="pager-button pager-next" type="button"><span>Следующий урок</span> →</button></div>
+          </div>
+          <footer class="page-footer"><span>Учись в своём темпе — прогресс хранится в этом браузере.</span><a href="https://github.com/memasevich/Bitburner_ru" target="_blank" rel="noreferrer">Исходный проект ↗</a></footer>
+        </main>
+
+        <aside class="practice-panel" aria-label="Редактор JavaScript">
+          <div class="practice-head"><div><span class="eyebrow">ПЕСОЧНИЦА</span><h2>Попробуй сам</h2></div><span class="lock-icon" title="Код запускается в изолированной песочнице" aria-label="Изолированная песочница">▣</span></div>
+          <p class="practice-note">Меняй код и нажми «Запустить». Этот пример выполняется отдельно от страницы.</p>
+          <div class="editor-frame">
+            <div class="editor-top"><span class="traffic-lights"><i></i><i></i><i></i></span><span>script.js</span><button id="reset-code" type="button" aria-label="Вернуть исходный пример" title="Вернуть исходный пример">↺</button></div>
+            <div class="editor-body"><span class="line-number" aria-hidden="true">1</span><textarea id="code-editor" aria-label="Редактор JavaScript" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea></div>
+          </div>
+          <button id="run-button" class="run-button" type="button"><span aria-hidden="true">▶</span> Запустить код <kbd>Ctrl ↵</kbd></button>
+          <div class="output-head"><span>РЕЗУЛЬТАТ</span><button id="clear-output" type="button">Очистить</button></div>
+          <pre id="code-output" class="code-output" aria-live="polite"><span class="output-placeholder">Здесь появится результат…</span></pre>
+          <div class="safety-note"><span aria-hidden="true">◈</span><span>Песочница без доступа к файлам и сети. Не запускай незнакомый код вне неё.</span></div>
+        </aside>
+      </div>
+    </div>
+    <iframe id="sandbox" title="Изолированная среда выполнения JavaScript" sandbox="allow-scripts" hidden></iframe>
+    <script src="./lessons.js" defer></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
