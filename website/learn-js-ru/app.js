@@ -166,12 +166,17 @@
   document.querySelector('#prev-button').addEventListener('click', () => { if (currentIndex > 0) showLesson(currentIndex - 1); });
   document.querySelector('#next-button').addEventListener('click', () => { if (currentIndex < lessons.length - 1) showLesson(currentIndex + 1); });
   function handleEditorKeys(textarea, event) {
-    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) { event.preventDefault(); runButton.click(); }
+    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
+      event.preventDefault();
+      if (textarea === expandedEditor) closeExpandedEditor();
+      runButton.click();
+    }
     if (event.key === 'Tab') {
       event.preventDefault();
       const start = textarea.selectionStart;
       const end = textarea.selectionEnd;
       textarea.setRangeText('  ', start, end, 'end');
+      if (textarea === expandedEditor) editor.value = expandedEditor.value;
     }
   }
   editor.addEventListener('keydown', event => handleEditorKeys(editor, event));
