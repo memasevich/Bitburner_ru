@@ -104,3 +104,32 @@ body{background:radial-gradient(ellipse at 52% -24%,#18301d 0,transparent 48%),v
 @media(max-width:920px){.workspace{align-items:stretch}.sidebar{position:sticky;top:0;max-height:100vh;height:100vh;grid-row:1/span 2}.practice-panel{position:static;max-height:none;overflow:visible}}
 @media(max-width:620px){.topbar{height:58px;padding-inline:15px}.topbar::before{height:2px}.brand-mark{width:34px;height:34px}.brand-copy strong{font-size:14px}.workspace{align-items:stretch;min-height:calc(100vh - 58px)}.sidebar{position:static;height:auto;max-height:none;min-height:0;padding:12px 14px 10px}.sidebar #lesson-nav{overflow-y:hidden;overscroll-behavior:auto}.main-content{padding:22px 17px 20px}.lesson-toolbar{margin-bottom:25px;padding-bottom:11px}.lesson-title{font-size:clamp(29px,8vw,36px)}.practice-panel{position:static;max-height:none;overflow:visible;border-left:0;border-top:1px solid #27382a;padding:20px 17px 25px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Expandable lesson editor */
+.editor-top-actions{display:flex;align-items:center;gap:7px}
+.editor-top-actions button{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:26px;padding:3px 5px;border:1px solid transparent;border-radius:3px;font:10px var(--mono)}
+.editor-top-actions .expand-editor{color:#a9eeb5}
+.editor-top-actions .expand-editor:hover{border-color:#426d49;background:#17251a;color:#e2ffe5}
+.editor-top-actions #reset-code{font-size:17px}
+.editor-dialog{width:min(1160px,calc(100vw - 40px));height:min(920px,calc(100dvh - 40px));max-width:none;max-height:none;margin:auto;padding:0;overflow:hidden;border:1px solid #497b50;background:#0b110c;color:#e7eee7;box-shadow:0 20px 90px #000b}
+.editor-dialog::backdrop{background:#030704d9;backdrop-filter:blur(3px)}
+.expanded-editor-shell{display:grid;grid-template-rows:62px minmax(0,1fr) 66px;height:100%}
+.expanded-editor-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 20px;border-bottom:1px solid #2c402f;background:#111a13}
+.expanded-file{display:flex;align-items:center;gap:12px;min-width:0}
+.terminal-cursor{display:grid;place-items:center;width:34px;height:34px;border:1px solid #477d4e;background:#0b140d;color:#a4f2b1;font:13px var(--mono)}
+.expanded-file div{display:flex;flex-direction:column;gap:3px}
+.expanded-file strong{color:#ecf5ec;font:13px var(--mono)}
+.expanded-file div>span{color:#94a496;font-size:11px}
+.close-editor,.expanded-reset,.expanded-run{min-height:36px;padding:7px 12px;border:1px solid #38543c;border-radius:3px;background:#142018;color:#c3efca;font-size:12px;cursor:pointer}
+.close-editor{display:flex;align-items:center;gap:10px;color:#c0ccc1}
+.close-editor:hover,.expanded-reset:hover{border-color:#66b273;background:#1a2b1d}
+.close-editor kbd,.expanded-run kbd{padding:2px 5px;border:1px solid #48684d;border-radius:2px;color:#b1c1b2;font:10px var(--mono)}
+#expanded-code-editor{display:block;width:100%;height:100%;min-height:0;resize:none;padding:22px 24px;border:0;outline:0;background:#090e0a;color:#b6f4be;caret-color:#d0ffd5;font:13px/1.75 var(--mono);tab-size:2;white-space:pre;overflow:auto}
+#expanded-code-editor:focus-visible{outline:2px solid #67e681;outline-offset:-3px}
+.expanded-editor-foot{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 18px;border-top:1px solid #2c402f;background:#111a13}
+.expanded-editor-foot>span{color:#99a89a;font-size:11px}
+.expanded-editor-foot>div{display:flex;align-items:center;gap:9px}
+.expanded-run{min-width:154px;border-color:#67e681;background:#67e681;color:#09100a;font-weight:700}
+.expanded-run:hover{filter:brightness(1.08)}
+.expanded-run kbd{margin-left:8px;border-color:#123f1b55;color:#143d1e}
+@media(max-width:620px){.editor-dialog{width:100vw;height:100dvh;margin:0;border:0}.expanded-editor-shell{grid-template-rows:58px minmax(0,1fr) auto}.expanded-editor-head{padding:0 13px}.expanded-editor-foot{align-items:stretch;flex-direction:column;padding:12px}.expanded-editor-foot>div{display:grid;grid-template-columns:1fr 1.3fr}.expanded-run{min-width:0}}

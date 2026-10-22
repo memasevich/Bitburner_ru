@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090d0a">
     <meta name="description" content="Интерактивный курс JavaScript на русском: короткие уроки, примеры кода и практика для начинающих и игроков Bitburner.">
     <title>JavaScript с нуля — учебная лаборатория</title>
-    <link rel="stylesheet" href="./styles.css?v=bitburner-lab-redesign1">
+    <link rel="stylesheet" href="./styles.css?v=bitburner-lab-editor2">
   </head>
   <body>
     <a class="skip-link" href="#lesson">Перейти к уроку</a>
@@ -53,7 +53,7 @@
           <div class="practice-head"><div><span class="eyebrow">ПЕСОЧНИЦА</span><h2>Попробуй сам</h2></div><span class="lock-icon" title="Код запускается в изолированной песочнице" aria-label="Изолированная песочница">▣</span></div>
           <p class="practice-note">Меняй код и нажми «Запустить». Этот пример выполняется отдельно от страницы.</p>
           <div class="editor-frame">
-            <div class="editor-top"><span class="traffic-lights"><i></i><i></i><i></i></span><span>script.js</span><button id="reset-code" type="button" aria-label="Вернуть исходный пример" title="Вернуть исходный пример">↺</button></div>
+            <div class="editor-top"><span class="traffic-lights"><i></i><i></i><i></i></span><span>script.js</span><div class="editor-top-actions"><button id="expand-editor" class="expand-editor" type="button" aria-label="Открыть редактор на весь экран" title="Открыть редактор на весь экран">⛶ <span>Развернуть</span></button><button id="reset-code" type="button" aria-label="Вернуть исходный пример" title="Вернуть исходный пример">↺</button></div></div>
             <div class="editor-body"><span class="line-number" aria-hidden="true">1</span><textarea id="code-editor" aria-label="Редактор JavaScript" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea></div>
           </div>
           <button id="run-button" class="run-button" type="button"><span aria-hidden="true">▶</span> Запустить код <kbd>Ctrl ↵</kbd></button>
@@ -63,8 +63,18 @@
         </aside>
       </div>
     </div>
+    <dialog id="editor-dialog" class="editor-dialog" aria-labelledby="expanded-editor-title">
+      <div class="expanded-editor-shell">
+        <header class="expanded-editor-head">
+          <div class="expanded-file"><span class="terminal-cursor" aria-hidden="true">&gt;_</span><div><strong id="expanded-editor-title">script.js</strong><span>Редактор JavaScript</span></div></div>
+          <button id="close-editor" class="close-editor" type="button">Свернуть <kbd>Esc</kbd></button>
+        </header>
+        <textarea id="expanded-code-editor" aria-label="Редактор JavaScript — большое окно" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off"></textarea>
+        <footer class="expanded-editor-foot"><span>Изменения сохраняются в редакторе урока автоматически.</span><div><button id="expanded-reset-code" type="button" class="expanded-reset">Вернуть пример</button><button id="expanded-run-button" type="button" class="expanded-run"><span aria-hidden="true">▶</span> Запустить код <kbd>Ctrl ↵</kbd></button></div></footer>
+      </div>
+    </dialog>
     <iframe id="sandbox" title="Изолированная среда выполнения JavaScript" sandbox="allow-scripts" hidden></iframe>
     <script src="./lessons.js?v=course54-target-cycle2" defer></script>
-    <script src="./app.js?v=course54-target-cycle2" defer></script>
+    <script src="./app.js?v=large-editor-modal1" defer></script>
   </body>
 </html>

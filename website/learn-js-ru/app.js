@@ -4,6 +4,8 @@
   const nav = document.querySelector('#lesson-nav');
   const article = document.querySelector('#lesson-content');
   const editor = document.querySelector('#code-editor');
+  const expandedEditor = document.querySelector('#expanded-code-editor');
+  const editorDialog = document.querySelector('#editor-dialog');
   const output = document.querySelector('#code-output');
   const iframe = document.querySelector('#sandbox');
   const completed = new Set(JSON.parse(localStorage.getItem('js-lab-completed') || '[]'));
@@ -124,8 +126,36 @@
   }
 
   document.querySelector('#lesson-search').addEventListener('input', event => renderNav(event.target.value));
-  document.querySelector('#run-button').addEventListener('click', runCode);
-  document.querySelector('#reset-code').addEventListener('click', () => { editor.value = lessons[currentIndex].code; editor.focus(); });
+  const runButton = document.querySelector('#run-button');
+  const expandButton = document.querySelector('#expand-editor');
+  function resetCode() {
+    editor.value = lessons[currentIndex].code;
+    expandedEditor.value = editor.value;
+    (editorDialog.open ? expandedEditor : editor).focus();
+  }
+  runButton.addEventListener('click', runCode);
+  document.querySelector('#reset-code').addEventListener('click', resetCode);
+  document.querySelector('#expanded-reset-code').addEventListener('click', resetCode);
+  expandButton.addEventListener('click', () => {
+    expandedEditor.value = editor.value;
+    expandedEditor.setSelectionRange(editor.selectionStart, editor.selectionEnd);
+    editorDialog.showModal();
+    expandedEditor.focus({ preventScroll: true });
+  });
+  function closeExpandedEditor() {
+    editor.value = expandedEditor.value;
+    if (editorDialog.open) editorDialog.close();
+  }
+  document.querySelector('#close-editor').addEventListener('click', closeExpandedEditor);
+  editorDialog.addEventListener('close', () => {
+    editor.value = expandedEditor.value;
+    expandButton.focus();
+  });
+  document.querySelector('#expanded-run-button').addEventListener('click', () => {
+    closeExpandedEditor();
+    runButton.click();
+  });
+  expandedEditor.addEventListener('input', () => { editor.value = expandedEditor.value; });
   document.querySelector('#clear-output').addEventListener('click', () => { output.innerHTML = '<span class="output-placeholder">Результат очищен.</span>'; });
   document.querySelector('#complete-button').addEventListener('click', () => {
     const id = lessons[currentIndex].id;
@@ -135,15 +165,17 @@
   });
   document.querySelector('#prev-button').addEventListener('click', () => { if (currentIndex > 0) showLesson(currentIndex - 1); });
   document.querySelector('#next-button').addEventListener('click', () => { if (currentIndex < lessons.length - 1) showLesson(currentIndex + 1); });
-  editor.addEventListener('keydown', event => {
-    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) { event.preventDefault(); runCode(); }
+  function handleEditorKeys(textarea, event) {
+    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) { event.preventDefault(); runButton.click(); }
     if (event.key === 'Tab') {
       event.preventDefault();
-      const start = editor.selectionStart;
-      const end = editor.selectionEnd;
-      editor.setRangeText('  ', start, end, 'end');
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      textarea.setRangeText('  ', start, end, 'end');
     }
-  });
+  }
+  editor.addEventListener('keydown', event => handleEditorKeys(editor, event));
+  expandedEditor.addEventListener('keydown', event => handleEditorKeys(expandedEditor, event));
 
   const hashIndex = lessons.findIndex(lesson => `#${lesson.id}` === location.hash);
   showLesson(hashIndex >= 0 ? hashIndex : 0);
