@@ -133,3 +133,126 @@ body{background:radial-gradient(ellipse at 52% -24%,#18301d 0,transparent 48%),v
 .expanded-run:hover{filter:brightness(1.08)}
 .expanded-run kbd{margin-left:8px;border-color:#123f1b55;color:#143d1e}
 @media(max-width:620px){.editor-dialog{width:100vw;height:100dvh;margin:0;border:0}.expanded-editor-shell{grid-template-rows:58px minmax(0,1fr) auto}.expanded-editor-head{padding:0 13px}.expanded-editor-foot{align-items:stretch;flex-direction:column;padding:12px}.expanded-editor-foot>div{display:grid;grid-template-columns:1fr 1.3fr}.expanded-run{min-width:0}}
+
+/* Reading, course route and practice share the same workspace. */
+[hidden]{display:none!important}
+body{font-size:15px}
+body.editor-open{overflow:hidden}
+.workspace{grid-template-columns:238px minmax(0,1fr) 370px;max-width:1680px}
+.main-content{max-width:840px;padding:34px clamp(28px,3.2vw,50px) 34px}
+.lesson-title{font-size:clamp(30px,3.1vw,42px);line-height:1.18;letter-spacing:-.035em}
+.lesson-lead{font-size:17px;line-height:1.8}
+.lesson-content{font-size:15px}
+.lesson-content h2{font-size:21px}
+.lesson-content p,.lesson-content ul{line-height:1.85}
+.lesson-content code:not(pre code){overflow-wrap:anywhere}
+.callout{font-size:13px;line-height:1.8}
+.lesson-toolbar{margin-bottom:28px}
+.lesson-route{display:flex;flex-direction:column;min-height:0;flex:1}
+.search-wrap{flex-shrink:0;height:40px}
+.search-wrap input{font-size:13px}
+.sidebar #lesson-nav{gap:3px}
+.nav-group-title{padding:15px 8px 7px;font-size:11px;letter-spacing:.025em;color:#8eab92}
+.lesson-link{font-size:13px;min-height:42px;line-height:1.6}
+.sidebar-foot{margin-top:14px;flex-shrink:0}
+.toggle-lessons,.mobile-jumps{display:none}
+.nav-empty{padding:0 9px;color:#bdccbf;font-size:13px;line-height:1.7}
+.reset-search{border:1px solid #426649;background:#142018;color:#c5edcc;padding:9px;font-size:12px;cursor:pointer}
+#lesson,#practice{scroll-margin-top:50px}
+.lesson-example{margin-top:32px;border:1px solid #2a4130;border-radius:4px;overflow:hidden;min-width:0}
+.example-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:#121d15;border-bottom:1px solid #253a2b}
+.example-head h2{margin:0;font-size:13px;font-weight:600;color:#d1e5d5}
+.example-head button{padding:6px 0;border:0;background:transparent;color:#9beaab;font:11px var(--mono);cursor:pointer}
+.lesson-example pre{margin:0;padding:18px;max-height:340px;overflow:auto;color:#bbebc4;background:#0a110c;font:13px/1.8 var(--mono);tab-size:2}
+.lesson-example code{font:inherit}
+.complete-button,.pager-button{min-height:40px;font-size:12px}
+.lesson-actions{flex-wrap:wrap}
+.footer-progress-note{white-space:normal}
+.editor-body{grid-template-columns:36px minmax(0,1fr);height:clamp(230px,32vh,330px);min-height:0}
+#code-editor{height:100%;min-height:0;resize:none;padding:14px 12px;font:13px/1.75 var(--mono)}
+.line-number{margin:0;min-height:0;height:100%;max-height:100%;padding:14px 7px;border-right:1px solid #223927;overflow:hidden;text-align:right;color:#708a76;background:#0b130e;font:13px/1.75 var(--mono)}
+.editor-top{height:42px}
+.editor-top-actions button{min-height:32px}
+.editor-status{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:35px;padding:7px 0;font:10px var(--mono);color:#8ca592}
+.copy-code{border:0;padding:5px 0;background:transparent;color:#acd8b5;font:10px var(--mono);cursor:pointer;flex-shrink:0}
+.copy-code:hover{color:#d5ffe0}
+.practice-head h2{font-size:20px}
+.practice-note{font-size:12px}
+.run-button{min-height:42px;margin-top:4px}
+.output-head{font-size:10px;letter-spacing:.03em}
+.output-head button{min-height:30px;font-size:11px}
+.code-output{font-size:12px;min-height:112px}
+[data-state="success"]{color:#91e5a2}
+[data-state="error"]{color:#ff9a9a}
+[data-state="running"]{color:#edca8b}
+.stop-code{min-height:36px;margin-top:8px;width:100%;border:1px solid #805e45;border-radius:3px;background:#241b13;color:#f1c29d;font-size:12px;cursor:pointer}
+.expanded-editor-shell{grid-template-rows:62px minmax(0,1fr) 66px}
+.expanded-workspace{display:grid;grid-template-columns:minmax(0,1fr) 300px;min-height:0}
+.expanded-code-area{display:flex;flex-direction:column;min-width:0;min-height:0}
+.expanded-code-body{display:grid;grid-template-columns:44px minmax(0,1fr);flex:1;min-height:0;overflow:hidden}
+#expanded-code-editor{padding:18px 16px;font:14px/1.8 var(--mono)}
+.expanded-code-body .line-number{padding:18px 8px;font:14px/1.8 var(--mono)}
+.expanded-code-area .editor-status{padding:7px 14px;border-top:1px solid #233628;flex-shrink:0}
+.dialog-console{display:flex;flex-direction:column;min-height:0;min-width:0;padding:10px 14px 14px;border-left:1px solid #2b4230;background:#0e1811}
+.dialog-console .output-head{margin:0 0 8px;flex-shrink:0}
+.dialog-console .code-output{flex:1;min-height:0;max-height:none;border:0;border-radius:0;padding:10px;background:#0a120d}
+.expanded-editor-foot>span{max-width:40%;line-height:1.5}
+.editor-dialog{width:min(1380px,calc(100vw - 40px))}
+@media(max-width:1180px){
+  .workspace{grid-template-columns:210px minmax(0,1fr) 320px}
+  .main-content{padding-inline:26px}
+  .lesson-title{font-size:34px}
+  .practice-panel{padding-inline:15px}
+  .expanded-workspace{grid-template-columns:minmax(0,1fr) 270px}
+}
+@media(max-width:1000px){
+  .workspace{grid-template-columns:210px minmax(0,1fr)}
+  .sidebar{grid-row:1/span 2}
+  .practice-panel{grid-column:2;position:static;max-height:none;border-left:0;border-top:1px solid #27382a;padding:26px}
+  .practice-panel>*{max-width:none}
+  .editor-body{height:270px}
+  .lesson-actions{align-items:stretch;flex-direction:column}
+  .pager{justify-content:space-between}
+}
+@media(max-width:620px){
+  .brand{min-width:0}
+  .mobile-jumps{display:flex;justify-content:space-between;position:sticky;top:0;z-index:5;padding:0 17px;background:#101a13;border-bottom:1px solid #304b36}
+  .mobile-jumps a{display:flex;align-items:center;min-height:44px;color:#c4eace;text-decoration:none;font-size:12px}
+  .sidebar{padding:16px}
+  .sidebar-heading{margin:0 0 10px}
+  .progress-track{margin:0 0 12px}
+  .toggle-lessons{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;width:100%;padding:9px 12px;border:1px solid #36573e;border-radius:3px;background:#142018;color:#e1eee3;font-size:13px;cursor:pointer}
+  .toggle-lessons span{font-size:11px;color:#a3c4ab}
+  .lesson-route{display:none}
+  .route-open .lesson-route{display:flex;margin-top:12px}
+  .sidebar #lesson-nav{flex-direction:column;gap:3px;max-height:55dvh;overflow-y:auto;overflow-x:hidden}
+  .nav-group-title{display:block}
+  .lesson-link{width:100%;min-width:0;font-size:13px;min-height:44px;white-space:normal;background:transparent;padding:8px 10px;gap:10px}
+  .nav-index{flex:0 0 22px;font-size:11px}
+  .main-content{padding:25px 18px}
+  .lesson-title{font-size:32px}
+  .lesson-lead{font-size:16px}
+  .lesson-content{font-size:15px}
+  .lesson-toolbar{margin-bottom:23px}
+  .callout{padding:13px;font-size:13px}
+  .example-head{align-items:flex-start;flex-direction:column;gap:4px}
+  .lesson-example pre{font-size:12px;padding:14px}
+  .practice-panel{padding:24px 18px}
+  .editor-body{height:265px}
+  .expanded-editor-shell{grid-template-rows:58px minmax(0,1fr) auto}
+  .editor-dialog{width:100vw;height:100dvh}
+  .expanded-workspace{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) minmax(100px,26%)}
+  .dialog-console{border-left:0;border-top:1px solid #2b4230;padding:4px 10px 8px}
+  .dialog-console .output-head{margin:0}
+  .dialog-console .code-output{padding:6px}
+  .expanded-code-area .editor-status{min-height:29px;padding:3px 10px;font-size:9px}
+  #expanded-code-editor{padding:12px 10px;font-size:13px}
+  .expanded-code-body{grid-template-columns:35px minmax(0,1fr)}
+  .expanded-code-body .line-number{padding:12px 6px;font-size:13px}
+  .expanded-editor-foot{gap:8px;padding:10px}
+  .expanded-editor-foot>span{max-width:none;font-size:10px}
+  .expanded-editor-foot>div{gap:8px}
+  .expanded-run kbd{display:none}
+  .expanded-run,.expanded-reset{min-height:42px;font-size:12px}
+  .safety-note{font-size:11px}
+}
