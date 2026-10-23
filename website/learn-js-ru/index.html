@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#090d0a">
     <meta name="description" content="Интерактивный курс JavaScript на русском: короткие уроки, примеры кода и практика для начинающих и игроков Bitburner.">
     <title>JavaScript с нуля — учебная лаборатория</title>
-    <link rel="stylesheet" href="./styles.css?v=lab-workspace3">
+    <link rel="stylesheet" href="./styles.css?v=lab-visual4">
   </head>
   <body>
     <a class="skip-link" href="#lesson">Перейти к уроку</a>
@@ -14,7 +14,7 @@
       <header class="topbar">
         <a class="brand" href="#welcome" aria-label="JavaScript с нуля — на главную">
           <span class="brand-mark" aria-hidden="true">&gt;_</span>
-          <span class="brand-copy"><strong>Bitburner</strong><span>JavaScript с нуля</span></span>
+          <span class="brand-copy"><strong>JavaScript с нуля</strong><span>Практикум по мотивам Bitburner</span></span>
         </a>
         <div class="topbar-meta"><span class="status-dot"></span> Практика в браузере <span class="topbar-divider">·</span> без регистрации</div>
         <a class="game-link" href="https://github.com/memasevich/Bitburner_ru" target="_blank" rel="noreferrer">Проект Bitburner <span aria-hidden="true">↗</span></a>
@@ -32,7 +32,7 @@
 
       <div class="workspace">
         <aside class="sidebar" aria-label="Навигация по курсу">
-          <div class="sidebar-heading"><span>МАРШРУТ</span><span id="progress-label">0 / 54</span></div>
+          <div class="sidebar-heading"><span>Твой маршрут</span><span id="progress-label">0 / 54</span></div>
           <div class="progress-track" role="progressbar" aria-label="Прогресс по курсу" aria-valuemin="0" aria-valuemax="54" aria-valuenow="0"><span id="progress-bar"></span></div>
           <button id="toggle-lessons" class="toggle-lessons" type="button" aria-expanded="false" aria-controls="lesson-route">Все уроки <span>Показать список +</span></button>
           <div id="lesson-route" class="lesson-route">
@@ -55,10 +55,10 @@
         </main>
 
         <aside id="practice" class="practice-panel" aria-label="Редактор JavaScript">
-          <div class="practice-head"><div><span class="eyebrow">ПЕСОЧНИЦА</span><h2>Попробуй сам</h2></div><span class="lock-icon" title="Код запускается в изолированной песочнице" aria-label="Изолированная песочница">▣</span></div>
+          <div class="practice-head"><div><span class="eyebrow">Практика</span><h2>Попробуй сам</h2></div><span class="lock-icon" title="Код запускается в изолированной песочнице" aria-label="Изолированная песочница">▣</span></div>
           <p class="practice-note">Меняй код и нажми «Запустить». Этот пример выполняется отдельно от страницы.</p>
           <div class="editor-frame">
-            <div class="editor-top"><span class="traffic-lights"><i></i><i></i><i></i></span><span>script.js</span><div class="editor-top-actions"><button id="expand-editor" class="expand-editor" type="button" aria-label="Открыть редактор на весь экран" title="Открыть редактор на весь экран">⛶ <span>Развернуть</span></button><button id="reset-code" type="button" aria-label="Вернуть исходный пример" title="Вернуть исходный пример">↺</button></div></div>
+            <div class="editor-top"><span class="editor-file"><span class="file-type" aria-hidden="true">JS</span>script.js</span><div class="editor-top-actions"><button id="expand-editor" class="expand-editor" type="button" aria-label="Открыть редактор на весь экран" title="Открыть редактор на весь экран">⛶ <span>Развернуть</span></button><button id="reset-code" type="button" aria-label="Вернуть исходный пример" title="Вернуть исходный пример">↺</button></div></div>
             <div class="editor-body"><pre id="line-numbers" class="line-number" aria-hidden="true">1</pre><textarea id="code-editor" aria-label="Редактор JavaScript" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off"></textarea></div>
           </div>
           <div class="editor-status"><span id="draft-status" role="status">Пример урока</span><button class="copy-code" type="button">Копировать код</button></div>
@@ -85,6 +85,6 @@
     </dialog>
     <iframe id="sandbox" title="Изолированная среда выполнения JavaScript" sandbox="allow-scripts" hidden></iframe>
     <script src="./lessons.js?v=lab-workspace3" defer></script>
-    <script src="./app.js?v=lab-workspace3" defer></script>
+    <script src="./app.js?v=lab-visual4" defer></script>
   </body>
 </html>

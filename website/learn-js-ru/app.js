@@ -180,14 +180,29 @@
     document.querySelectorAll('.stop-code').forEach(button => { button.hidden = true; });
   }
 
+  function highlightExample(element, source) {
+    // Only decorate text nodes; the sample stays selectable and executable as written.
+    const tokens = /\/\/[^\n]*|\/\*[\s\S]*?\*\/|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`|\b(?:async|await|const|let|var|function|return|if|else|for|while|break|continue|try|catch|finally|throw|new|class|extends|switch|case|default|of|in|typeof|export|import)\b|\b(?:true|false|null|undefined)\b|\b\d+(?:\.\d+)?\b/g;
+    let cursor = 0;
+    for (const match of source.matchAll(tokens)) {
+      element.append(document.createTextNode(source.slice(cursor, match.index)));
+      const token = document.createElement('span');
+      token.textContent = match[0];
+      token.className = match[0].startsWith('/') ? 'syntax-comment' : /^["'`]/.test(match[0]) ? 'syntax-string' : /^\d/.test(match[0]) ? 'syntax-number' : 'syntax-keyword';
+      element.append(token);
+      cursor = match.index + match[0].length;
+    }
+    element.append(document.createTextNode(source.slice(cursor)));
+  }
+
   function showLesson(index, navigate = true) {
     saveDraft();
     disposeRun();
     currentIndex = index;
     const lesson = lessons[index];
     document.title = lesson.title + ' — JavaScript с нуля';
-    document.querySelector('#lesson-category').textContent = lesson.category;
-    document.querySelector('#lesson-number').textContent = 'УРОК ' + String(index + 1).padStart(2, '0');
+    document.querySelector('#lesson-category').textContent = lesson.group;
+    document.querySelector('#lesson-number').textContent = 'Урок ' + (index + 1) + ' из ' + lessons.length;
     article.innerHTML = '<h1 class="lesson-title">' + lesson.title + '</h1><p class="lesson-lead">' + lesson.lead + '</p><div class="lesson-content">' + lesson.body + '</div>';
     if (notes[lesson.id]) {
       const note = document.createElement('div');
@@ -205,12 +220,12 @@
     label.textContent = 'Пример для практики';
     const tryButton = document.createElement('button');
     tryButton.type = 'button';
-    tryButton.textContent = 'Открыть редактор ↗';
+    tryButton.textContent = 'Попробовать в редакторе ↗';
     tryButton.addEventListener('click', openExpandedEditor);
     head.append(label, tryButton);
     const pre = document.createElement('pre');
     const code = document.createElement('code');
-    code.textContent = lesson.code;
+    highlightExample(code, lesson.code);
     pre.append(code);
     example.append(head, pre);
     article.append(example);
